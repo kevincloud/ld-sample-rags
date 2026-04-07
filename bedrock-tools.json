@@ -1,0 +1,137 @@
+[
+  {
+    "toolSpec": {
+      "name": "search_investments",
+      "description": "Search the investment advisor knowledge base for information about investment products, retirement accounts (IRAs, 401k), ETFs, mutual funds, bonds, stocks, asset allocation strategies, market commentary, and financial planning scenarios.",
+      "inputSchema": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The question or topic to search for"
+            },
+            "content_type": {
+              "type": "string",
+              "enum": ["PRODUCT", "FAQ", "MARKET_COMMENTARY", "CLIENT_SCENARIO"],
+              "description": "Optional: filter results to a specific content category"
+            },
+            "top_k": {
+              "type": "integer",
+              "description": "Number of results to return (default: 5)"
+            }
+          },
+          "required": ["query"]
+        }
+      }
+    }
+  },
+  {
+    "toolSpec": {
+      "name": "search_loans",
+      "description": "Search the loans and credit knowledge base for information about mortgages, HELOCs, home equity loans, personal loans, auto loans, student loans, credit cards, and loan application processes.",
+      "inputSchema": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The question or topic to search for"
+            },
+            "content_type": {
+              "type": "string",
+              "enum": ["PRODUCT", "FAQ", "MARKET_COMMENTARY", "CLIENT_SCENARIO"],
+              "description": "Optional: filter results to a specific content category"
+            },
+            "top_k": {
+              "type": "integer",
+              "description": "Number of results to return (default: 5)"
+            }
+          },
+          "required": ["query"]
+        }
+      }
+    }
+  },
+  {
+    "toolSpec": {
+      "name": "search_accounts",
+      "description": "Search the account management knowledge base for information about checking accounts, savings accounts, CDs (certificates of deposit), money market accounts, interest rates, account features, and how to open or manage accounts.",
+      "inputSchema": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The question or topic to search for"
+            },
+            "content_type": {
+              "type": "string",
+              "enum": ["PRODUCT", "FAQ", "MARKET_COMMENTARY", "CLIENT_SCENARIO"],
+              "description": "Optional: filter results to a specific content category"
+            },
+            "top_k": {
+              "type": "integer",
+              "description": "Number of results to return (default: 5)"
+            }
+          },
+          "required": ["query"]
+        }
+      }
+    }
+  },
+  {
+    "toolSpec": {
+      "name": "search_transfers",
+      "description": "Search the transfers and payments knowledge base for information about wire transfers, ACH transfers, Zelle, bill pay, peer-to-peer payments, international transfers, and payment processing timelines.",
+      "inputSchema": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The question or topic to search for"
+            },
+            "content_type": {
+              "type": "string",
+              "enum": ["PRODUCT", "FAQ", "MARKET_COMMENTARY", "CLIENT_SCENARIO"],
+              "description": "Optional: filter results to a specific content category"
+            },
+            "top_k": {
+              "type": "integer",
+              "description": "Number of results to return (default: 5)"
+            }
+          },
+          "required": ["query"]
+        }
+      }
+    }
+  },
+  {
+    "toolSpec": {
+      "name": "search_support",
+      "description": "Search the customer support knowledge base for information about support channels (phone, live chat, branch), the mobile banking app, online banking features, card services, and general customer assistance.",
+      "inputSchema": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The question or topic to search for"
+            },
+            "content_type": {
+              "type": "string",
+              "enum": ["PRODUCT", "FAQ", "MARKET_COMMENTARY", "CLIENT_SCENARIO"],
+              "description": "Optional: filter results to a specific content category"
+            },
+            "top_k": {
+              "type": "integer",
+              "description": "Number of results to return (default: 5)"
+            }
+          },
+          "required": ["query"]
+        }
+      }
+    }
+  }
+]

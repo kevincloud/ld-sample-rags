@@ -1,0 +1,2064 @@
+[
+  {
+    "content_type": "PRODUCT",
+    "title": "S&P 500 Index ETF (VOO)",
+    "text": "The Vanguard S&P 500 ETF (VOO) tracks the S&P 500 index, offering broad exposure to 500 of the largest U.S. companies. With an expense ratio of just 0.03%, it is one of the most cost-efficient ways to invest in U.S. large-cap equities. VOO is appropriate for investors with a long-term horizon of 5 or more years who can tolerate moderate-to-high market volatility. Historically, the S&P 500 has delivered annualized returns of approximately 10% over long periods, though past performance does not guarantee future results. It is suitable as a core portfolio holding for growth-oriented investors.",
+    "metadata": {
+      "asset_class": "Equity",
+      "risk_level": "Moderate-High",
+      "tags": [
+        "ETF",
+        "index",
+        "large-cap",
+        "US equity"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Total Bond Market ETF (BND)",
+    "text": "The Vanguard Total Bond Market ETF (BND) provides broad exposure to U.S. investment-grade bonds, including Treasuries, corporate bonds, and mortgage-backed securities. With a low expense ratio of 0.03%, BND is ideal for investors seeking income and portfolio stability. It has an average duration of approximately 6 years, meaning it carries moderate interest rate sensitivity. BND is best suited for conservative to moderate investors looking to reduce overall portfolio volatility and generate steady income. It is commonly used as a ballast against equity market downturns.",
+    "metadata": {
+      "asset_class": "Fixed Income",
+      "risk_level": "Low-Moderate",
+      "tags": [
+        "ETF",
+        "bonds",
+        "fixed income",
+        "diversified"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Roth IRA with Target Date Fund",
+    "text": "A Roth IRA invested in a target date fund is one of the most straightforward retirement savings strategies. Contributions are made with after-tax dollars, and all qualified withdrawals in retirement are tax-free. Target date funds automatically rebalance from growth-oriented assets (equities) to more conservative assets (bonds) as the target retirement year approaches. For a 30-year-old investor targeting retirement at 65, a 2060 target date fund would be appropriate. Annual contribution limits are $7,000 for individuals under 50 (2024), with a $1,000 catch-up contribution allowed for those 50 and older.",
+    "metadata": {
+      "asset_class": "Multi-Asset",
+      "risk_level": "Varies by date",
+      "tags": [
+        "Roth IRA",
+        "retirement",
+        "target date",
+        "tax-free"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "U.S. Treasury I-Bonds",
+    "text": "Series I Savings Bonds (I-Bonds) are U.S. government-issued bonds designed to protect against inflation. Their interest rate is composed of a fixed rate plus a variable inflation adjustment tied to the CPI-U, reset every six months. I-Bonds have a 30-year maturity but can be redeemed after 12 months, with a 3-month interest penalty if redeemed before 5 years. Purchases are limited to $10,000 per person per year through TreasuryDirect. They are appropriate for conservative investors seeking inflation protection and capital preservation, particularly in high-inflation environments.",
+    "metadata": {
+      "asset_class": "Fixed Income",
+      "risk_level": "Very Low",
+      "tags": [
+        "I-Bond",
+        "Treasury",
+        "inflation protection",
+        "savings"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "High-Yield Savings Account (HYSA)",
+    "text": "A high-yield savings account (HYSA) offers significantly higher interest rates than traditional savings accounts, often 4\u20135% APY in the current rate environment. HYSAs are FDIC-insured up to $250,000 per depositor per institution, making them one of the safest places to park cash. They are ideal for emergency funds (3\u20136 months of expenses), short-term savings goals, or as a holding vehicle for cash awaiting investment. Unlike CDs, funds in an HYSA remain fully liquid. The main risk is that rates are variable and will decrease when the Federal Reserve cuts rates.",
+    "metadata": {
+      "asset_class": "Cash Equivalent",
+      "risk_level": "Very Low",
+      "tags": [
+        "HYSA",
+        "savings",
+        "FDIC",
+        "liquidity",
+        "cash"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "6-Month Treasury Bill",
+    "text": "U.S. Treasury bills (T-bills) are short-term government debt securities with maturities ranging from 4 to 52 weeks. The 6-month T-bill is particularly popular as a safe, liquid instrument that currently yields competitive rates. T-bills are sold at a discount and pay face value at maturity, with the difference representing the investor's return. They are exempt from state and local income taxes. T-bills are appropriate for risk-averse investors, retirees needing short-term income, or anyone managing a cash allocation. They can be purchased directly via TreasuryDirect or through a brokerage account.",
+    "metadata": {
+      "asset_class": "Cash Equivalent",
+      "risk_level": "Very Low",
+      "tags": [
+        "T-bill",
+        "Treasury",
+        "short-term",
+        "tax advantage"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "2-Year Certificate of Deposit (CD)",
+    "text": "A 2-year certificate of deposit (CD) is a time deposit offered by banks and credit unions with a fixed interest rate for a set term. CDs currently offer some of the most competitive fixed rates available for short-to-medium term savings. They are FDIC-insured up to $250,000. The primary trade-off is illiquidity \u2014 early withdrawal penalties typically range from 6 to 12 months of interest. CDs are well-suited for investors who do not need access to funds for 2 years and want to lock in current high rates. A CD ladder strategy (staggering maturities) can provide both yield and periodic liquidity.",
+    "metadata": {
+      "asset_class": "Fixed Income",
+      "risk_level": "Very Low",
+      "tags": [
+        "CD",
+        "FDIC",
+        "fixed rate",
+        "time deposit"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Dividend Growth ETF (VIG)",
+    "text": "The Vanguard Dividend Appreciation ETF (VIG) tracks companies with a history of consistently growing their dividends for at least 10 consecutive years. With an expense ratio of 0.06%, it focuses on high-quality companies with strong balance sheets and sustainable dividend policies. VIG tends to be less volatile than the broad market and provides growing income over time. It is appropriate for income-focused investors, retirees, or those in or near the distribution phase of investing. The dividend growth strategy provides a hedge against inflation over long holding periods.",
+    "metadata": {
+      "asset_class": "Equity",
+      "risk_level": "Moderate",
+      "tags": [
+        "ETF",
+        "dividends",
+        "income",
+        "large-cap",
+        "quality"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "International Developed Markets ETF (VXUS)",
+    "text": "The Vanguard Total International Stock ETF (VXUS) provides exposure to over 7,000 stocks across developed and emerging markets outside the United States. Allocating a portion of a portfolio to international equities provides geographic diversification and reduces concentration in U.S. markets. VXUS has a low expense ratio of 0.07% and covers Europe, Asia-Pacific, and emerging markets. It is appropriate for investors with a long time horizon who accept currency and geopolitical risk in exchange for broader diversification. A typical allocation is 20\u201340% of the equity portion.",
+    "metadata": {
+      "asset_class": "Equity",
+      "risk_level": "Moderate-High",
+      "tags": [
+        "ETF",
+        "international",
+        "diversification",
+        "global equity"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Municipal Bond Fund",
+    "text": "Municipal bond funds invest in bonds issued by state and local governments. The primary advantage is that interest income is generally exempt from federal income tax and, in some cases, state and local taxes. This tax advantage makes municipal bonds particularly attractive to investors in high income tax brackets (32% and above). Tax-equivalent yields for munis can be significantly higher than nominal yields for high-earners. Municipal bonds historically have very low default rates. They are most suitable for taxable accounts \u2014 in tax-advantaged accounts like IRAs, the tax benefit is lost.",
+    "metadata": {
+      "asset_class": "Fixed Income",
+      "risk_level": "Low-Moderate",
+      "tags": [
+        "municipal bonds",
+        "tax-exempt",
+        "income",
+        "high earners"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Real Estate Investment Trust ETF (VNQ)",
+    "text": "The Vanguard Real Estate ETF (VNQ) provides exposure to U.S. real estate investment trusts (REITs), which own and operate income-producing real estate such as apartments, office buildings, retail centers, and data centers. REITs are required by law to distribute at least 90% of taxable income as dividends, resulting in high current yields. VNQ has an expense ratio of 0.12%. Real estate provides diversification benefits due to its low correlation with stocks and bonds and acts as a partial inflation hedge. It is appropriate for investors seeking income and diversification but should be held in tax-advantaged accounts due to the high dividend taxation.",
+    "metadata": {
+      "asset_class": "Real Estate",
+      "risk_level": "Moderate",
+      "tags": [
+        "REIT",
+        "real estate",
+        "income",
+        "diversification"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Money Market Fund",
+    "text": "Money market funds invest in high-quality, short-term debt instruments such as Treasury bills, commercial paper, and certificates of deposit. They aim to maintain a stable $1.00 net asset value (NAV) and provide same-day liquidity. Government money market funds are among the safest investment vehicles available. Current yields on government money market funds are competitive, often matching or exceeding HYSA rates. They are ideal for cash management, emergency funds within brokerage accounts, or as a parking place for funds awaiting investment. They are not FDIC-insured but are considered extremely low-risk.",
+    "metadata": {
+      "asset_class": "Cash Equivalent",
+      "risk_level": "Very Low",
+      "tags": [
+        "money market",
+        "liquidity",
+        "cash management",
+        "stable NAV"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Small-Cap Value ETF (VBR)",
+    "text": "The Vanguard Small-Cap Value ETF (VBR) tracks small-cap U.S. companies with value characteristics \u2014 those trading at lower price-to-earnings and price-to-book ratios relative to peers. Academic research (Fama-French) has demonstrated that small-cap value stocks have historically produced higher long-term returns than the broad market, albeit with higher volatility. VBR has an expense ratio of 0.07% and is appropriate for investors with a long time horizon (7+ years) and higher risk tolerance. It works best as a portfolio tilt, not a standalone investment, complementing a core S&P 500 or total market position.",
+    "metadata": {
+      "asset_class": "Equity",
+      "risk_level": "High",
+      "tags": [
+        "ETF",
+        "small-cap",
+        "value",
+        "factor investing"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Corporate Bond Fund (Investment Grade)",
+    "text": "Investment-grade corporate bond funds hold bonds issued by financially stable companies rated BBB- or higher by major credit rating agencies. They offer higher yields than equivalent-maturity Treasuries to compensate for credit risk. Investment-grade corporate bonds balance income generation with relative safety. They are suitable for investors seeking higher yields than government bonds without taking on significant credit risk. Duration management is key \u2014 shorter-duration corporate bond funds are less sensitive to interest rate changes. These funds are appropriate for moderate investors with a 3\u20137 year time horizon.",
+    "metadata": {
+      "asset_class": "Fixed Income",
+      "risk_level": "Low-Moderate",
+      "tags": [
+        "corporate bonds",
+        "investment grade",
+        "income",
+        "credit"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "529 College Savings Plan",
+    "text": "A 529 plan is a tax-advantaged savings account designed for education expenses. Contributions grow tax-free, and withdrawals are tax-free when used for qualified education expenses including tuition, room and board, and supplies. Many states offer a state income tax deduction for contributions. 529 plans can be used for K-12 tuition (up to $10,000/year) and higher education. Unused funds can now be rolled over to a Roth IRA (up to $35,000 lifetime, subject to annual Roth IRA limits). Plans offer age-based portfolios that automatically become more conservative as the beneficiary approaches college age.",
+    "metadata": {
+      "asset_class": "Multi-Asset",
+      "risk_level": "Varies",
+      "tags": [
+        "529",
+        "education",
+        "tax-advantaged",
+        "college savings"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Balanced Fund (60/40 Portfolio)",
+    "text": "A balanced fund maintains a fixed allocation between stocks and bonds \u2014 the classic 60/40 portfolio holds 60% equities and 40% fixed income. This allocation has historically provided a strong risk-adjusted return, capturing most of equity upside while dampening volatility with bonds. The Vanguard Balanced Index Fund (VBINX) is a low-cost example with an expense ratio of 0.07%. Balanced funds are appropriate for moderate investors, those nearing retirement, or anyone who prefers a simple one-fund solution. In rising rate environments, the bond portion may underperform, but over full market cycles the 60/40 has proven resilient.",
+    "metadata": {
+      "asset_class": "Multi-Asset",
+      "risk_level": "Moderate",
+      "tags": [
+        "balanced",
+        "60/40",
+        "diversified",
+        "multi-asset"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Health Savings Account (HSA) as Investment Vehicle",
+    "text": "An HSA is often called the 'triple tax advantage' account: contributions are tax-deductible, growth is tax-free, and withdrawals for qualified medical expenses are tax-free. For 2024, contribution limits are $4,150 for individuals and $8,300 for families. After age 65, funds can be withdrawn for any purpose (taxed as ordinary income, like a traditional IRA). To maximize the investment benefit, many advisors recommend paying medical expenses out-of-pocket and investing HSA funds in low-cost index funds. An HSA is available only to those enrolled in a high-deductible health plan (HDHP). It is one of the most powerful but underutilized retirement savings vehicles.",
+    "metadata": {
+      "asset_class": "Multi-Asset",
+      "risk_level": "Varies",
+      "tags": [
+        "HSA",
+        "tax-advantaged",
+        "healthcare",
+        "retirement",
+        "HDHP"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Annuity \u2014 Fixed vs. Variable",
+    "text": "Annuities are insurance products designed to provide a stream of income, often in retirement. A fixed annuity provides guaranteed interest at a set rate for a specified period \u2014 essentially a CD from an insurance company. A variable annuity allows investment in sub-accounts similar to mutual funds, with returns linked to market performance. Variable annuities come with higher fees (often 2\u20133% annually) and surrender charges. Fixed indexed annuities (FIAs) offer market-linked upside with downside protection. Annuities are most suitable for investors who have maxed out other tax-advantaged accounts and need guaranteed lifetime income. Always review surrender periods and mortality and expense (M&E) charges carefully.",
+    "metadata": {
+      "asset_class": "Insurance / Income",
+      "risk_level": "Low to High",
+      "tags": [
+        "annuity",
+        "fixed",
+        "variable",
+        "income",
+        "retirement"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Gold and Precious Metals ETF (GLD)",
+    "text": "The SPDR Gold Shares ETF (GLD) provides exposure to the price of gold without the need to hold physical metal. Gold is traditionally viewed as a store of value, an inflation hedge, and a safe-haven asset during periods of economic uncertainty. However, gold does not produce income and can have long periods of underperformance relative to equities. Most advisors recommend a small allocation (2\u20135% of a portfolio) to precious metals for diversification purposes. GLD has an expense ratio of 0.40%. Gold tends to perform well when real interest rates are negative or when geopolitical risk is elevated.",
+    "metadata": {
+      "asset_class": "Commodities",
+      "risk_level": "Moderate-High",
+      "tags": [
+        "gold",
+        "commodities",
+        "inflation hedge",
+        "safe haven"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Emerging Markets Equity ETF (VWO)",
+    "text": "The Vanguard Emerging Markets ETF (VWO) provides exposure to equities in developing economies including China, India, Brazil, Taiwan, and South Africa. Emerging markets offer higher long-term growth potential than developed markets, driven by younger populations, rising middle classes, and rapid industrialization. However, they carry higher risks including political instability, currency risk, regulatory risk, and lower market liquidity. VWO has an expense ratio of 0.08% and is appropriate for investors with a long time horizon and high risk tolerance. A typical allocation is 5\u201315% of the equity portion for a globally diversified portfolio.",
+    "metadata": {
+      "asset_class": "Equity",
+      "risk_level": "High",
+      "tags": [
+        "ETF",
+        "emerging markets",
+        "global",
+        "growth"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Traditional IRA",
+    "text": "A traditional IRA allows individuals to contribute pre-tax dollars (if eligible for the deduction), reducing current taxable income. Investments grow tax-deferred, and withdrawals in retirement are taxed as ordinary income. For 2024, the contribution limit is $7,000 ($8,000 for those 50+). The deductibility of contributions phases out at higher income levels if you or your spouse are covered by a workplace retirement plan. Required minimum distributions (RMDs) begin at age 73. Traditional IRAs are most beneficial for those who expect to be in a lower tax bracket in retirement than during their working years.",
+    "metadata": {
+      "asset_class": "Account Type",
+      "risk_level": "Varies",
+      "tags": [
+        "IRA",
+        "traditional",
+        "tax-deferred",
+        "retirement"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "401(k) Plan Basics",
+    "text": "A 401(k) is an employer-sponsored retirement savings plan that allows employees to contribute pre-tax income, reducing current taxable income. For 2024, the employee contribution limit is $23,000 ($30,500 for those 50+). Many employers match a percentage of contributions \u2014 always contribute at least enough to capture the full employer match, as it is essentially free money with an immediate 50\u2013100% return. Investment options are limited to those offered in the plan, typically a selection of mutual funds or target date funds. Roth 401(k) options are increasingly available, allowing after-tax contributions with tax-free withdrawals in retirement.",
+    "metadata": {
+      "asset_class": "Account Type",
+      "risk_level": "Varies",
+      "tags": [
+        "401k",
+        "employer match",
+        "retirement",
+        "pre-tax"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Short-Term Bond Fund",
+    "text": "Short-term bond funds invest in bonds with maturities of 1\u20133 years. They offer higher yields than money market funds and HYSAs while maintaining low interest rate risk due to their short duration. Short-term bond funds are appropriate for cash that won't be needed for 1\u20133 years, as a conservative income-generating investment. In a declining rate environment, these funds benefit from price appreciation. The Vanguard Short-Term Bond ETF (BSV) has an expense ratio of 0.04% and holds a mix of Treasuries, agency, and investment-grade corporate bonds. Suitable for conservative investors or as a cash substitute.",
+    "metadata": {
+      "asset_class": "Fixed Income",
+      "risk_level": "Low",
+      "tags": [
+        "short-term bonds",
+        "low duration",
+        "income",
+        "conservative"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Tech Sector ETF (QQQ)",
+    "text": "The Invesco QQQ ETF tracks the Nasdaq-100, which holds the 100 largest non-financial companies listed on the Nasdaq. It is heavily weighted toward technology (over 50%), with significant exposure to companies like Apple, Microsoft, Nvidia, Amazon, and Alphabet. QQQ has historically delivered outsized returns but with significantly higher volatility than the broad market. It is appropriate for growth-oriented investors with a high risk tolerance and long time horizon who want concentrated exposure to technology and innovation. Its expense ratio is 0.20%. It is most suitable as a satellite holding rather than a core position.",
+    "metadata": {
+      "asset_class": "Equity",
+      "risk_level": "High",
+      "tags": [
+        "ETF",
+        "technology",
+        "Nasdaq",
+        "growth",
+        "sector"
+      ]
+    }
+  },
+  {
+    "content_type": "PRODUCT",
+    "title": "Treasury Inflation-Protected Securities (TIPS)",
+    "text": "TIPS are U.S. government bonds whose principal adjusts with inflation as measured by the Consumer Price Index (CPI). When inflation rises, the principal increases, and interest payments (paid at a fixed rate on the adjusted principal) also increase. TIPS provide a direct, government-backed hedge against inflation. They are available with maturities of 5, 10, and 30 years. TIPS are most appropriate in tax-advantaged accounts because the inflation adjustment to principal is taxable as ordinary income even though it is not received as cash until maturity (phantom income). The Vanguard Inflation-Protected Securities Fund (VIPSX) is a low-cost mutual fund option.",
+    "metadata": {
+      "asset_class": "Fixed Income",
+      "risk_level": "Low-Moderate",
+      "tags": [
+        "TIPS",
+        "inflation protection",
+        "Treasury",
+        "real return"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a Roth IRA and how does it work?",
+    "text": "A Roth IRA is an individual retirement account funded with after-tax dollars. Unlike a traditional IRA, contributions are not tax-deductible, but all growth and qualified withdrawals in retirement are completely tax-free. For 2024, you can contribute up to $7,000 per year ($8,000 if you're 50 or older), provided your income is below the phase-out thresholds ($146,000\u2013$161,000 for single filers; $230,000\u2013$240,000 for married filing jointly). Roth IRAs have no required minimum distributions (RMDs) during the owner's lifetime. They are generally most beneficial for younger investors who expect to be in a higher tax bracket in retirement.",
+    "metadata": {
+      "category": "Retirement Accounts",
+      "tags": [
+        "Roth IRA",
+        "retirement",
+        "tax-free",
+        "contribution limits"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is the difference between a stock and a bond?",
+    "text": "A stock represents an ownership stake (equity) in a company. Stockholders benefit when the company grows and its share price rises, and may receive dividends. Stocks carry higher risk \u2014 share prices can fall significantly \u2014 but historically provide higher long-term returns. A bond is a loan made to a company or government, which pays back the principal at maturity along with periodic interest (coupon) payments. Bonds are generally less volatile than stocks and provide predictable income, but offer lower long-term returns. A well-diversified portfolio typically holds both, with the ratio adjusted based on the investor's age, risk tolerance, and time horizon.",
+    "metadata": {
+      "category": "Investment Basics",
+      "tags": [
+        "stocks",
+        "bonds",
+        "investing basics",
+        "diversification"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "How much should I have in an emergency fund?",
+    "text": "Financial advisors generally recommend maintaining 3\u20136 months of essential living expenses in an emergency fund. Essential expenses include housing (rent/mortgage), utilities, food, transportation, minimum debt payments, and insurance premiums. Those with variable income (freelancers, commission-based workers), single-income households, or higher job instability should aim for 6\u201312 months. Emergency funds should be held in highly liquid, safe accounts such as a high-yield savings account (HYSA) or money market fund \u2014 not invested in stocks, as market downturns often coincide with job losses when you might need the funds most.",
+    "metadata": {
+      "category": "Financial Planning",
+      "tags": [
+        "emergency fund",
+        "savings",
+        "financial planning",
+        "liquidity"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What does 'diversification' mean in investing?",
+    "text": "Diversification means spreading investments across different asset classes, sectors, geographies, and securities to reduce overall portfolio risk. The core idea is that not all investments will decline at the same time or by the same amount. A diversified portfolio might include U.S. and international equities, bonds, real estate, and cash equivalents. Within equities, diversification spans large-cap, mid-cap, small-cap, and various sectors (technology, healthcare, energy, etc.). Diversification does not eliminate risk \u2014 it manages it. Low-cost index funds and ETFs are one of the most efficient ways to achieve broad diversification instantly.",
+    "metadata": {
+      "category": "Investment Basics",
+      "tags": [
+        "diversification",
+        "risk management",
+        "portfolio",
+        "asset allocation"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is compound interest and why does it matter?",
+    "text": "Compound interest is the process of earning interest on both your original principal and the interest already accumulated. It is often called the 'eighth wonder of the world' because of its exponential growth effect over time. For example, $10,000 invested at 8% annual return grows to approximately $21,589 in 10 years, $46,610 in 20 years, and $100,627 in 30 years \u2014 without any additional contributions. The key factors are: rate of return, time horizon, and frequency of compounding. Starting to invest early is the most powerful lever available to investors. Delaying investment by even 5\u201310 years can reduce final wealth by 30\u201350%.",
+    "metadata": {
+      "category": "Investment Basics",
+      "tags": [
+        "compound interest",
+        "time value of money",
+        "long-term investing",
+        "growth"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is dollar-cost averaging?",
+    "text": "Dollar-cost averaging (DCA) is an investment strategy where you invest a fixed dollar amount at regular intervals (e.g., $500 every month), regardless of market conditions. When prices are high, your fixed amount buys fewer shares. When prices are low, the same amount buys more shares. Over time, this results in a lower average cost per share compared to making a single lump-sum purchase at a potentially poor time. DCA also removes the emotional pressure of 'timing the market.' It is the natural strategy for 401(k) contributors who invest each paycheck. Research shows that lump-sum investing outperforms DCA roughly two-thirds of the time when a lump sum is available, but DCA reduces regret and behavioral errors.",
+    "metadata": {
+      "category": "Investment Strategy",
+      "tags": [
+        "dollar-cost averaging",
+        "DCA",
+        "behavioral finance",
+        "401k"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is an expense ratio?",
+    "text": "An expense ratio is the annual fee charged by a mutual fund or ETF, expressed as a percentage of your investment. For example, an expense ratio of 0.10% means you pay $1 for every $1,000 invested annually. While this seems small, fees compound over time and can significantly erode long-term returns. A 1% expense ratio can cost an investor hundreds of thousands of dollars over a 30-year investment period compared to a 0.05% index fund. Actively managed funds often charge 0.5\u20131.5%, while passive index ETFs may charge as little as 0.03\u20130.10%. Always compare expense ratios when evaluating funds with similar objectives.",
+    "metadata": {
+      "category": "Investment Basics",
+      "tags": [
+        "expense ratio",
+        "fees",
+        "ETF",
+        "mutual fund",
+        "cost"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is the difference between a traditional IRA and a Roth IRA?",
+    "text": "The key difference is when you get the tax break. With a traditional IRA, contributions may be tax-deductible now (reducing your current tax bill), and you pay taxes on withdrawals in retirement. With a Roth IRA, contributions are made with after-tax money (no upfront deduction), but all qualified withdrawals in retirement are completely tax-free. Traditional IRAs have required minimum distributions (RMDs) starting at age 73; Roth IRAs do not. Traditional IRAs are generally better for those in high tax brackets now who expect lower taxes in retirement. Roth IRAs are better for younger investors or those who expect higher tax rates in retirement. Many advisors recommend having both for tax diversification.",
+    "metadata": {
+      "category": "Retirement Accounts",
+      "tags": [
+        "IRA",
+        "traditional IRA",
+        "Roth IRA",
+        "tax planning",
+        "retirement"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "How does inflation affect my investments?",
+    "text": "Inflation erodes the purchasing power of money over time. If inflation averages 3% annually, $100 today will only have the purchasing power of $74 in 10 years. For investors, this means the 'real' return on an investment is the nominal return minus inflation. A savings account earning 2% with 3% inflation produces a -1% real return \u2014 you're actually losing purchasing power. Equities have historically been the best long-term hedge against inflation, with average real returns of around 7% annually. TIPS, I-Bonds, real estate, and commodities like gold also provide inflation protection. Holding excessive cash or long-term nominal bonds in inflationary environments is particularly damaging.",
+    "metadata": {
+      "category": "Economic Concepts",
+      "tags": [
+        "inflation",
+        "real return",
+        "purchasing power",
+        "hedging"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is asset allocation?",
+    "text": "Asset allocation is the process of dividing investments among different asset classes \u2014 primarily stocks, bonds, and cash \u2014 based on your financial goals, time horizon, and risk tolerance. It is considered the most important investment decision you can make, as studies show that asset allocation explains roughly 90% of portfolio return variability over time. A common rule of thumb for equity allocation is '110 minus your age' (a 40-year-old would hold 70% stocks). However, individual circumstances vary widely. A young investor with a 30-year horizon can tolerate a more aggressive allocation (90%+ stocks), while a retiree needing income and capital preservation may prefer 40\u201360% stocks.",
+    "metadata": {
+      "category": "Investment Strategy",
+      "tags": [
+        "asset allocation",
+        "stocks",
+        "bonds",
+        "portfolio construction",
+        "risk"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is rebalancing and how often should I do it?",
+    "text": "Portfolio rebalancing is the process of realigning your portfolio back to its target asset allocation by selling assets that have grown above their target weight and buying those that have fallen below. For example, if your target is 60% stocks/40% bonds but stocks have risen to 70%, you would sell some stocks and buy bonds. Rebalancing maintains your intended risk level and enforces a 'buy low, sell high' discipline. Most advisors recommend rebalancing annually or when any asset class drifts more than 5% from its target. Tax-efficient rebalancing involves making adjustments in tax-advantaged accounts first and using new contributions to rebalance rather than selling.",
+    "metadata": {
+      "category": "Portfolio Management",
+      "tags": [
+        "rebalancing",
+        "asset allocation",
+        "discipline",
+        "risk management"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a fiduciary advisor?",
+    "text": "A fiduciary financial advisor is legally obligated to act in the client's best interest at all times. This is a higher standard than the 'suitability' standard, which only requires that an investment be 'suitable' for a client \u2014 not necessarily the best option. Fee-only fiduciary advisors are compensated only by client fees (not commissions), eliminating many conflicts of interest. When selecting a financial advisor, ask directly: 'Are you a fiduciary at all times?' and 'How are you compensated?' Certified Financial Planners (CFPs) are held to a fiduciary standard. Registered Investment Advisors (RIAs) registered with the SEC or state are also fiduciaries.",
+    "metadata": {
+      "category": "Advisor Selection",
+      "tags": [
+        "fiduciary",
+        "CFP",
+        "RIA",
+        "fee-only",
+        "conflict of interest"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is tax-loss harvesting?",
+    "text": "Tax-loss harvesting is the practice of selling investments that have declined in value to realize a capital loss, which can offset capital gains and up to $3,000 of ordinary income per year. Unused losses can be carried forward to future tax years. After selling, you can immediately reinvest in a similar (but not 'substantially identical') security to maintain your market exposure \u2014 this avoids the IRS wash-sale rule. Tax-loss harvesting is most valuable in taxable accounts for investors in higher tax brackets. Robo-advisors like Betterment and Wealthfront automate this process. It converts a paper loss into a tangible tax savings without meaningfully changing your investment exposure.",
+    "metadata": {
+      "category": "Tax Planning",
+      "tags": [
+        "tax-loss harvesting",
+        "capital gains",
+        "tax efficiency",
+        "wash-sale rule"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "How do I know how much risk I can tolerate?",
+    "text": "Risk tolerance has two components: your ability to take risk (financial capacity) and your willingness to take risk (psychological comfort). Ability to take risk is determined by time horizon, income stability, and financial obligations. A 25-year-old with a stable job and no dependents has high ability to take risk. Willingness is behavioral \u2014 can you watch your portfolio drop 40% without panic-selling? A simple test: if the market drops 30% tomorrow, would you: (a) buy more, (b) do nothing, (c) sell some, or (d) sell everything? If your answer is (c) or (d), your portfolio may be too aggressive. Formal risk questionnaires used by advisors help quantify this. Always align your portfolio to the lower of your ability and willingness to take risk.",
+    "metadata": {
+      "category": "Investment Psychology",
+      "tags": [
+        "risk tolerance",
+        "behavioral finance",
+        "portfolio",
+        "volatility"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is the difference between active and passive investing?",
+    "text": "Active investing involves fund managers or investors selecting individual securities attempting to outperform a benchmark index. Passive investing tracks a market index (like the S&P 500) without trying to beat it. Decades of evidence show that roughly 80\u201390% of active fund managers underperform their benchmark index over 15+ year periods, primarily due to higher fees, trading costs, and the difficulty of consistently predicting markets. The remaining 10\u201320% who outperform often don't do so consistently across periods. For most retail investors, low-cost passive index funds and ETFs are the most reliable path to market returns. Active investing may be appropriate for alternative asset classes or specific market niches.",
+    "metadata": {
+      "category": "Investment Strategy",
+      "tags": [
+        "active investing",
+        "passive investing",
+        "index funds",
+        "fees",
+        "performance"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "When should I start investing?",
+    "text": "The best time to start investing is as early as possible \u2014 the second best time is today. Time is the most powerful variable in wealth building due to compound growth. A person who invests $5,000/year from age 22 to 32 (10 years, $50,000 total) and then stops will often end up with more wealth at 65 than someone who invests $5,000/year from age 32 to 65 (33 years, $165,000 total), assuming the same 8% annual return. The first priority is to eliminate high-interest debt (credit cards above 7%). Then build an emergency fund. Then maximize employer 401(k) match. Then maximize Roth IRA contributions. Then additional taxable investing. Time in the market consistently beats timing the market.",
+    "metadata": {
+      "category": "Financial Planning",
+      "tags": [
+        "investing basics",
+        "starting early",
+        "compound interest",
+        "financial planning"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a target date fund?",
+    "text": "A target date fund (also called a lifecycle fund) is a single fund designed to be a complete retirement portfolio. You choose a fund corresponding to your expected retirement year (e.g., 'Target Date 2055 Fund'), and the fund automatically manages a diversified portfolio that gradually shifts from growth-oriented (mostly stocks) to more conservative (more bonds and cash) as the target date approaches. This 'glide path' reduces portfolio risk as you near retirement. Target date funds are the default investment option in most 401(k) plans. They are appropriate for investors who prefer a hands-off approach. The main consideration is the expense ratio \u2014 look for index-based target date funds with costs below 0.15%.",
+    "metadata": {
+      "category": "Investment Products",
+      "tags": [
+        "target date fund",
+        "lifecycle",
+        "retirement",
+        "glide path",
+        "401k"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What happens to my investments if the market crashes?",
+    "text": "Market crashes \u2014 defined as drops of 20% or more \u2014 are a normal part of investing. Since 1950, the S&P 500 has experienced 12 bear markets, with the average decline being about 35% and the average duration about 14 months. However, every single bear market in history has been followed by a recovery to new all-time highs. The worst thing an investor can do is sell during a crash and lock in losses, only to miss the recovery. Historically, the best trading days follow the worst days \u2014 missing just the 10 best days in any 20-year period can cut your returns in half. The appropriate response to a crash depends on your time horizon: if it's 10+ years, stay the course or consider buying more.",
+    "metadata": {
+      "category": "Investment Psychology",
+      "tags": [
+        "market crash",
+        "bear market",
+        "behavioral finance",
+        "long-term investing"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a Required Minimum Distribution (RMD)?",
+    "text": "A Required Minimum Distribution (RMD) is the minimum amount the IRS requires you to withdraw annually from tax-deferred retirement accounts (traditional IRA, 401(k), 403(b), etc.) starting at age 73 (as of the SECURE 2.0 Act). The amount is calculated by dividing your account balance on December 31 of the prior year by a life expectancy factor from IRS tables. Failing to take your RMD results in a penalty of 25% of the amount not withdrawn (reduced to 10% if corrected within 2 years). Roth IRAs do not have RMDs during the owner's lifetime. RMDs can push retirees into higher tax brackets, so proactive strategies like Roth conversions in the years before RMDs begin can reduce the long-term tax burden.",
+    "metadata": {
+      "category": "Retirement Accounts",
+      "tags": [
+        "RMD",
+        "traditional IRA",
+        "401k",
+        "retirement distribution",
+        "tax"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is capital gains tax?",
+    "text": "Capital gains tax is owed when you sell an investment for more than you paid for it (your cost basis). Short-term capital gains \u2014 on assets held for one year or less \u2014 are taxed at ordinary income tax rates (up to 37%). Long-term capital gains \u2014 on assets held for more than one year \u2014 are taxed at preferential rates of 0%, 15%, or 20%, depending on your taxable income. For most middle-class investors, long-term capital gains are taxed at 15%. This creates a powerful incentive to hold investments for at least one year. Tax-advantaged accounts (IRAs, 401(k)s) shelter gains from capital gains tax entirely until withdrawal (or permanently for Roth accounts).",
+    "metadata": {
+      "category": "Tax Planning",
+      "tags": [
+        "capital gains",
+        "taxes",
+        "long-term",
+        "short-term",
+        "tax efficiency"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "Should I pay off debt or invest?",
+    "text": "The decision depends primarily on the interest rate of the debt. As a general rule: (1) Always capture employer 401(k) match first \u2014 it's an immediate 50\u2013100% return. (2) Pay off high-interest debt (credit cards, 7%+) before investing further \u2014 no investment reliably returns more than a 20% credit card rate. (3) For moderate-rate debt (student loans, mortgages at 3\u20136%), the answer depends on your psychological preference and expected investment returns. The mathematical case often favors investing, but paying off debt provides a guaranteed return and psychological peace of mind. (4) Low-rate debt (under 3%) in a mortgage can generally coexist with investing, as historical equity returns have exceeded this rate.",
+    "metadata": {
+      "category": "Financial Planning",
+      "tags": [
+        "debt",
+        "investing",
+        "credit card",
+        "student loans",
+        "prioritization"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a beneficiary designation?",
+    "text": "A beneficiary designation names who will receive your retirement account or life insurance proceeds upon your death. These designations override your will \u2014 meaning even if your will says one thing, the beneficiary form on your IRA or 401(k) controls who receives the money. It is critical to keep beneficiary designations up to date after major life events (marriage, divorce, death of a named beneficiary, birth of a child). Primary beneficiaries receive assets directly. Contingent (secondary) beneficiaries receive assets if the primary beneficiary predeceases you. Naming a trust as beneficiary can be appropriate for estate planning but requires careful coordination with an estate attorney.",
+    "metadata": {
+      "category": "Estate Planning",
+      "tags": [
+        "beneficiary",
+        "estate planning",
+        "IRA",
+        "life insurance",
+        "will"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a robo-advisor?",
+    "text": "A robo-advisor is a digital platform that uses algorithms to automatically build and manage an investment portfolio based on your stated goals, time horizon, and risk tolerance. Popular robo-advisors include Betterment, Wealthfront, and Schwab Intelligent Portfolios. They typically invest in low-cost ETFs, offer automatic rebalancing, and provide tax-loss harvesting for taxable accounts. Management fees range from 0% (Schwab) to 0.25\u20130.50% annually. Robo-advisors are appropriate for hands-off investors who want a diversified, low-cost portfolio without making investment decisions themselves. They are generally not suitable for complex financial planning needs (estate planning, business ownership, tax optimization) where a human CFP provides greater value.",
+    "metadata": {
+      "category": "Technology",
+      "tags": [
+        "robo-advisor",
+        "automated investing",
+        "Betterment",
+        "Wealthfront",
+        "fintech"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is Social Security and when should I claim it?",
+    "text": "Social Security is a federal program that provides retirement, disability, and survivor benefits funded by payroll taxes. You become eligible for retirement benefits at age 62, but claiming early permanently reduces your monthly benefit. Full retirement age (FRA) is 67 for those born after 1960. Delaying beyond FRA increases your benefit by 8% per year until age 70. The optimal claiming age depends on health, longevity expectations, financial need, and whether you're married. For those in good health, delaying to 70 maximizes lifetime income. For married couples, the higher earner should generally delay to maximize the survivor benefit. The break-even age for delaying from 62 to 70 is approximately age 80\u201382.",
+    "metadata": {
+      "category": "Retirement Planning",
+      "tags": [
+        "Social Security",
+        "retirement",
+        "claiming strategy",
+        "longevity"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is an expense ratio and how do fees affect my returns?",
+    "text": "An expense ratio is the annual cost of owning a mutual fund or ETF, expressed as a percentage of assets. Even small differences in fees can have a dramatic impact over time due to compounding. Consider two funds: one with a 1.0% expense ratio and one with 0.05% \u2014 both earning a gross 8% return. Over 30 years, a $100,000 investment in the low-cost fund grows to approximately $906,000, while the same investment in the high-fee fund grows to only $574,000 \u2014 a difference of $332,000. The fee difference is literally the difference between a comfortable retirement and a strained one. Always prioritize low-cost index funds and ETFs, especially for core portfolio holdings.",
+    "metadata": {
+      "category": "Investment Basics",
+      "tags": [
+        "expense ratio",
+        "fees",
+        "compounding",
+        "long-term impact",
+        "cost"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is an index fund?",
+    "text": "An index fund is a type of mutual fund or ETF that passively tracks a market index such as the S&P 500, total U.S. stock market, or bond market. Instead of having a manager select individual stocks, the fund simply holds all (or a representative sample) of the securities in the index in the same proportions. The result is broad diversification at extremely low cost. Index funds have low turnover, resulting in tax efficiency in taxable accounts. Jack Bogle founded Vanguard and pioneered index fund investing, famously stating that 'in investing, you get what you don't pay for.' The S&P 500 index has outperformed the majority of actively managed funds over any 10-year period.",
+    "metadata": {
+      "category": "Investment Products",
+      "tags": [
+        "index fund",
+        "passive investing",
+        "S&P 500",
+        "ETF",
+        "Vanguard"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a net worth statement?",
+    "text": "A net worth statement is a financial snapshot that calculates your wealth by subtracting total liabilities (what you owe) from total assets (what you own). Assets include cash, investments, retirement accounts, real estate, and valuable personal property. Liabilities include mortgages, car loans, student loans, and credit card balances. Net Worth = Total Assets \u2212 Total Liabilities. Tracking net worth annually is a powerful way to measure financial progress. A negative net worth is common early in life (especially with student loans) and does not indicate financial failure if the trajectory is improving. Financial advisors typically prepare a net worth analysis as part of a comprehensive financial plan.",
+    "metadata": {
+      "category": "Financial Planning",
+      "tags": [
+        "net worth",
+        "financial planning",
+        "assets",
+        "liabilities",
+        "wealth"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a Roth conversion and when does it make sense?",
+    "text": "A Roth conversion is the process of moving funds from a traditional IRA or 401(k) to a Roth IRA. The converted amount is added to your taxable income in the year of conversion. The strategy makes sense when: (1) you are in a temporarily low tax bracket (e.g., early retirement before Social Security begins); (2) you expect tax rates to be higher in the future; (3) you want to reduce future RMDs; (4) you want to leave tax-free assets to heirs. Converting in years when income is low \u2014 such as after early retirement but before Social Security \u2014 can fill up lower tax brackets at advantageous rates. A series of partial conversions over several years is usually more tax-efficient than converting all at once.",
+    "metadata": {
+      "category": "Tax Planning",
+      "tags": [
+        "Roth conversion",
+        "tax planning",
+        "traditional IRA",
+        "retirement",
+        "RMD"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is life insurance and do I need it?",
+    "text": "Life insurance provides a financial death benefit to your beneficiaries if you die. Term life insurance is the simplest and most cost-effective type \u2014 it provides coverage for a set period (10, 20, or 30 years) and has no cash value. Whole life and universal life insurance are permanent policies with a cash value component, but come with significantly higher premiums and complexity. Most financial advisors recommend term life insurance for those with dependents or financial obligations (mortgage, college funding). A rule of thumb is 10\u201312x your annual income in coverage. You may not need life insurance if you are single with no dependents or have accumulated sufficient assets to self-insure.",
+    "metadata": {
+      "category": "Insurance",
+      "tags": [
+        "life insurance",
+        "term life",
+        "whole life",
+        "dependents",
+        "financial planning"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "How does a financial advisor get paid?",
+    "text": "Financial advisors are compensated in three primary ways: (1) Fee-only: Advisors charge a flat fee, hourly rate, or percentage of assets under management (AUM), typically 0.5\u20131.5% annually. They receive no commissions. This eliminates most conflicts of interest. (2) Commission-based: Advisors earn commissions from selling financial products (insurance, mutual funds, annuities). Their recommendations may be influenced by which products pay higher commissions. (3) Fee-based: A hybrid \u2014 they charge advisory fees but also earn commissions on some products. Always ask how your advisor is compensated and whether they are a fiduciary. The NAPFA (National Association of Personal Financial Advisors) directory lists fee-only, fiduciary advisors.",
+    "metadata": {
+      "category": "Advisor Selection",
+      "tags": [
+        "advisor compensation",
+        "fee-only",
+        "commission",
+        "fiduciary",
+        "AUM"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a will and why do I need one?",
+    "text": "A will (last will and testament) is a legal document that specifies how you want your assets distributed after death and names a guardian for minor children. Without a will, your estate is distributed according to your state's intestacy laws, which may not reflect your wishes. A will must go through probate \u2014 the court-supervised process of validating the will and distributing assets \u2014 which can be time-consuming and public. Note that assets with beneficiary designations (IRAs, 401(k)s, life insurance) and jointly owned property pass outside the will and probate. Everyone over 18 with any assets should have a will. A simple will can be created inexpensively through an estate attorney or online legal services.",
+    "metadata": {
+      "category": "Estate Planning",
+      "tags": [
+        "will",
+        "estate planning",
+        "probate",
+        "guardian",
+        "inheritance"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a stock market index?",
+    "text": "A stock market index is a hypothetical portfolio of securities representing a specific segment of the financial market. Indexes are used as benchmarks to measure market performance. The S&P 500 tracks the 500 largest U.S. publicly traded companies by market capitalization and represents approximately 80% of the total U.S. equity market value. The Dow Jones Industrial Average (DJIA) tracks just 30 large U.S. companies. The Nasdaq Composite tracks all companies listed on the Nasdaq exchange (heavily tech-weighted). The Russell 2000 tracks small-cap U.S. stocks. You cannot invest directly in an index \u2014 but you can invest in an index fund or ETF that tracks it.",
+    "metadata": {
+      "category": "Investment Basics",
+      "tags": [
+        "index",
+        "S&P 500",
+        "Dow Jones",
+        "benchmark",
+        "market"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "How does a 401(k) employer match work?",
+    "text": "An employer 401(k) match is a contribution your employer makes to your retirement account based on your own contributions. For example, a common match is '100% of the first 3% of salary' \u2014 if you earn $80,000 and contribute 3% ($2,400), your employer also contributes $2,400. Another common formula is '50% of the first 6%' \u2014 contributing 6% of salary earns a 3% employer match. The employer match is essentially a 50\u2013100% immediate return on your contribution, making it the single best investment available to most employees. Always contribute at least enough to receive the full employer match before directing money to other accounts. Employer matches are subject to vesting schedules \u2014 meaning you may need to stay employed for 1\u20136 years to fully own those funds.",
+    "metadata": {
+      "category": "Retirement Accounts",
+      "tags": [
+        "401k",
+        "employer match",
+        "vesting",
+        "retirement",
+        "free money"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is estate planning?",
+    "text": "Estate planning is the process of arranging for the transfer of your assets after death in a tax-efficient, legally sound manner that reflects your wishes. Key components include: a will (directs asset distribution and names guardians), beneficiary designations on retirement accounts and insurance, durable power of attorney (authorizes someone to make financial decisions if you're incapacitated), healthcare proxy/living will (medical decisions), and potentially a revocable living trust (avoids probate and provides privacy). For high-net-worth individuals, estate planning also includes strategies to minimize estate taxes (gifts, irrevocable trusts, charitable planning). Even those of modest means benefit from basic estate planning documents to avoid court involvement and family disputes.",
+    "metadata": {
+      "category": "Estate Planning",
+      "tags": [
+        "estate planning",
+        "will",
+        "trust",
+        "power of attorney",
+        "inheritance"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a taxable brokerage account?",
+    "text": "A taxable brokerage account is an investment account with no special tax advantages \u2014 you invest with after-tax dollars, and dividends, interest, and capital gains are taxed in the year they are received or realized. Despite this, taxable accounts offer key advantages: no contribution limits, no withdrawal restrictions, access to any investment type, and favorable long-term capital gains tax rates. They are appropriate after maxing out tax-advantaged accounts (401k, IRA, HSA). Tax efficiency strategies for taxable accounts include: holding tax-efficient index funds, avoiding high-turnover funds, using tax-loss harvesting, and placing high-income assets (bonds, REITs) in tax-advantaged accounts while equities go in taxable accounts (asset location).",
+    "metadata": {
+      "category": "Account Types",
+      "tags": [
+        "taxable account",
+        "brokerage",
+        "capital gains",
+        "tax efficiency",
+        "investing"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is Social Security spousal benefit?",
+    "text": "A Social Security spousal benefit allows a spouse to receive up to 50% of the other spouse's full retirement benefit amount, even if the spouse has never worked or has limited earnings history. This benefit is available for current spouses (married for at least 1 year) and, in some cases, divorced spouses (married at least 10 years, currently unmarried). The spousal benefit can be claimed as early as age 62 (with a reduction) or at full retirement age (for the full 50%). Unlike the worker's own benefit, spousal benefits do not increase by delaying past full retirement age. Coordinating spousal benefits with the primary earner's claiming strategy is an important part of retirement income planning for married couples.",
+    "metadata": {
+      "category": "Retirement Planning",
+      "tags": [
+        "Social Security",
+        "spousal benefit",
+        "retirement",
+        "married couples"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a health insurance deductible?",
+    "text": "A health insurance deductible is the amount you must pay out-of-pocket for covered medical services before your insurance begins to pay. For example, with a $2,000 deductible, you pay the first $2,000 in medical costs each year \u2014 after that, insurance covers its share. A High Deductible Health Plan (HDHP) has a minimum deductible of $1,600 (individual) or $3,200 (family) for 2024, and qualifies you to open an HSA. Lower-deductible plans typically have higher monthly premiums. The right choice depends on your expected healthcare usage. Healthy individuals with low expected medical costs often benefit from HDHPs paired with HSAs, while those with chronic conditions or high expected costs may prefer lower-deductible plans despite higher premiums.",
+    "metadata": {
+      "category": "Insurance",
+      "tags": [
+        "health insurance",
+        "deductible",
+        "HDHP",
+        "HSA",
+        "premiums"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a margin account?",
+    "text": "A margin account allows investors to borrow money from their broker to purchase securities, using their existing portfolio as collateral. The broker charges interest on the borrowed funds. Margin amplifies both gains and losses \u2014 if you buy $10,000 of stock using $5,000 of your own money and $5,000 borrowed, a 20% gain in the stock gives you a 40% return on your capital, but a 20% loss wipes out 40% of your investment. A 'margin call' occurs when your account equity falls below the broker's maintenance margin requirement, forcing you to deposit more funds or sell holdings. Margin investing is inappropriate for most retail investors and is generally not recommended except for sophisticated investors with significant experience and risk tolerance.",
+    "metadata": {
+      "category": "Investment Products",
+      "tags": [
+        "margin",
+        "leverage",
+        "risk",
+        "brokerage",
+        "advanced"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is an ETF vs. a mutual fund?",
+    "text": "Both ETFs (exchange-traded funds) and mutual funds pool money from many investors to hold a diversified portfolio of securities. The key differences are: (1) Trading: ETFs trade on exchanges throughout the day like stocks, while mutual fund shares are priced once per day after market close. (2) Minimums: Most ETFs can be purchased for the price of one share; mutual funds often have $1,000\u2013$3,000 minimums. (3) Tax efficiency: ETFs are generally more tax-efficient due to their in-kind creation/redemption mechanism. (4) Cost: Index ETFs and index mutual funds have similar low expense ratios; actively managed funds typically charge more. For most investors, low-cost index ETFs are the preferred vehicle due to their flexibility, tax efficiency, and low minimums.",
+    "metadata": {
+      "category": "Investment Products",
+      "tags": [
+        "ETF",
+        "mutual fund",
+        "index",
+        "comparison",
+        "investing"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a financial plan?",
+    "text": "A comprehensive financial plan is a document that analyzes your current financial situation and provides a roadmap to achieve your goals. Key components include: net worth analysis, cash flow and budgeting, tax planning, investment plan and asset allocation, retirement projections, insurance analysis, estate planning review, and education funding (if applicable). A one-time comprehensive financial plan from a fee-only CFP typically costs $2,000\u2013$5,000. Ongoing financial planning relationships (AUM-based) charge 0.5\u20131.5% of assets annually. At minimum, everyone should have a clear understanding of their monthly cash flow, an emergency fund, and a retirement savings strategy \u2014 even without a formal plan.",
+    "metadata": {
+      "category": "Financial Planning",
+      "tags": [
+        "financial plan",
+        "CFP",
+        "retirement",
+        "cash flow",
+        "comprehensive"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a 403(b) plan?",
+    "text": "A 403(b) plan is a tax-advantaged retirement savings plan similar to a 401(k), but available to employees of public schools, non-profit organizations, hospitals, and certain ministers. Contribution limits are the same as a 401(k): $23,000 in 2024 ($30,500 for those 50+). Some 403(b) plans offer an additional catch-up provision for employees with 15+ years of service. Historically, 403(b) plans had higher fees due to annuity-based investment options, but modern plans increasingly offer low-cost index fund options. Employees of non-profits may also have access to a 457(b) plan, which can be used simultaneously with a 403(b) to effectively double contribution limits.",
+    "metadata": {
+      "category": "Retirement Accounts",
+      "tags": [
+        "403b",
+        "non-profit",
+        "retirement",
+        "teacher",
+        "tax-advantaged"
+      ]
+    }
+  },
+  {
+    "content_type": "FAQ",
+    "title": "What is a backdoor Roth IRA?",
+    "text": "A backdoor Roth IRA is a strategy for high-income earners who exceed the Roth IRA income limits to still contribute to a Roth account. The process involves: (1) Contributing to a traditional IRA on a non-deductible basis (no income limit for traditional IRA contributions, only for deductibility). (2) Converting the traditional IRA to a Roth IRA. If the traditional IRA holds only the non-deductible contribution (no pre-tax money), the conversion is tax-free. Complications arise if you have other traditional IRA balances due to the 'pro-rata rule,' which averages the tax basis across all IRAs. The backdoor Roth strategy has been in legal practice for years and has broad Congressional awareness without being specifically prohibited.",
+    "metadata": {
+      "category": "Tax Planning",
+      "tags": [
+        "backdoor Roth",
+        "high income",
+        "Roth IRA",
+        "conversion",
+        "pro-rata rule"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Q1 2025 Market Outlook: Navigating Rate Uncertainty",
+    "text": "As we enter Q1 2025, equity markets face a complex backdrop of moderating inflation and an uncertain Federal Reserve trajectory. After 11 rate hikes totaling 525 basis points since March 2022, the Fed held rates steady through much of 2024 before beginning a gradual easing cycle. The key question for 2025 is the pace and magnitude of further cuts. We expect 2\u20133 cuts of 25 basis points each in 2025, bringing the federal funds rate to approximately 3.75\u20134.00%. Equity markets have priced in a 'soft landing,' and valuations remain elevated by historical standards (S&P 500 forward P/E of ~21x). We recommend a balanced approach: maintain equity exposure but with a quality tilt toward companies with pricing power and strong free cash flow.",
+    "metadata": {
+      "period": "Q1 2025",
+      "topic": "Interest Rates",
+      "tags": [
+        "outlook",
+        "Federal Reserve",
+        "rate cuts",
+        "equity valuation"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The Case for International Diversification in 2025",
+    "text": "U.S. equities have significantly outperformed international stocks over the past decade, leading many investors to question the value of international diversification. However, current valuation disparities are compelling. European equities trade at approximately 13x forward earnings versus 21x for U.S. large caps. Japanese equities, buoyed by corporate governance reforms, offer attractive value at 14x earnings with improving shareholder returns. Emerging markets, particularly India and Southeast Asia, offer strong secular growth tailwinds from demographics and infrastructure investment. While currency risk and geopolitical uncertainty are real concerns, a 20\u201330% international allocation provides valuable diversification that may reduce portfolio volatility while maintaining return potential.",
+    "metadata": {
+      "period": "2025",
+      "topic": "International Markets",
+      "tags": [
+        "international",
+        "valuation",
+        "diversification",
+        "emerging markets"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Fixed Income Outlook: Bonds Are Back",
+    "text": "After the painful 2022 bond bear market \u2014 the worst in modern history \u2014 fixed income has re-emerged as a genuinely attractive asset class. With the 10-year Treasury yield at approximately 4.2% and investment-grade corporate bonds yielding 5.0\u20135.5%, bonds now offer meaningful income for the first time in over a decade. More importantly, bonds have regained their portfolio role as a diversifier \u2014 in a recession scenario, rates would likely fall, providing capital appreciation to offset equity losses. We recommend a barbell approach: short-term Treasuries and money market funds for liquidity, and intermediate investment-grade bonds (5\u20137 year duration) for income. Avoid long-duration bonds (10+ years) until the rate trajectory becomes clearer.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Fixed Income",
+      "tags": [
+        "bonds",
+        "yield",
+        "fixed income",
+        "portfolio diversification"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Artificial Intelligence and Technology: Separating Signal from Noise",
+    "text": "The AI investment theme dominated equity markets in 2023\u20132024, driving extraordinary gains in semiconductor and large-cap technology stocks. Nvidia's data center GPU business grew revenues by over 200% year-over-year, while the 'Magnificent Seven' technology stocks (Apple, Microsoft, Nvidia, Amazon, Alphabet, Meta, Tesla) accounted for a disproportionate share of S&P 500 returns. Looking ahead, we see continued AI infrastructure investment as the first phase (data centers, chips, power) gives way to a second phase of AI applications and productivity gains across industries. While valuations for AI-adjacent stocks are elevated, the long-term productivity potential is real. We recommend broad market exposure through S&P 500 index funds rather than concentrated AI-themed bets.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Technology/AI",
+      "tags": [
+        "AI",
+        "technology",
+        "Nvidia",
+        "Magnificent Seven",
+        "sector"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Housing Market Update: Affordability Challenges Persist",
+    "text": "The U.S. housing market remains in a 'lock-in' effect \u2014 existing homeowners with 3% mortgages are reluctant to sell and take on a new mortgage at 6.5\u20137%, severely limiting inventory. This supply constraint has kept home prices elevated despite the significant decline in affordability. The monthly payment on a median-priced home has risen from approximately $1,200 in 2021 to over $2,200 today. First-time homebuyers face particularly acute challenges. As the Fed continues to lower rates, mortgage rates should gradually decline, unlocking some inventory and moderating price appreciation. For investors, REITs focused on apartments and industrial properties offer an attractive alternative to direct real estate ownership in this environment.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Real Estate",
+      "tags": [
+        "housing",
+        "mortgage rates",
+        "real estate",
+        "affordability",
+        "REIT"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Federal Reserve Policy and Impact on Your Portfolio",
+    "text": "The Federal Reserve's dual mandate is to maximize employment and maintain price stability (targeting 2% inflation). From 2022\u20132023, the Fed raised rates aggressively to combat 40-year high inflation. Inflation peaked at 9.1% in June 2022 and has moderated to near the 2% target by late 2024. As the Fed pivots to easing, different asset classes respond in predictable ways: (1) Cash/money market yields decline as the Fed cuts. (2) Bonds appreciate as yields fall. (3) Equities generally benefit from lower borrowing costs. (4) The housing market improves as mortgage rates fall. (5) The U.S. dollar typically weakens, benefiting international stocks and commodities. Investors holding excessive cash should gradually deploy into longer-duration bonds and equities.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Monetary Policy",
+      "tags": [
+        "Federal Reserve",
+        "interest rates",
+        "inflation",
+        "portfolio impact"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The Energy Transition Investment Opportunity",
+    "text": "The global transition from fossil fuels to clean energy represents one of the largest capital investment cycles in history. The International Energy Agency estimates $4 trillion in annual clean energy investment will be needed by 2030 to reach net-zero targets. In the U.S., the Inflation Reduction Act (IRA) of 2022 allocated approximately $370 billion in clean energy incentives, spurring significant investment in solar, wind, EVs, and battery storage. Investment opportunities span multiple sectors: utilities (renewable power), industrials (grid infrastructure), materials (lithium, copper, rare earth minerals), and technology (battery manufacturers, EV makers). Clean energy ETFs such as ICLN and QCLN provide broad exposure. The sector is volatile and dependent on policy continuity, making diversification within the theme important.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Clean Energy",
+      "tags": [
+        "ESG",
+        "clean energy",
+        "IRA",
+        "transition",
+        "investing theme"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Geopolitical Risk and Portfolio Resilience",
+    "text": "Elevated geopolitical tensions \u2014 including the ongoing conflicts in Ukraine and the Middle East, U.S.-China trade and technology competition, and regional political instability \u2014 represent ongoing tail risks for global financial markets. Historically, geopolitical events cause short-term market volatility but rarely derail long-term equity trends. However, they can cause persistent disruptions in commodity prices (particularly oil), supply chains, and trade flows. Building portfolio resilience against geopolitical risk involves: (1) Broad international diversification to avoid single-country concentration. (2) A small allocation to gold or commodity funds as a hedge. (3) Avoiding over-concentration in sectors most exposed to trade disruption (semiconductors, defense, energy). (4) Maintaining adequate liquidity to avoid selling during volatility.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Geopolitical Risk",
+      "tags": [
+        "geopolitical",
+        "risk",
+        "volatility",
+        "gold",
+        "diversification"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Small-Cap Value: The Overlooked Opportunity",
+    "text": "Large-cap technology stocks have dominated performance for nearly a decade, leaving small-cap value stocks trading at some of the cheapest valuations relative to large caps in modern history. The Russell 2000 Value index trades at approximately 12x forward earnings versus 21x for the S&P 500. Small caps historically outperform large caps when the economy is recovering from a slowdown and interest rates are declining \u2014 both conditions that may characterize 2025. Additionally, small-cap U.S. companies are more domestically focused, providing insulation from global trade tensions. We view small-cap value as one of the more attractively valued segments of the market for investors with a 5+ year time horizon and tolerance for higher near-term volatility.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Small Cap",
+      "tags": [
+        "small cap",
+        "value",
+        "valuation",
+        "Russell 2000",
+        "opportunity"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Inflation: Is It Really Under Control?",
+    "text": "After peaking at 9.1% in June 2022, CPI inflation has declined significantly, reaching 2.4\u20132.7% by late 2024. While the trend is clearly positive, several structural factors may prevent a full return to the pre-pandemic sub-2% regime: (1) De-globalization and supply chain reshoring are structurally inflationary. (2) Tight labor markets and demographic aging support wage growth. (3) Energy transition investment requires massive commodity inputs. (4) Fiscal deficits remain elevated, a historically inflationary force. Our base case is inflation settling in the 2.5\u20133% range \u2014 not a crisis, but above the Fed's target. Portfolios should maintain meaningful exposure to real assets (equities, real estate, TIPS, commodities) rather than over-relying on nominal bonds for inflation protection.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Inflation",
+      "tags": [
+        "inflation",
+        "CPI",
+        "monetary policy",
+        "real assets",
+        "Fed target"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Dividend Investing in a Changing Rate Environment",
+    "text": "High-quality dividend growth stocks offer an attractive combination of income and inflation protection. Companies that consistently grow dividends tend to have strong competitive positions, disciplined management, and resilient cash flows. As interest rates decline from current highs, dividend stocks become relatively more attractive compared to bonds and cash. Sectors with historically strong dividend growth include healthcare, consumer staples, industrials, and financial services. Key metrics to evaluate: dividend yield (current income), payout ratio (sustainability \u2014 below 60% is generally healthy), dividend growth rate (10-year CAGR), and free cash flow coverage. The Dividend Aristocrats (S&P 500 companies with 25+ consecutive years of dividend increases) are a starting universe for quality dividend investors.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Dividend Investing",
+      "tags": [
+        "dividends",
+        "income",
+        "dividend growth",
+        "rate environment",
+        "quality"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Private Credit: Opportunities and Risks for Retail Investors",
+    "text": "Private credit \u2014 loans to middle-market companies made by non-bank lenders \u2014 has grown rapidly as banks retreated from this market following regulatory changes. Business Development Companies (BDCs) allow retail investors to access private credit markets, typically offering yields of 8\u201312% through floating rate loans. This floating rate characteristic provides natural inflation protection. However, private credit carries significant risks: illiquidity, credit risk (primarily below-investment-grade borrowers), complexity, and high management fees. BDCs like Ares Capital (ARCC) and Prospect Capital are publicly traded, providing liquidity not available in private credit funds. Private credit is appropriate for income-seeking investors who understand the risks and can tolerate the complexity. It should represent no more than 5\u201310% of a diversified portfolio.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Private Credit",
+      "tags": [
+        "private credit",
+        "BDC",
+        "income",
+        "illiquidity",
+        "alternative"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The 2025 Tax Landscape for Investors",
+    "text": "Several key provisions of the 2017 Tax Cuts and Jobs Act are scheduled to expire at the end of 2025, creating significant uncertainty for financial planning. Potentially expiring provisions include: lower individual income tax rates (reverting from 37% to 39.6% at the top), higher standard deductions, the 20% pass-through business deduction (Section 199A), and the temporarily doubled estate tax exemption ($13.6 million per person in 2024). The outcome depends on the composition of Congress. Proactive strategies for 2025 include: accelerating income recognition where beneficial (Roth conversions, realizing capital gains at current rates), maximizing deductions, and reviewing estate plans in light of potentially lower exemptions. Working with a tax advisor before year-end 2025 is particularly important.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Tax Planning",
+      "tags": [
+        "tax",
+        "TCJA",
+        "sunset",
+        "2025 tax cliff",
+        "planning"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Healthcare Sector: Demographics Drive Demand",
+    "text": "The U.S. healthcare sector represents approximately 18% of GDP and continues to grow, driven by powerful demographic tailwinds. The 'Silver Tsunami' \u2014 73 million Baby Boomers entering peak healthcare consumption years \u2014 will drive elevated demand for decades. Key investment themes within healthcare: (1) Pharmaceuticals and biotech: GLP-1 drugs (Ozempic, Wegovy) are potentially transformative for obesity, diabetes, and cardiovascular disease. (2) Medical devices: aging demographics drive device demand. (3) Healthcare IT: automation and AI are transforming care delivery. (4) Senior care: assisted living and home health. Healthcare ETFs such as XLV (large-cap pharma/devices) and IBB (biotech) provide sector exposure. The sector offers defensive characteristics with long-term structural growth.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Healthcare Sector",
+      "tags": [
+        "healthcare",
+        "demographics",
+        "biotech",
+        "GLP-1",
+        "sector investing"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Understanding the Yield Curve and What It Means for Your Portfolio",
+    "text": "The yield curve plots interest rates on government bonds of different maturities, from 3 months to 30 years. Normally, longer maturities offer higher yields (upward-sloping curve) to compensate for longer lock-up periods. An inverted yield curve \u2014 where short-term rates exceed long-term rates \u2014 has preceded each of the last eight U.S. recessions and is considered a reliable recession predictor. The yield curve was deeply inverted throughout 2023\u20132024. As the Fed cuts rates, the curve typically re-steepens. The practical implication for investors: an inverted curve is an unusual environment where short-term bonds yield more than long-term bonds, making cash and short-term Treasuries attractive relative to longer bonds. As the curve normalizes, extending bond duration becomes more advantageous.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Fixed Income",
+      "tags": [
+        "yield curve",
+        "inversion",
+        "recession indicator",
+        "duration",
+        "Treasury"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "ESG Investing: Balancing Values and Returns",
+    "text": "Environmental, Social, and Governance (ESG) investing incorporates non-financial factors into investment analysis alongside traditional financial metrics. ESG funds screen out (or underweight) companies with poor environmental records, labor practices, or governance structures. The performance debate is nuanced: ESG funds performed well in 2019\u20132021 (driven by tech overweight) but underperformed in 2022 (energy sector exclusions hurt). Long-term evidence on ESG alpha is mixed. The primary reason to consider ESG is values alignment, not outperformance. Key considerations: (1) Expense ratios for ESG funds are often higher than plain index funds. (2) ESG criteria vary widely by provider. (3) 'Greenwashing' is a real concern. For most investors, a low-cost total market index fund with direct shareholder engagement may be more effective.",
+    "metadata": {
+      "period": "2025",
+      "topic": "ESG",
+      "tags": [
+        "ESG",
+        "sustainable investing",
+        "values",
+        "performance",
+        "screening"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Recession Probability and Portfolio Positioning",
+    "text": "Forecasting recessions is notoriously difficult, but several leading indicators provide useful signals. As of early 2025, our assessment: the inverted yield curve (historically the most reliable indicator) has been flashing warning signs for 18+ months; the Conference Board Leading Economic Index has declined; however, the labor market remains resilient, consumer spending is stable, and bank lending standards, while tighter, have not reached crisis levels. We assign roughly a 30\u201335% probability of a mild recession in 2025. Portfolio implications: maintain a strategic cash buffer (3\u20136 months), avoid overextension in cyclical sectors (discretionary, industrials), favor quality companies with strong balance sheets, and ensure bonds serve their diversification role. Do not attempt to fully de-risk \u2014 missing the recovery is as costly as experiencing the decline.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Macroeconomics",
+      "tags": [
+        "recession",
+        "leading indicators",
+        "portfolio positioning",
+        "defensive"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Gold's Role in a Modern Portfolio",
+    "text": "Gold has served as a store of value for millennia and continues to play a role in modern portfolios, primarily as a hedge against tail risks: currency debasement, systemic financial crises, and geopolitical instability. Gold's relationship with inflation is imperfect over short periods but stronger over long time horizons. Gold performed extremely well in the 2022 Fed tightening cycle (when real yields were deeply negative), continued to rise in 2023\u20132024, and reached all-time highs above $2,500/oz in 2024. Central banks, particularly from China, Russia, and emerging markets, have been net buyers of gold, providing structural demand support. We recommend a 3\u20135% allocation to gold (via GLD ETF or physical) as portfolio insurance. Gold pays no income, so sizing the position appropriately is key.",
+    "metadata": {
+      "period": "2024-2025",
+      "topic": "Commodities",
+      "tags": [
+        "gold",
+        "safe haven",
+        "inflation hedge",
+        "central banks",
+        "allocation"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The Impact of Rising National Debt on Long-Term Investors",
+    "text": "U.S. federal debt has exceeded $34 trillion, representing over 120% of GDP \u2014 a level historically associated with slower economic growth and eventually higher inflation or taxes. Annual interest payments on the national debt now exceed $1 trillion, competing with defense, entitlement, and discretionary spending. Long-term implications for investors: (1) Persistently higher interest rates as the Treasury issues more debt. (2) Higher future tax rates to service the debt \u2014 strengthening the case for Roth accounts. (3) Potential currency debasement over time \u2014 supporting real assets. (4) Possible 'fiscal dominance' where debt concerns constrain monetary policy effectiveness. Practical responses: diversify globally, maintain real asset exposure, maximize Roth account contributions, and consider TIPS for inflation protection.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Fiscal Policy",
+      "tags": [
+        "national debt",
+        "fiscal policy",
+        "taxes",
+        "inflation",
+        "long-term risk"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Banking Sector Outlook: Interest Rates and Credit Quality",
+    "text": "The banking sector navigated a turbulent 2023 \u2014 the collapse of Silicon Valley Bank, Signature Bank, and First Republic Bank exposed vulnerabilities in institutions with concentrated depositor bases and large unrealized bond losses. Larger banks emerged relatively stronger, benefiting from 'flight to safety' deposit inflows. As of 2025, key dynamics include: (1) Net interest margins are compressing as the Fed cuts rates and banks reprice deposits upward. (2) Commercial real estate (CRE) credit quality is deteriorating, particularly in office loans \u2014 a key risk for regional banks. (3) Capital requirements are increasing. Bank ETFs (KBE for broad banks, KRE for regional banks) offer diversified sector exposure. We favor large diversified financials over regional banks given CRE exposure and capital requirement concerns.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Banking Sector",
+      "tags": [
+        "banks",
+        "banking sector",
+        "credit quality",
+        "CRE",
+        "regional banks"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Emerging Markets: India's Rise as an Investment Destination",
+    "text": "India has emerged as one of the most compelling long-term investment stories globally. With a population of 1.4 billion \u2014 the world's largest and youngest major economy \u2014 India offers secular growth tailwinds that China provided in the 2000s\u20132010s. Key drivers: (1) Demographic dividend: median age of 28 versus China's 40. (2) Rapid infrastructure investment in roads, railways, and digital infrastructure. (3) Manufacturing investment driven by 'China+1' supply chain diversification. (4) Rising middle class driving domestic consumption. The Sensex and Nifty 50 have delivered strong returns over the past decade. Indian equity valuations are higher than peers (24x P/E), reflecting growth expectations. INDA and PIN ETFs provide U.S. investor access. Currency risk and market liquidity are key considerations.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Emerging Markets",
+      "tags": [
+        "India",
+        "emerging markets",
+        "demographics",
+        "growth",
+        "EM investing"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Cryptocurrency: An Advisor's Perspective",
+    "text": "Cryptocurrency \u2014 particularly Bitcoin \u2014 has evolved from a fringe asset to one increasingly discussed in mainstream portfolio construction. The January 2024 launch of Bitcoin spot ETFs (BlackRock's IBIT, Fidelity's FBTC) brought institutional-quality access for retail investors. Bitcoin's case rests on: fixed supply (21M cap), network effects, and potential as 'digital gold.' However, extreme volatility (60\u201380% drawdowns are common), regulatory uncertainty, lack of income generation, and short track record make it unsuitable as a core holding. If included at all, a position of 1\u20135% of portfolio is appropriate for risk-tolerant investors with a long time horizon who understand the speculative nature. Never invest borrowed money in crypto, and ensure any crypto allocation does not affect your ability to meet financial obligations.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Cryptocurrency",
+      "tags": [
+        "Bitcoin",
+        "crypto",
+        "Bitcoin ETF",
+        "alternative assets",
+        "speculation"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The Importance of Behavioral Finance in Investing",
+    "text": "Decades of research in behavioral finance reveal systematic ways that psychological biases impair investment decision-making. Key biases that affect investors: (1) Loss aversion: losses feel roughly twice as painful as equivalent gains, leading to panic selling. (2) Recency bias: over-weighting recent events (buying high after a rally, selling low after a crash). (3) Overconfidence: believing you can time markets better than average. (4) Herding: following the crowd into popular investments at the top. (5) Mental accounting: treating money differently based on its source. The antidote is a rules-based investment policy: set a target allocation, automate contributions, rebalance systematically, and avoid frequent monitoring of portfolio performance. Having a financial advisor primarily serves to prevent these behavioral errors.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Behavioral Finance",
+      "tags": [
+        "behavioral finance",
+        "biases",
+        "loss aversion",
+        "psychology",
+        "investing"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Sector Rotation Strategy: Following the Economic Cycle",
+    "text": "Different economic sectors tend to outperform at different phases of the business cycle. Early cycle recovery: Financials, Consumer Discretionary, and Technology typically lead. Mid-cycle expansion: Technology, Industrials, and Materials tend to perform well. Late cycle: Energy, Materials, and Consumer Staples often hold up better. Recession/contraction: Utilities, Healthcare, and Consumer Staples (defensive sectors) typically outperform. Sector ETFs (XLF, XLK, XLE, etc.) allow tactical tilts, but research shows most retail investors harm their returns attempting sector rotation. Tilts should be modest (overweighting by 5\u201310%) and based on conviction, not short-term market noise. A diversified total market index fund remains the core.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Sector Analysis",
+      "tags": [
+        "sector rotation",
+        "economic cycle",
+        "tactical allocation",
+        "sector ETF"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Japan's Stock Market Renaissance",
+    "text": "Japanese equities experienced a remarkable renaissance in 2023\u20132024, with the Nikkei 225 finally surpassing its 1989 bubble peak for the first time in over 30 years. Key catalysts: (1) Corporate governance reforms pushed by the Tokyo Stock Exchange, requiring companies trading below book value to improve capital efficiency or face delisting pressure. (2) Warren Buffett's high-profile investment in Japanese trading companies (Itochu, Mitsubishi, Mitsui, etc.) highlighted the value. (3) Yen weakness boosted export earnings. (4) Global investors rebalancing away from Chinese equities found Japan an attractive alternative. Risks include yen volatility and potential BOJ policy normalization. For U.S. investors, hedged Japan ETFs (DXJ) or unhedged (EWJ) both have merit depending on yen outlook.",
+    "metadata": {
+      "period": "2023-2025",
+      "topic": "International Markets",
+      "tags": [
+        "Japan",
+        "Nikkei",
+        "corporate governance",
+        "international",
+        "value"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The 4% Withdrawal Rule: Is It Still Valid?",
+    "text": "The '4% rule,' developed from the Trinity Study in the 1990s, suggests that retirees can withdraw 4% of their portfolio in year one and adjust for inflation each year, with a high probability of the portfolio lasting 30 years. However, critics argue the rule needs updating for the current environment: (1) Lower expected bond returns reduce portfolio longevity. (2) Longer life expectancies may require 35\u201340 year withdrawal periods. (3) Sequence of returns risk (poor returns in early retirement) is particularly damaging. More recent research suggests a flexible withdrawal rate of 3.3\u20133.8% is more appropriate for today's conditions, particularly for early retirees. Dynamic withdrawal strategies \u2014 reducing spending in down markets and increasing in up markets \u2014 significantly improve portfolio sustainability.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Retirement Planning",
+      "tags": [
+        "4% rule",
+        "withdrawal rate",
+        "retirement income",
+        "sustainable withdrawal"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Infrastructure Investing: Stability and Income",
+    "text": "Infrastructure assets \u2014 airports, toll roads, utilities, pipelines, data centers, and cell towers \u2014 provide essential services with often monopolistic or quasi-monopolistic competitive positions. Their characteristics make them attractive portfolio additions: long-term concession agreements, inflation-indexed cash flows, low correlation to equities, and stable income. Infrastructure ETFs like PAVE (U.S. infrastructure) and IFRA provide equity exposure to infrastructure companies. Master Limited Partnerships (MLPs) in pipelines offer high yields but have complex tax treatment (K-1 forms). Listed infrastructure has historically provided equity-like returns with lower volatility, making it appropriate for income-seeking investors and those seeking inflation protection. The U.S. Infrastructure Investment and Jobs Act is driving significant new infrastructure spending.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Infrastructure",
+      "tags": [
+        "infrastructure",
+        "income",
+        "utilities",
+        "inflation hedge",
+        "MLPs"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Mid-Year Portfolio Review Checklist",
+    "text": "Conducting a mid-year portfolio review ensures your investments remain aligned with your goals. Key items: (1) Rebalancing: Has any asset class drifted more than 5% from its target? (2) Contributions: Are you on track to maximize 401(k) and IRA contributions for the year? (3) Tax efficiency: Are there unrealized losses you can harvest? Have capital gains been generated that need planning? (4) Insurance review: Are coverage amounts still appropriate given income changes? (5) Beneficiary designations: Any life changes (marriage, divorce, birth of child) requiring updates? (6) Emergency fund: Still adequately funded? (7) Goal progress: Are you on track for retirement, college funding, or other goals? A disciplined mid-year review prevents year-end surprises and keeps financial plans on track.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Portfolio Management",
+      "tags": [
+        "portfolio review",
+        "rebalancing",
+        "checklist",
+        "financial planning",
+        "annual review"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Bonds vs. CDs: Which Is Better Right Now?",
+    "text": "Both bonds and CDs offer fixed income with varying trade-offs. Current environment considerations: (1) Yield: Short-term CDs and T-bills currently offer competitive yields, often similar to or slightly above equivalent-maturity bonds. (2) Liquidity: Treasury bonds can be sold anytime on the secondary market; CDs incur early withdrawal penalties (typically 6 months of interest). (3) Tax: Treasury interest is exempt from state/local taxes \u2014 a significant advantage in high-tax states like California and New York. (4) Capital appreciation: If rates fall, bonds appreciate in value; CDs do not \u2014 you simply get your principal back at maturity. (5) FDIC insurance: CDs (bank-issued) are FDIC-insured up to $250,000; Treasury bonds are backed by the full faith and credit of the U.S. government. For investors expecting rate cuts, locking in bond duration is advantageous. For pure yield with no interest rate exposure, CDs and T-bills are appropriate.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Fixed Income",
+      "tags": [
+        "bonds",
+        "CDs",
+        "comparison",
+        "yield",
+        "fixed income"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The Case for Low-Cost Index Investing",
+    "text": "After decades of evidence, the case for low-cost index investing is overwhelming. The S&P Indices Versus Active (SPIVA) scorecard consistently shows that over 15-year periods, over 90% of actively managed U.S. large-cap funds underperform the S&P 500 index after fees. The primary reason is simple arithmetic: the average actively managed fund must underperform its benchmark by exactly its expense ratio, since all investors collectively hold the market. Vanguard founder Jack Bogle's insight was that minimizing costs is the single most reliable way to improve investment outcomes. A simple three-fund portfolio \u2014 U.S. total market index, international index, and bond index \u2014 has outperformed the vast majority of actively managed portfolios over any meaningful time period.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Investment Strategy",
+      "tags": [
+        "index investing",
+        "SPIVA",
+        "passive",
+        "Vanguard",
+        "low cost"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Understanding Portfolio Volatility and Standard Deviation",
+    "text": "Volatility in investment portfolios is measured by standard deviation \u2014 how much returns deviate from the average. A higher standard deviation means returns are more variable (both up and down). Historically, the S&P 500 has had an annual standard deviation of about 15\u201320%. This means in any given year, returns are roughly expected to fall within +/- 15\u201320% of the average roughly 68% of the time (one standard deviation). In practice, this means expecting 30\u201340% gains in strong years and 20\u201330% losses in bad years is entirely normal. Understanding this prevents panic during normal market corrections. A bond allocation reduces portfolio standard deviation significantly \u2014 a 60/40 portfolio has historically had a standard deviation of approximately 10\u201312%, compared to 16\u201318% for a 100% equity portfolio.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Risk Management",
+      "tags": [
+        "volatility",
+        "standard deviation",
+        "risk",
+        "portfolio construction",
+        "statistics"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Tax-Efficient Investing: Location Matters",
+    "text": "Asset location \u2014 placing investments in the right type of account (taxable vs. tax-advantaged) \u2014 can meaningfully improve after-tax returns. The general framework: (1) Tax-advantaged accounts (401k, IRA): Best for high-income-generating assets \u2014 bonds, REITs, high-dividend stocks, actively managed funds. These produce income taxed at ordinary rates, so sheltering them in tax-deferred accounts is most valuable. (2) Taxable accounts: Best for tax-efficient assets \u2014 broad market index funds, growth stocks held long-term, municipal bonds. Total market index funds have very low turnover and generate minimal taxable events. (3) Roth accounts: Best for highest-expected-return assets \u2014 small-cap equities, emerging markets \u2014 since all future growth is permanently tax-free. Proper asset location can add 0.2\u20130.4% annually to after-tax returns.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Tax Planning",
+      "tags": [
+        "asset location",
+        "tax efficiency",
+        "Roth",
+        "taxable account",
+        "after-tax returns"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Retirement Income Strategies: Beyond the 4% Rule",
+    "text": "Creating sustainable retirement income requires more than a simple withdrawal percentage. Key strategies: (1) Bucket strategy: Divide portfolio into short-term (cash, 1\u20132 years of expenses), medium-term (bonds, 3\u20137 years), and long-term (equities, 8+ years) buckets. Spend from short-term, replenish from medium-term. (2) Floor and upside strategy: Cover essential expenses with guaranteed income (Social Security, pension, annuity) and invest the rest for growth and discretionary spending. (3) Flexible withdrawal: Set a base withdrawal rate and rules for reducing spending in down markets. Research shows reducing withdrawals by 10% in bear markets dramatically improves portfolio longevity. (4) Tax-aware sequencing: Pull from taxable accounts first, then traditional IRA, then Roth IRA to maximize tax efficiency.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Retirement Planning",
+      "tags": [
+        "retirement income",
+        "bucket strategy",
+        "withdrawal",
+        "sequence risk",
+        "planning"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "The Rise of Direct Indexing",
+    "text": "Direct indexing allows investors to own the individual stocks that make up an index (like the S&P 500) directly in their brokerage account, rather than through an ETF or fund. This unlocks powerful customization: (1) Tax-loss harvesting at the individual stock level \u2014 selling underperforming stocks while maintaining index exposure by holding the rest \u2014 can generate 1\u20132% annually in tax alpha for investors with significant taxable portfolios. (2) ESG customization: exclude specific companies or sectors. (3) Concentration management: exclude stocks you already own through employer equity. Until recently, direct indexing required $500,000+ minimums, but fractional shares have lowered minimums to $5,000\u2013$50,000. Firms offering direct indexing include Parametric (Morgan Stanley), Fidelity, Schwab, and Vanguard.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Investment Strategy",
+      "tags": [
+        "direct indexing",
+        "tax-loss harvesting",
+        "customization",
+        "wealth management",
+        "tax alpha"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Understanding the Difference Between Saving and Investing",
+    "text": "Saving and investing are related but distinct financial activities with different purposes and time horizons. Saving involves setting aside money in low-risk, highly liquid vehicles (HYSA, money market, CDs) for short-term goals and emergencies. The priority is capital preservation and liquidity, not growth. Investing involves deploying capital in assets (stocks, bonds, real estate) that can grow over time, accepting some risk of loss in exchange for higher expected returns. Investing is appropriate for goals with a 5+ year horizon. The common mistake is investing money needed in the short term (next 1\u20133 years) in volatile assets \u2014 you may need the funds just when markets have declined. Conversely, keeping long-term savings in cash means losing ground to inflation over time.",
+    "metadata": {
+      "period": "2025",
+      "topic": "Financial Planning",
+      "tags": [
+        "saving vs investing",
+        "time horizon",
+        "risk",
+        "financial planning",
+        "basics"
+      ]
+    }
+  },
+  {
+    "content_type": "MARKET_COMMENTARY",
+    "title": "Currency Risk in International Investing",
+    "text": "When U.S. investors own international stocks or bonds, they face currency risk \u2014 the impact of exchange rate fluctuations on their returns. If the euro strengthens against the dollar, European stock returns are amplified for U.S. investors. If the yen weakens, Japanese stock gains are reduced. Currency effects can significantly add to or subtract from underlying market returns. Currency-hedged ETFs (e.g., EWJ for Japan unhedged, DXJ for hedged) eliminate currency risk but add costs and can underperform when the target currency strengthens. For long-term investors, currency effects tend to even out over time and the unhedged exposure actually adds diversification value. Hedging may be more appropriate for fixed income international positions where currency volatility can overwhelm bond returns.",
+    "metadata": {
+      "period": "2025",
+      "topic": "International Markets",
+      "tags": [
+        "currency risk",
+        "international investing",
+        "hedging",
+        "FX",
+        "diversification"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: New Graduate Starting Career at 23",
+    "text": "Profile: Maya, age 23, just started her first job earning $65,000. She has $8,000 in student loans at 5.5% interest and no savings. Goal: Build wealth for long-term financial independence.\n\nRecommended approach: (1) Build a $3,000 starter emergency fund before aggressive debt payoff. (2) Contribute enough to her 401(k) to get the full employer match (3%). (3) Pay down student loans while simultaneously contributing to a Roth IRA ($200/month to start). (4) Once loans are paid off, redirect loan payment to investments. Time is Maya's greatest asset \u2014 $300/month invested at 8% from age 23 grows to over $1 million by age 65. Investment allocation: 90% equities (60% U.S. total market, 30% international, 10% small-cap value), 10% bonds. Gradually increase bond allocation as she approaches retirement.",
+    "metadata": {
+      "scenario_type": "Young Investor",
+      "age_range": "20s",
+      "tags": [
+        "new graduate",
+        "starting out",
+        "Roth IRA",
+        "student loans",
+        "young investor"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Couple in Their 30s Buying First Home",
+    "text": "Profile: James and Lisa, both 34, combined income $160,000. They are saving for a down payment on a $500,000 home and want to put down 20% ($100,000) within 3 years.\n\nRecommended approach: Down payment savings should NOT be in stocks given the 3-year timeline. Optimal vehicles: high-yield savings account, 2-year CDs, and short-term Treasury bills. Currently saving $2,500/month, they can reach the goal in approximately 3.5 years assuming 4.5% yield. In parallel: continue maxing employer 401(k) match, fund Roth IRAs ($7,000 each). First-time homebuyer programs may allow lower down payment (3\u20135%) if they qualify. Important: Don't sacrifice retirement savings entirely for home savings \u2014 the compounding loss of not investing in your 30s is substantial.",
+    "metadata": {
+      "scenario_type": "Home Purchase",
+      "age_range": "30s",
+      "tags": [
+        "home purchase",
+        "down payment",
+        "savings goal",
+        "couple",
+        "30s"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: High-Income Professional Maximizing Tax Efficiency",
+    "text": "Profile: Dr. Sarah Chen, 42, physician earning $400,000/year. She is in the 35% federal tax bracket, maxes out her 401(k), and is looking to optimize further.\n\nTax-efficiency priority stack: (1) Backdoor Roth IRA contribution ($7,000) \u2014 income is too high for direct Roth contribution. (2) HSA contribution ($4,150) if enrolled in HDHP. (3) After-tax 401(k) with Roth conversion (Mega Backdoor Roth) \u2014 up to $66,000 total 401(k) contribution in 2024. (4) 457(b) plan if available through her hospital employer (additional $23,000 deferral). (5) Municipal bond funds in taxable account \u2014 tax-equivalent yield is excellent at her tax rate. (6) Tax-loss harvesting in taxable account. Consider SEP-IRA or defined benefit plan if she has any self-employment income through a private practice.",
+    "metadata": {
+      "scenario_type": "High Income",
+      "age_range": "40s",
+      "tags": [
+        "high income",
+        "physician",
+        "tax efficiency",
+        "backdoor Roth",
+        "mega backdoor"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Retiree Seeking Sustainable Income",
+    "text": "Profile: Robert, age 68, recently retired. Portfolio: $1.2M (60% stocks, 40% bonds). Social Security: $2,200/month. Monthly expenses: $5,500. Gap to fill from portfolio: $3,300/month ($39,600/year).\n\nAnalysis: $39,600 / $1,200,000 = 3.3% withdrawal rate \u2014 comfortably within sustainable range. Recommended structure: (1) 2 years of cash in HYSA for living expenses ($80,000). (2) Bond ladder for years 3\u20137 using individual Treasury bonds and CDs. (3) Diversified equity portfolio (dividend-focused) for long-term growth. At-risk assets: review for any excessive concentrations. RMD planning: at $1.2M, RMDs will begin at a manageable level but will grow \u2014 Roth conversions in lower-income years (ages 60\u201372) could have reduced this obligation. Annual tax planning: harvest losses in equities to offset bond interest.",
+    "metadata": {
+      "scenario_type": "Retiree Income",
+      "age_range": "60s",
+      "tags": [
+        "retiree",
+        "retirement income",
+        "sustainable withdrawal",
+        "Social Security",
+        "RMD"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Business Owner Selling a Company",
+    "text": "Profile: Michael, 55, sold his manufacturing business for $3.5M (cash deal). Long-term capital gains tax of ~$500,000 (20% federal + 3.8% NIIT + state) will be owed. Net proceeds: approximately $3M.\n\nRecommended approach: (1) Qualified Opportunity Zone (QOZ) investment to defer capital gains \u2014 investing gains in a QOZ fund within 180 days defers tax to 2026 and reduces it if held. (2) Charitable Remainder Trust (CRT) \u2014 contribute appreciated assets, receive income stream, defer capital gains, charitable deduction. (3) Immediate: deploy $1.5M into diversified portfolio while $1.5M is invested in QOZ or used for next business venture. (4) Maximize all retirement account contributions for this last high-income year. (5) Revise estate plan \u2014 new estate size requires review of estate tax strategy.",
+    "metadata": {
+      "scenario_type": "Business Sale",
+      "age_range": "50s",
+      "tags": [
+        "business sale",
+        "capital gains",
+        "QOZ",
+        "CRT",
+        "tax planning"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Divorce and Financial Restart at 48",
+    "text": "Profile: Patricia, 48, recently divorced. Received $350,000 in investment accounts, keeps the family home (value: $425,000, mortgage: $180,000), and will receive $1,800/month in support payments for 5 years. Income: $72,000/year (new job). Goals: rebuild retirement savings, maintain home, achieve financial independence.\n\nPriority plan: (1) Review and update all beneficiary designations immediately \u2014 remove ex-spouse. (2) Update will and powers of attorney. (3) Evaluate whether to keep home \u2014 carrying costs (mortgage, property tax, insurance, maintenance) should not exceed 30% of gross income. (4) Build 6-month emergency fund ($25,000). (5) Maximize 401(k) contributions \u2014 at 48, she still has 15+ working years. (6) Review investment accounts received: re-register QDRO (qualified domestic relations order) if any came from ex's 401(k). Investment allocation: 70% equities/30% bonds given age and career restart.",
+    "metadata": {
+      "scenario_type": "Life Transition",
+      "age_range": "40s",
+      "tags": [
+        "divorce",
+        "financial restart",
+        "beneficiary",
+        "QDRO",
+        "single income"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Inheritance Planning for a 35-Year-Old",
+    "text": "Profile: David, 35, unexpectedly inherited $180,000 from a grandparent. He has $22,000 in credit card debt (18% interest), $45,000 in student loans (6%), a healthy 401(k), and no taxable brokerage account.\n\nPriority allocation: (1) Immediately pay off all credit card debt ($22,000) \u2014 guaranteed 18% return. (2) Build emergency fund to 6 months ($18,000 in HYSA). (3) Pay off student loans ($45,000) \u2014 6% guaranteed return vs. uncertain investment returns. (4) Remaining $95,000: open taxable brokerage and invest in low-cost index funds (VTSAX + VXUS + BND). (5) Simultaneously max Roth IRA for this year ($7,000). Important: Windfall discipline \u2014 avoid lifestyle inflation. The $95,000 in index funds at 7% real return becomes $1.35M at age 65. This inheritance can transform his retirement trajectory.",
+    "metadata": {
+      "scenario_type": "Inheritance",
+      "age_range": "30s",
+      "tags": [
+        "inheritance",
+        "windfall",
+        "debt payoff",
+        "investing",
+        "financial plan"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Pre-Retiree at 58 \u2014 7 Years to Retirement",
+    "text": "Profile: Carol, 58, planning to retire at 65. Portfolio: $620,000 (70% equities/30% bonds). Income: $95,000/year. Social Security projected: $2,400/month at 65 ($3,400/month if delayed to 70). Monthly expenses in retirement: estimated $6,000.\n\n7-year countdown plan: (1) Maximize 401(k) catch-up contributions ($30,500/year) \u2014 over 7 years adds approximately $215,000+ in contributions plus growth. (2) Consider delaying Social Security to 70 \u2014 $1,000/month more = $12,000/year more, break-even at approximately age 82. (3) Begin building cash and bond ladder for first 5 years of retirement income. (4) Gradually de-risk: reduce to 60/40 at 60, 55/45 at 62, 50/50 at 65. (5) Project Medicare costs at 65 and plan for healthcare bridge. (6) Model long-term care insurance \u2014 late 50s is optimal purchase age.",
+    "metadata": {
+      "scenario_type": "Pre-Retirement",
+      "age_range": "50s",
+      "tags": [
+        "pre-retirement",
+        "countdown",
+        "Social Security",
+        "long-term care",
+        "catch-up contributions"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Young Family \u2014 Balancing College and Retirement Savings",
+    "text": "Profile: Tom and Amy, 38 and 36. Combined income: $145,000. Two children ages 4 and 7. Current retirement savings: $180,000. No college savings yet.\n\nPrioritization framework: Always prioritize retirement over college. You can borrow for college; you cannot borrow for retirement. Recommended allocation of monthly surplus ($1,800/month after expenses and 401(k) match capture): (1) $600/month to 529 plans ($400 for 7-year-old, $200 for 4-year-old) \u2014 should accumulate $100,000\u2013$120,000 by college age assuming 6% return. (2) $1,200/month to Roth IRAs ($600 each). College cost estimate: 4-year public university currently $130,000\u2013$140,000 total; 4-year private: $280,000\u2013$320,000. Gap can be filled with financial aid, work-study, and student loans. Retirement gap cannot.",
+    "metadata": {
+      "scenario_type": "Young Family",
+      "age_range": "30s",
+      "tags": [
+        "college savings",
+        "529",
+        "young family",
+        "retirement vs college",
+        "prioritization"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Widow at 71 Managing Inherited IRA",
+    "text": "Profile: Eleanor, 71, recently widowed. Inherited husband's $450,000 IRA. Her own IRA: $280,000. Social Security survivor benefit: $2,800/month. Pension: $1,200/month. Monthly expenses: $4,500.\n\nKey decisions: (1) As a spousal beneficiary, Eleanor can roll the inherited IRA into her own IRA \u2014 she should do this if she doesn't need the funds immediately, as it delays RMDs. (2) RMD calculation on combined $730,000 IRA at age 71: approximately $24,700/year \u2014 well within her income needs given pension + Social Security covers expenses. (3) Investment allocation: At 71, with income covered, she can maintain 50% equity for growth to pass to heirs. Consider a total return approach rather than income-focused. (4) Estate planning: update beneficiary designations, consider Roth conversions to reduce future RMDs and leave tax-free assets to children.",
+    "metadata": {
+      "scenario_type": "Widow/Widower",
+      "age_range": "70s",
+      "tags": [
+        "inherited IRA",
+        "spousal beneficiary",
+        "widow",
+        "RMD",
+        "estate planning"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Early Retirement Seeker (FIRE) at 42",
+    "text": "Profile: Alex, 42, seeks to retire at 50. Current portfolio: $1.1M. Annual expenses: $60,000. Annual savings rate: $80,000. Goal: $1.5M portfolio to support $60,000/year withdrawals (4% rule).\n\nAnalysis: At current savings and assumed 7% real return, Alex reaches $1.5M in approximately 4 years (age 46) \u2014 ahead of schedule. Key challenges for early retirement: (1) Healthcare: Must fund healthcare from age 50\u201365 until Medicare eligibility \u2014 budget $15,000\u2013$20,000/year (ACA marketplace). (2) Roth conversion ladder: IRA funds are accessible at 59\u00bd without penalty, but with 9-year bridge needed. Build taxable account and Roth ladder (convert now, access principal in 5 years). (3) Sequence of returns risk is heightened with a 50+ year retirement horizon \u2014 consider 3.0\u20133.5% withdrawal rate. (4) Plan for meaningful activity and social connection \u2014 non-financial aspects of retirement are critical.",
+    "metadata": {
+      "scenario_type": "Early Retirement",
+      "age_range": "40s",
+      "tags": [
+        "FIRE",
+        "early retirement",
+        "Roth ladder",
+        "healthcare",
+        "sequence risk"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Recent College Graduate With Significant Student Debt",
+    "text": "Profile: Jordan, 24, earned a law degree with $185,000 in federal student loans at average 6.5% interest. Starting salary at a law firm: $90,000. Choosing between aggressive debt payoff and investing.\n\nRecommended framework: (1) Explore income-driven repayment (IDR) plans and Public Service Loan Forgiveness (PSLF) if pursuing public interest law \u2014 forgiveness after 10 years of qualifying payments. (2) If private sector: capture full 401(k) match first ($2,700 match on $9,000 contribution at 3% match). (3) Build $5,000 emergency fund. (4) Contribute $200/month to Roth IRA while on lower salary (before income rises). (5) Aggressively pay down highest-rate loans first. At $90K income, allocate 25\u201330% of take-home ($1,500\u2013$1,800/month) to debt service above minimum payments. At this rate, $185,000 can be paid in 8\u201310 years.",
+    "metadata": {
+      "scenario_type": "Student Debt",
+      "age_range": "20s",
+      "tags": [
+        "student debt",
+        "law school",
+        "PSLF",
+        "IDR",
+        "debt payoff strategy"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Tech Employee with Stock Compensation",
+    "text": "Profile: Kevin, 35, software engineer at a tech company. Salary: $200,000 plus $150,000 in RSUs vesting annually. Current net worth: $800,000, but $500,000 concentrated in employer stock. Concern: Over-concentration risk.\n\nDiversification strategy: (1) As RSUs vest, sell immediately (or soon after) to diversify \u2014 the company has already compensated you with the shares. Holding creates concentration risk. (2) If single stock already exceeds 10\u201315% of net worth, gradually sell and diversify even if capital gains are owed. (3) If employer stock is in 401(k), Net Unrealized Appreciation (NUA) rules may offer a tax-efficient distribution strategy. (4) Build diversified portfolio with RSU proceeds: 60% VTI + 20% VXUS + 10% BND + 10% AVUV (small-cap value tilt). (5) Beware the correlation of concentrated stock risk with employment risk \u2014 if company struggles, you may lose job and see stock decline simultaneously.",
+    "metadata": {
+      "scenario_type": "Stock Compensation",
+      "age_range": "30s",
+      "tags": [
+        "RSU",
+        "concentrated stock",
+        "tech employee",
+        "NUA",
+        "diversification"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Immigrant First-Generation Wealth Builder",
+    "text": "Profile: Priya, 32, immigrated to the U.S. at age 22. Currently earning $78,000, no employer-sponsored retirement plan available (small non-profit employer). Limited knowledge of U.S. financial system. Goals: build emergency fund, understand accounts, invest for future.\n\nStep-by-step plan: (1) Open HYSA at an online bank \u2014 earn 4\u20135% on emergency savings goal of $15,000. (2) Open Traditional IRA or Roth IRA at Fidelity/Vanguard/Schwab \u2014 fully deductible IRA at $78K income without employer plan. Start with $100/month, increase as budget allows. (3) No 401(k) available \u2014 self-employed individuals can open a Solo 401(k) or SEP-IRA if any freelance income exists. (4) Invest IRA in a single target date fund for simplicity (e.g., Vanguard Target Retirement 2055). (5) Establish ITIN or SSN-based credit history if not already built \u2014 credit score impacts borrowing costs for future home purchase.",
+    "metadata": {
+      "scenario_type": "First Generation",
+      "age_range": "30s",
+      "tags": [
+        "first generation",
+        "immigrant",
+        "IRA",
+        "financial literacy",
+        "wealth building"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Small Business Owner Planning Retirement",
+    "text": "Profile: Frank, 52, owner of a profitable plumbing business generating $250,000/year in net income. No retirement plan established. Wants to retire in 10 years.\n\nBusiness owner retirement plan options, ranked by maximum contribution: (1) Defined Benefit (DB) Plan: Can shelter $150,000\u2013$200,000+/year at age 52 \u2014 dramatically reduces current taxes and builds substantial retirement asset. Best option if maximizing tax deferral is the priority. Actuarial calculations required. (2) Solo 401(k): $66,000 in 2024 ($73,500 with catch-up at 50+) \u2014 employee contribution + employer profit sharing up to 25% of compensation. Simpler administration. (3) SEP-IRA: 25% of net self-employment income, up to $66,000. Simplest option. Also consider: whether to structure business sale for retirement funding; succession planning (key man insurance, buy-sell agreement).",
+    "metadata": {
+      "scenario_type": "Small Business Owner",
+      "age_range": "50s",
+      "tags": [
+        "small business",
+        "self-employed",
+        "defined benefit",
+        "solo 401k",
+        "SEP-IRA"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Sudden Job Loss at 55",
+    "text": "Profile: Linda, 55, laid off from a $120,000/year corporate job after 20 years. Severance: 4 months ($40,000). 401(k): $380,000. Cash: $35,000. Mortgage: $1,200/month. No other debt.\n\nImmediate priorities: (1) Apply for unemployment insurance immediately \u2014 up to 26 weeks in most states. (2) Activate COBRA health insurance \u2014 expensive but provides continuity; ACA marketplace may be cheaper given reduced income. (3) Create a reduced-spending budget for job search period. (4) Do NOT raid the 401(k) \u2014 withdrawals before 59\u00bd incur 10% penalty plus income tax. Exception: 55 rule \u2014 separating from service at 55+ allows penalty-free 401(k) withdrawals from that specific employer's plan. (5) Job search: Update LinkedIn, networking is most effective for senior roles. (6) If job market is difficult, evaluate whether skills can be monetized through consulting while searching. Budget allows 18+ months of coverage before needing to tap investments.",
+    "metadata": {
+      "scenario_type": "Job Loss",
+      "age_range": "50s",
+      "tags": [
+        "job loss",
+        "layoff",
+        "55 rule",
+        "COBRA",
+        "financial crisis management"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Elderly Parent Long-Term Care Planning",
+    "text": "Profile: Helen, 78, and her daughter Susan, 52. Helen has moderate dementia and can no longer live alone. Helen's assets: $280,000 in savings/investments, $1,400/month Social Security, home ($320,000 value, no mortgage). Monthly memory care cost in their state: $7,500\u2013$8,500.\n\nPlanning analysis: At $8,000/month, Helen's $280,000 savings last approximately 35 months without investment growth. Options: (1) Sell home to fund care \u2014 proceeds would fund 5+ additional years. (2) Medicaid planning: Medicaid covers long-term care for those who have 'spent down' assets to state-defined limits. Requires 5-year look-back on asset transfers \u2014 consult an elder law attorney. (3) PACE program (Program of All-Inclusive Care for the Elderly) may provide care coordination for those who qualify. Lesson for Susan: Purchase long-term care insurance now in her 50s \u2014 premium is $2,500\u2013$4,000/year versus $96,000/year for care.",
+    "metadata": {
+      "scenario_type": "Elder Care",
+      "age_range": "70s+",
+      "tags": [
+        "long-term care",
+        "dementia",
+        "Medicaid",
+        "elder law",
+        "caregiving costs"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Retiring Teacher with Pension",
+    "text": "Profile: Maria, 60, public school teacher with 30 years of service. Defined benefit pension: $4,200/month at age 62 (80% of final 3-year average salary). 403(b) balance: $95,000. No Social Security (public sector job). Home equity: $180,000. Monthly expenses: $4,800.\n\nAnalysis: Maria's pension nearly covers her expenses \u2014 a favorable position. Key considerations: (1) Pension election: Evaluate single-life vs. joint-and-survivor option if married \u2014 survivor benefit reduces monthly amount but provides protection for spouse. (2) No Social Security: Public sector workers may be affected by the Windfall Elimination Provision (WEP) if they have some Social Security earnings. Consult SSA for accurate benefit projection. (3) 403(b): Serves as supplemental income and emergency reserve \u2014 invest conservatively (60/40) since pension provides income floor. (4) Retirement healthcare bridge: does school district provide retiree health insurance? If not, budget for ACA marketplace until Medicare at 65.",
+    "metadata": {
+      "scenario_type": "Pension Holder",
+      "age_range": "60s",
+      "tags": [
+        "pension",
+        "teacher",
+        "403b",
+        "WEP",
+        "public sector retirement"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Military Veteran Transitioning to Civilian Financial Planning",
+    "text": "Profile: Marcus, 38, recently separated from military service after 15 years. Will receive Reserve retirement pay at age 60 (approximately $1,800/month). VA disability rating: 40% ($700/month, tax-free). Starting civilian career at $85,000/year. TSP (Thrift Savings Plan) balance: $145,000.\n\nFinancial plan: (1) Roll TSP to IRA or leave in TSP \u2014 TSP has excellent low-cost funds (G Fund for short-term, C/S/I funds for equity). TSP's institutional pricing (0.04% expense ratio) is competitive. Consider keeping TSP while adding new employer 401(k). (2) VA disability: Tax-free income \u2014 use for accelerated savings. (3) GI Bill education benefits: If planning graduate school, maximize remaining GI Bill benefits. (4) VA home loan: No down payment required \u2014 significant benefit for first home purchase. (5) Vesting timeline: Civilian employer 401(k) match vesting schedule \u2014 plan to stay through vesting. Marcus has strong foundations and meaningful guaranteed income at 60.",
+    "metadata": {
+      "scenario_type": "Military Veteran",
+      "age_range": "30s",
+      "tags": [
+        "veteran",
+        "TSP",
+        "VA benefits",
+        "military transition",
+        "pension"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Concentrated Position in Single Stock \u2014 Managing Risk",
+    "text": "Profile: Barbara, 61, long-time executive at a Fortune 500 company. Has $1.8M in company stock (cost basis: $200,000, unrealized gain: $1.6M). Total portfolio: $2.4M. Retiring in 2 years.\n\nThe problem: 75% of portfolio in one stock is extreme concentration risk. However, selling all at once would trigger $320,000+ in federal capital gains taxes plus state taxes. Strategies: (1) Systematic diversification: Sell $200,000\u2013$300,000 in stock annually to stay within the 15% long-term capital gains bracket. Each year she fills up the 0%/15% LTCG brackets before retirement. (2) Charitable giving: Donate appreciated shares to a donor-advised fund (DAF) \u2014 receives full fair market value deduction, no capital gains tax on donated shares. (3) Exchange fund: Contribute stock to a partnership; after 7 years, receive a diversified basket of stocks without immediate gain recognition (complex, accredited investor only). (4) Protective options: Buy puts or collars to limit downside while retaining upside.",
+    "metadata": {
+      "scenario_type": "Concentrated Stock",
+      "age_range": "60s",
+      "tags": [
+        "concentrated position",
+        "capital gains",
+        "DAF",
+        "exchange fund",
+        "executive"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: First-Generation College Student Saving for Education",
+    "text": "Profile: Rosa, 16, first-generation college aspirant. Parents earn $55,000/year combined. Older sister will start college next year. Goal: minimize student debt.\n\nKey strategies for Rosa's family: (1) 529 plan: Still valuable even with 2 years remaining \u2014 contributions grow tax-free and state tax deduction may apply. $5,000 invested at 6% for 2 years grows to $5,600. (2) FAFSA: File as early as possible each year (opens October 1). At $55,000 income, Rosa likely qualifies for significant need-based aid. (3) Community college transfer path: 2 years community college + 2 years state university dramatically reduces total cost. (4) Merit scholarships: Strong GPA and extracurriculars open merit aid at many schools. (5) Work-study: Federal work-study programs provide part-time income. Average student debt should target no more than first-year expected salary \u2014 critical rule to prevent debt crisis.",
+    "metadata": {
+      "scenario_type": "College Planning",
+      "age_range": "High School",
+      "tags": [
+        "college savings",
+        "FAFSA",
+        "529",
+        "first generation",
+        "scholarships"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Late Start to Retirement Savings at 50",
+    "text": "Profile: Steven, 50, just becoming serious about retirement after spending his 30s-40s paying off debt and raising four children. Current savings: $45,000 in 401(k). Income: $88,000. Goal: retire comfortably at 67.\n\nReality check and plan: Steven has 17 years \u2014 still meaningful time. Maximize strategies: (1) Catch-up contributions: At 50, he can contribute $30,500 to 401(k) in 2024. Maximizing this for 17 years at 7% return = approximately $1,000,000. Combined with existing $45,000, total reaches $1,100,000+. (2) Social Security: Earning $88,000 through age 67 builds substantial Social Security \u2014 projected $2,500\u2013$3,000/month. (3) Delay retirement to 67: Working until full retirement age maximizes Social Security and gives portfolio more time to grow. (4) Housing equity: If home is paid off, downsizing at retirement can free $150,000\u2013$200,000. (5) Part-time work in early retirement (67\u201372) reduces withdrawal rate and portfolio depletion risk significantly.",
+    "metadata": {
+      "scenario_type": "Late Saver",
+      "age_range": "50s",
+      "tags": [
+        "late start",
+        "catch-up contributions",
+        "retirement savings",
+        "Social Security",
+        "realistic planning"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Dual-Income Couple Optimizing Tax Brackets",
+    "text": "Profile: Chris (45) and Jamie (43), both working professionals. Combined income: $320,000. Effective federal tax rate: 24\u201332%. Looking to minimize tax burden and optimize retirement savings.\n\nTax optimization strategies: (1) Maximize both 401(k) pre-tax contributions ($46,000 total) \u2014 reduces taxable income by $46,000 and saves $12,000\u2013$15,000 in federal taxes annually. (2) HSA contribution if HDHP eligible \u2014 $8,300 family contribution. (3) Backdoor Roth IRA for each ($7,000 each, $14,000 total) \u2014 income too high for direct Roth. (4) Review 529 plans for children \u2014 state tax deduction if available. (5) Tax-loss harvesting in taxable account. (6) Charitable bunching: Contribute 2\u20133 years of charitable donations to a donor-advised fund (DAF) in one year to exceed standard deduction and itemize, then give from DAF in following years. Annual tax savings from full optimization: potentially $20,000\u2013$30,000/year.",
+    "metadata": {
+      "scenario_type": "Dual Income",
+      "age_range": "40s",
+      "tags": [
+        "dual income",
+        "tax optimization",
+        "backdoor Roth",
+        "401k",
+        "DAF"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Inheriting a Home \u2014 Keep, Sell, or Rent?",
+    "text": "Profile: Nicole, 44, inherited parents' home (value: $450,000, no mortgage, parents' cost basis: $80,000). She owns her own home and does not need to live in the inherited property.\n\nTax analysis: Under current tax law, inherited property receives a 'stepped-up' basis to the fair market value at the date of death. Nicole's new cost basis is $450,000 \u2014 meaning she can sell immediately with zero capital gains tax. This is one of the most valuable but least understood provisions in tax law. Options: (1) Sell now: Receive $450,000 tax-free (after selling costs). Best if she prefers liquidity and doesn't want to be a landlord. (2) Rent: If market rent is $2,500/month ($30,000/year), gross yield is 6.7%. But landlord responsibilities, vacancy, and maintenance must be factored in. (3) Keep: Only if she intends to use it as a second home or future residence. Recommendation: Sell and diversify unless there is strong personal attachment or rental economics are compelling.",
+    "metadata": {
+      "scenario_type": "Inherited Property",
+      "age_range": "40s",
+      "tags": [
+        "inherited home",
+        "stepped-up basis",
+        "capital gains",
+        "estate",
+        "real estate"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Newlywed Financial Planning",
+    "text": "Profile: Alex and Sam, both 28, recently married. Alex: $75,000 income, $30,000 savings. Sam: $62,000 income, $18,000 savings. Combined student loans: $42,000 at 5.8%.\n\nFirst steps for financial unity: (1) Open joint accounts for shared expenses while maintaining individual accounts for personal spending \u2014 'yours, mine, and ours' structure works well. (2) Update beneficiary designations on all accounts and life insurance policies. (3) Review insurance: may be able to save on health insurance by joining one employer's plan. (4) Discuss financial goals and values \u2014 major source of marital stress is financial disagreement. (5) Debt strategy: Both income levels suggest moderate debt-to-income. Accelerate loan payoff by directing one income toward loans. (6) Home purchase timeline: If buying in 3\u20135 years, start a dedicated down payment savings account in HYSAs. (7) Emergency fund: Build to 3\u20136 months of combined expenses ($20,000\u2013$25,000). Time is their greatest advantage \u2014 maximizing Roth IRA contributions now generates extraordinary tax-free wealth over 40 years.",
+    "metadata": {
+      "scenario_type": "Newlywed",
+      "age_range": "20s",
+      "tags": [
+        "newlywed",
+        "financial planning",
+        "marriage",
+        "joint accounts",
+        "beneficiary"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: International Employee with U.S. and Foreign Assets",
+    "text": "Profile: Yuki, 39, Japanese national working in the U.S. on an H-1B visa. Has retirement savings in Japan (equivalent of $120,000) and has been building U.S. accounts for 8 years (401k: $95,000, taxable: $40,000). Plans to eventually return to Japan.\n\nKey complexities: (1) FBAR/FATCA filing: U.S. tax residents with more than $10,000 in foreign accounts must file FinCEN Form 114 (FBAR). Foreign financial assets over $50,000 require Form 8938. Non-compliance penalties are severe. (2) Japanese pension (iDeCo/NISA equivalents): Consult a cross-border tax specialist on whether Japanese accounts are covered by the U.S.-Japan tax treaty. (3) 401(k) at departure: Options include leaving in plan, rolling to IRA, or distributing (with taxes/penalty). IRA is generally best to maintain tax deferral. (4) Social Security totalization: U.S.-Japan totalization agreement prevents double Social Security taxation and may allow combined benefit. Cross-border financial planning requires specialized expertise.",
+    "metadata": {
+      "scenario_type": "Expat / International",
+      "age_range": "30s",
+      "tags": [
+        "expat",
+        "international",
+        "FBAR",
+        "FATCA",
+        "H-1B visa",
+        "cross-border"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Lottery Winner \u2014 Managing a Windfall",
+    "text": "Profile: Robert, 52, won a state lottery jackpot of $2M (after-tax, lump sum). He currently earns $55,000/year and has $40,000 in savings.\n\nCritical first steps \u2014 the 'lottery curse' is real: (1) Tell no one except immediate family and advisors. (2) Assemble a team: CPA (tax professional), estate attorney, and fee-only fiduciary CFP. Do not make any major financial decisions for 6\u201312 months. (3) Park the money: Initially in Treasury bills or FDIC-insured accounts while developing a plan. (4) Tax planning: The $2M is already after-tax. Any investment income is taxable going forward. (5) Avoid common mistakes: Do not loan money to family/friends, do not buy a boat/vacation home immediately, do not quit job in the first year. (6) Investment plan: $2M at 4% withdrawal = $80,000/year, replacing and exceeding current income. Invest in low-cost diversified index portfolio. $2M can provide lifelong income if managed prudently.",
+    "metadata": {
+      "scenario_type": "Windfall",
+      "age_range": "50s",
+      "tags": [
+        "lottery",
+        "windfall",
+        "sudden wealth",
+        "financial planning",
+        "behavioral finance"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Philanthropic Planning with Donor-Advised Fund",
+    "text": "Profile: Henry and Grace, 65 and 62, both retired with $3.2M in investments and a strong desire to give back to their community. Annual charitable giving: $25,000. They hold $200,000 in appreciated stock with a cost basis of $40,000.\n\nCharitable strategy optimization: (1) Contribute appreciated stock to a Donor-Advised Fund (DAF) at Fidelity Charitable or Schwab Charitable. They receive a charitable deduction of $200,000 (full fair market value), avoid $24,000+ in capital gains taxes, and the fund can grow and be distributed to charities over time. (2) Qualified Charitable Distribution (QCD): Once they reach age 70\u00bd, they can direct up to $105,000/year from IRA to charity as a QCD \u2014 counts toward RMD, reduces taxable income. (3) Charitable Remainder Trust (CRT): For larger gifts, provides income to donors during lifetime, remainder to charity \u2014 charitable deduction now. (4) Legacy planning: Name DAF or specific charities as beneficiaries of IRA assets \u2014 highly tax-efficient since charities pay no tax on inherited IRAs.",
+    "metadata": {
+      "scenario_type": "Charitable Planning",
+      "age_range": "60s",
+      "tags": [
+        "DAF",
+        "charitable giving",
+        "QCD",
+        "appreciated stock",
+        "philanthropy"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Renter Debating Whether to Buy a Home",
+    "text": "Profile: Daniel, 33, renting for $1,800/month in a city. He has saved $80,000 for a potential down payment. Comparable homes cost $450,000. Current mortgage rate: 6.75%.\n\nBuy vs. rent analysis: Monthly cost of ownership: $2,250 mortgage (30yr at 6.75%) + $400 property tax + $150 insurance + $300 maintenance = $3,100/month total cost of ownership vs. $1,800 rent. The 'price-to-rent ratio' is 450,000 / (1,800 \u00d7 12) = 20.8 \u2014 suggesting renting may be more financially efficient currently (ratio over 20 generally favors renting). However: (1) Mortgage payments build equity over time. (2) Historical home price appreciation averages 3\u20134%/year. (3) Psychological value of ownership and stability. (4) If planning to stay 7+ years, buying becomes more favorable. Daniel's $80,000 provides only an 18% down payment. Consider waiting for rates to decline or prices to adjust. Investing the $80,000 in index funds may outperform home equity over 5\u20137 years.",
+    "metadata": {
+      "scenario_type": "Buy vs Rent",
+      "age_range": "30s",
+      "tags": [
+        "buy vs rent",
+        "home purchase",
+        "price-to-rent ratio",
+        "mortgage",
+        "real estate decision"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Family Business Succession Planning",
+    "text": "Profile: William, 68, owner of a family manufacturing business valued at $4M. He has three children \u2014 one works in the business, two do not. Estate: $6M total. He wants to retire at 72 and treat children equitably.\n\nSuccession options: (1) Sale to child who works in business: At $4M value, cash purchase is difficult. Seller-financed installment sale over 10\u201315 years provides retirement income. Valuation discount for gift/intra-family sale \u2014 GRAT or family limited partnership can reduce estate tax exposure. (2) ESOP (Employee Stock Ownership Plan): Tax-advantaged sale to employees \u2014 seller can defer capital gains via Section 1042 rollover if ESOP owns 30%+ after sale. Provides employee ownership culture. (3) Third-party sale: Maximize value, simplify estate distribution \u2014 each child inherits cash equally. (4) Estate tax planning: Current $13.6M exemption ($27.2M married). If TCJA expires in 2026, exemption drops to ~$6M \u2014 urgency to use remaining exemption before expiration. Consult estate attorney immediately.",
+    "metadata": {
+      "scenario_type": "Business Succession",
+      "age_range": "60s",
+      "tags": [
+        "business succession",
+        "ESOP",
+        "estate planning",
+        "family business",
+        "TCJA"
+      ]
+    }
+  },
+  {
+    "content_type": "CLIENT_SCENARIO",
+    "title": "Case Study: Non-Profit Employee Maximizing Benefits",
+    "text": "Profile: Jessica, 37, program director at a non-profit, earning $65,000. She has access to both a 403(b) and a 457(b) plan through her employer \u2014 a powerful but underutilized combination.\n\nContribution strategy: (1) The key advantage: 403(b) and 457(b) limits are independent. She can contribute $23,000 to the 403(b) AND $23,000 to the 457(b) = $46,000 total in 2024 at age 37. (2) Additional advantage of 457(b): No 10% early withdrawal penalty \u2014 funds can be accessed at separation from service at any age. This is powerful for those considering early retirement or career changes. (3) Priority: First capture any employer match on 403(b). Then consider after-tax implications. (4) Student loan note: If Jessica has remaining loans from an academic background, the non-profit sector qualifies for PSLF after 10 years of qualifying payments. (5) At $65K income, contributing $46K is aggressive but possible with disciplined budgeting \u2014 saves $10,000\u2013$13,000 in federal taxes annually.",
+    "metadata": {
+      "scenario_type": "Non-Profit Employee",
+      "age_range": "30s",
+      "tags": [
+        "non-profit",
+        "403b",
+        "457b",
+        "PSLF",
+        "double contribution"
+      ]
+    }
+  }
+]

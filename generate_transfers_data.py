@@ -1,0 +1,1352 @@
+"""
+Generates ~130 demo text chunks for the Transfer Transactions RAG corpus.
+Outputs: rag/data/transfers_chunks.json
+
+Content types:
+  PRODUCT           - transfer and payment products/services
+  FAQ               - common transfer and payment questions
+  MARKET_COMMENTARY - trends in payments and money movement
+  CLIENT_SCENARIO   - transfer transaction case studies
+"""
+
+import json
+import os
+
+OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "data", "transfers_chunks.json")
+
+PRODUCTS = [
+    {
+        "title": "Domestic Wire Transfer",
+        "text": (
+            "A domestic wire transfer is an electronic transfer of funds between U.S. bank accounts "
+            "via the Fedwire Funds Service or the Clearing House Interbank Payments System (CHIPS). "
+            "Key characteristics: same-day settlement when initiated before the bank's cutoff time "
+            "(typically 4:00–5:00 PM ET), irrevocable once processed, direct bank-to-bank movement. "
+            "Fees: outgoing $20–$35 at most banks; incoming $10–$20; some premium accounts waive "
+            "wire fees. Required information: recipient's bank routing number, account number, "
+            "bank name and address, and recipient's name and address. Security: wire fraud is the "
+            "most common and costly form of bank fraud — always verify wire instructions through "
+            "a known, trusted phone number before sending. Best uses: real estate closings, large "
+            "business payments, down payments, and time-sensitive transfers where ACH's 1–3 day "
+            "processing is insufficient."
+        ),
+        "metadata": {"product_type": "Wire Transfer", "tags": ["wire transfer", "domestic wire", "Fedwire", "irrevocable", "same-day"]},
+    },
+    {
+        "title": "International Wire Transfer (SWIFT)",
+        "text": (
+            "International wire transfers move funds between banks in different countries via the "
+            "SWIFT (Society for Worldwide Interbank Financial Telecommunication) network. Required "
+            "information: SWIFT/BIC code (identifies the recipient's bank globally), IBAN "
+            "(International Bank Account Number — required in Europe and many other countries), "
+            "recipient's name and address, bank name and address, and purpose of payment (required "
+            "for some countries). Fees: $25–$50 outgoing at most U.S. banks plus potential "
+            "intermediary bank fees ($10–$20) and currency conversion spreads (2–3% at banks). "
+            "Processing time: 1–5 business days. Exchange rate transparency: banks' exchange rates "
+            "include a spread; compare against mid-market rate (xe.com). Alternative services "
+            "(Wise, OFX, Remitly) offer significantly lower fees and better exchange rates for "
+            "international transfers — often 5–8x cheaper than traditional bank wires for amounts "
+            "under $50,000."
+        ),
+        "metadata": {"product_type": "Wire Transfer", "tags": ["international wire", "SWIFT", "IBAN", "BIC", "currency exchange", "international transfer"]},
+    },
+    {
+        "title": "ACH Transfer (Standard)",
+        "text": (
+            "ACH (Automated Clearing House) is an electronic network for processing batch financial "
+            "transactions in the United States, governed by Nacha (National Automated Clearing House "
+            "Association). Standard ACH processes in 1–3 business days. Types: ACH credit "
+            "(push — sender initiates, e.g., direct deposit, bill payment) and ACH debit "
+            "(pull — receiver initiates, e.g., loan payment, subscription billing). Fees: "
+            "typically free for consumer account-to-account transfers; businesses may pay $0.20–$1.50 "
+            "per transaction. Reversibility: ACH transactions can be reversed within 5 business days "
+            "for unauthorized transactions, which is a key advantage over wire transfers. Use cases: "
+            "direct deposit (payroll, government benefits), bill payment, recurring transfers, "
+            "vendor payments. ACH processes Monday–Friday, excluding federal holidays; transactions "
+            "initiated on weekends are processed the next business day."
+        ),
+        "metadata": {"product_type": "ACH", "tags": ["ACH", "Nacha", "direct deposit", "electronic payment", "bank transfer"]},
+    },
+    {
+        "title": "Same-Day ACH",
+        "text": (
+            "Same-Day ACH allows ACH transactions to be processed and settled on the same business day "
+            "they are initiated, rather than the standard 1–3 days. Nacha implemented Same-Day ACH "
+            "in three phases (2016–2018) and has since expanded eligibility. Transaction limit: "
+            "$1,000,000 per transaction (increased from $100,000 in 2022). Processing windows: "
+            "2 daily windows (morning and afternoon cutoffs); funds available by end of business day. "
+            "Fees: banks may charge a premium for Same-Day ACH ($5–$15 per transaction); many "
+            "consumer banks offer it free or at low cost. Best uses: payroll for late-submitted runs, "
+            "insurance claim payments, last-minute bill payments, real estate earnest money. "
+            "Cannot be used for international transactions or transactions over $1M. "
+            "Same-Day ACH is now available at virtually all U.S. financial institutions."
+        ),
+        "metadata": {"product_type": "ACH", "tags": ["same-day ACH", "Nacha", "fast payment", "same-day settlement", "payroll"]},
+    },
+    {
+        "title": "Zelle",
+        "text": (
+            "Zelle is a real-time payment network owned by Early Warning Services (a consortium of "
+            "major U.S. banks) and integrated directly into the mobile banking apps of 1,700+ "
+            "participating financial institutions. Key features: instant, bank-to-bank transfers "
+            "(typically within seconds); free for consumers; no separate app required for most "
+            "bank customers; funds go directly into the recipient's bank account. Send limits: "
+            "vary by bank ($500–$2,500/day for standard accounts; $10,000–$25,000/day for premium). "
+            "Critical safety limitation: Zelle transfers are irrevocable — once sent, the money "
+            "cannot be recalled unless the recipient cooperates. Appropriate uses: splitting bills "
+            "with known friends and family, paying trusted service providers, rent payment. "
+            "Not appropriate for: purchasing goods from strangers, marketplace transactions, "
+            "or any situation where you don't completely trust the recipient's identity. "
+            "Impersonation scams using Zelle are among the fastest-growing fraud categories."
+        ),
+        "metadata": {"product_type": "P2P Payment", "tags": ["Zelle", "instant transfer", "P2P", "bank-integrated", "real-time payment"]},
+    },
+    {
+        "title": "Venmo",
+        "text": (
+            "Venmo (owned by PayPal) is a peer-to-peer payment app popular among younger users for "
+            "splitting bills, paying friends, and small transactions. Key features: holds a Venmo "
+            "balance within the app; social feed showing (optionally public) transaction activity; "
+            "instant transfers between Venmo users. Transfer to bank: standard transfer is free "
+            "(1–3 days); instant transfer to bank charges 1.75% (minimum $0.25, maximum $25). "
+            "Venmo balance is NOT FDIC insured unless enrolled in the Venmo Debit Card program "
+            "(which holds funds at a partner bank). Business payments: Venmo charges 1.9% + $0.10 "
+            "for goods and services transactions, which includes buyer protection. Personal "
+            "transactions have no buyer protection. Privacy setting: change default payment notes "
+            "to 'private' — public transactions expose your social network and payment patterns. "
+            "Best for casual friend payments; not suitable for large or high-stakes transactions."
+        ),
+        "metadata": {"product_type": "P2P Payment", "tags": ["Venmo", "PayPal", "P2P", "social payments", "instant transfer fee"]},
+    },
+    {
+        "title": "PayPal",
+        "text": (
+            "PayPal is the world's largest online payment platform, used for e-commerce, business "
+            "payments, and peer-to-peer transfers. Key features: buyer protection on goods and "
+            "services purchases (ability to dispute unauthorized or misrepresented purchases); "
+            "widely accepted by online merchants; available in 200+ countries. Fees: sending "
+            "personal payments to friends/family from bank account or PayPal balance = free; "
+            "using a debit/credit card = 2.9% + $0.30; receiving business payments = 3.49% + $0.49 "
+            "(standard); selling goods/services = 2.89% + $0.49. International payments: PayPal's "
+            "currency conversion fees are significant (3–4% spread); alternatives like Wise or "
+            "Remitly are typically cheaper for international remittances. PayPal balance: not FDIC "
+            "insured (PayPal is not a bank), though it participates in the FDIC pass-through "
+            "program through partner banks for some balances. Best for: online purchases, "
+            "international payments, and business-to-consumer transactions."
+        ),
+        "metadata": {"product_type": "Digital Payment", "tags": ["PayPal", "e-commerce", "buyer protection", "international payments", "online payments"]},
+    },
+    {
+        "title": "Bill Pay (Bank-Side)",
+        "text": (
+            "Bank-initiated bill pay allows customers to schedule one-time or recurring payments to "
+            "billers (utilities, mortgage servicers, credit cards, local services) from within "
+            "online/mobile banking. The bank sends either an electronic ACH payment (faster, free) "
+            "or a physical check (2–7 days for delivery) depending on whether the biller is in the "
+            "bank's electronic network. Key advantages: (1) Centralized — manage all bills from "
+            "one interface. (2) Control — you initiate payments; billers cannot pull unauthorized "
+            "amounts. (3) Proof — payment history is recorded in banking statements. (4) Stop payment "
+            "on check payments if needed. Scheduling: set payment date 5–7 business days before due "
+            "date for check payments; 1–2 days for electronic. Many banks offer bill pay for free "
+            "as a standard account feature. Note: bill pay sends from your bank; it does not connect "
+            "to the biller's online account — you may still need separate biller logins for viewing "
+            "account details and receiving e-bills."
+        ),
+        "metadata": {"product_type": "Bill Payment", "tags": ["bill pay", "online banking", "ACH", "scheduled payment", "biller"]},
+    },
+    {
+        "title": "Apple Pay / Google Pay / Samsung Pay",
+        "text": (
+            "Mobile wallets allow users to make contactless payments using their smartphone or "
+            "smartwatch at NFC-enabled terminals, bypassing the physical card. How they work: "
+            "the mobile wallet stores a tokenized version of your card number — merchants never "
+            "receive your actual card number, providing enhanced security. Major options: "
+            "Apple Pay (iPhone/Apple Watch), Google Pay/Google Wallet (Android), Samsung Pay "
+            "(Samsung devices). Acceptance: all major U.S. retailers, restaurants, transit systems, "
+            "and most modern payment terminals. No additional fee to use mobile wallets — charges "
+            "appear as normal card transactions. Added security: transaction requires biometric "
+            "authentication (Face ID, fingerprint) or PIN. In-app purchases: mobile wallets also "
+            "enable one-tap checkout in apps. For lost phone: cards can be remotely removed from "
+            "Apple Wallet or Google Wallet without canceling the underlying card."
+        ),
+        "metadata": {"product_type": "Digital Payment", "tags": ["Apple Pay", "Google Pay", "mobile wallet", "NFC", "contactless payment"]},
+    },
+    {
+        "title": "FedNow Instant Payment Service",
+        "text": (
+            "FedNow is the Federal Reserve's real-time payment service launched in July 2023, enabling "
+            "instant, 24/7/365 account-to-account transfers across participating U.S. financial "
+            "institutions. Key features: transactions settle in seconds (compared to same-day ACH's "
+            "end-of-day settlement); available at any time including weekends and holidays; "
+            "transaction limit of $500,000 per payment (individual bank limits may be lower); "
+            "irrevocable once sent. Growing adoption: over 1,000 financial institutions had joined "
+            "by early 2025. Consumer applications: instant payroll from employers, immediate insurance "
+            "claims, government benefit payments, P2P transfers. Business applications: instant "
+            "supplier payments, just-in-time inventory payments, gig worker instant pay. "
+            "Unlike Zelle (owned by banks) or RTP (private clearing house), FedNow is operated by "
+            "the Federal Reserve, ensuring broad access including for smaller community banks and "
+            "credit unions."
+        ),
+        "metadata": {"product_type": "Instant Payment", "tags": ["FedNow", "instant payment", "Federal Reserve", "real-time", "24/7"]},
+    },
+    {
+        "title": "Cashier's Check for Large Transfers",
+        "text": (
+            "A cashier's check is a bank-guaranteed payment instrument drawn on the bank's own funds "
+            "rather than the customer's account. The customer pays the bank, the bank issues the check, "
+            "and the bank guarantees payment. Fees: $8–$15 per check (often free for premium accounts). "
+            "Use cases: real estate transactions (down payments, closings), vehicle purchases over "
+            "$10,000, security deposits, and any large payment where personal checks are not accepted. "
+            "Fraud risk: cashier's check fraud is common — fraudulent cashier's checks look identical "
+            "to real ones. Rules: (1) Always verify a cashier's check with the issuing bank before "
+            "releasing goods or services. (2) Wait for the check to fully clear (up to 10 business "
+            "days for large checks from unknown sources) — banks can provide 'provisional credit' "
+            "but the check may still bounce. (3) Never accept a cashier's check for more than an "
+            "agreed amount and send the difference back."
+        ),
+        "metadata": {"product_type": "Payment Instrument", "tags": ["cashier's check", "guaranteed payment", "real estate", "check fraud", "large payment"]},
+    },
+    {
+        "title": "Money Order for Unbanked / Untrusted Transfers",
+        "text": (
+            "A money order is a prepaid payment instrument in a specified amount, purchased at a "
+            "bank, post office (USPS), grocery store, or retail outlet. Limits: USPS money orders "
+            "are limited to $1,000 each (domestic) and $700 (international). Fees: USPS $1.75 "
+            "(up to $500) / $2.40 (up to $1,000); Walmart $0.88; banks $5–$10. Unlike cashier's "
+            "checks, money orders do not require a bank account to purchase (can use cash). "
+            "Advantages over cash: traceable (purchase receipt contains serial number for tracking "
+            "or replacement), safer to mail, accepted by most landlords and businesses. "
+            "Replacement for lost/stolen: contact the issuer with receipt; USPS allows replacement "
+            "after a waiting period for a $20 fee. Scam warning: money orders are frequently used "
+            "in overpayment and romance scams — never send a money order to someone you haven't met, "
+            "and be suspicious of any request that insists on money order payment."
+        ),
+        "metadata": {"product_type": "Payment Instrument", "tags": ["money order", "USPS", "unbanked", "prepaid", "payment instrument"]},
+    },
+    {
+        "title": "International Remittance — Fintech Alternatives",
+        "text": (
+            "International remittance services transfer money across borders. Traditional bank "
+            "international wires are expensive (fees + exchange rate spreads totaling 4–7%). "
+            "Fintech alternatives have disrupted this: Wise (formerly TransferWise): uses the "
+            "mid-market exchange rate + transparent flat fee (0.5–1.5% depending on currency pair). "
+            "Remitly, Xe, WorldRemit: competitive for common corridors (US-Mexico, US-Philippines, "
+            "US-India). Western Union/MoneyGram: extensive cash pickup network in countries with "
+            "limited banking, though digital transfers have higher fees. Send limits vary by service "
+            "and verification level. Comparison: For a $1,000 USD transfer to the Philippines, a "
+            "bank wire costs approximately $40–$60 in total fees+spread; Wise costs approximately "
+            "$8–$12; Remitly approximately $4–$6 (with competitive rate). Always compare both fee "
+            "AND exchange rate to get true total cost."
+        ),
+        "metadata": {"product_type": "International Transfer", "tags": ["remittance", "Wise", "international wire", "exchange rate", "cross-border payment"]},
+    },
+    {
+        "title": "Peer-to-Peer Lending / Loan Repayment Transfers",
+        "text": (
+            "Loan repayment transfers are the recurring scheduled transfers made to service debt. "
+            "Methods: (1) Bank-side bill pay: schedule from your bank to the lender's payment address. "
+            "(2) Biller-side autopay: authorize the lender to pull payments via ACH. (3) Online login "
+            "to lender portal and initiate payment. Autopay discount: most lenders (especially student "
+            "loan servicers) offer 0.25% interest rate reduction for autopay enrollment. "
+            "Grace periods: most lenders provide 10–15 days grace period before reporting late to "
+            "credit bureaus. A payment made on day 14 is typically not reported late. "
+            "Extra principal payments: when making extra payments, specify that the additional amount "
+            "should be applied to principal, not future payments — this reduces the balance on which "
+            "interest accrues. Keep confirmation numbers for all loan payments as proof of payment "
+            "in case of disputes with servicers."
+        ),
+        "metadata": {"product_type": "Loan Payment", "tags": ["loan repayment", "autopay", "principal payment", "student loan", "ACH pull"]},
+    },
+    {
+        "title": "Cryptocurrency Transfer",
+        "text": (
+            "Cryptocurrency transactions transfer digital assets (Bitcoin, Ethereum, USDC stablecoin) "
+            "on blockchain networks. From a money movement perspective: crypto transfers are "
+            "irreversible (no chargeback or recall mechanism), pseudonymous (transactions visible "
+            "on public blockchain), available 24/7, and settlement is typically 10 minutes to 1 hour. "
+            "For banking customers: buying crypto at an exchange (Coinbase, Kraken) requires a linked "
+            "bank account (ACH or wire); selling crypto and withdrawing to bank takes 1–5 days. "
+            "USDC stablecoin (1:1 pegged to USD) on Circle's infrastructure enables near-instant, "
+            "low-fee cross-border transfers for those with crypto infrastructure. Scam alert: "
+            "government agencies, utilities, and businesses do NOT accept crypto as payment — "
+            "any demand for crypto payment is a scam. Banks are increasingly monitoring for "
+            "cryptocurrency exchange transfers as part of BSA/AML compliance."
+        ),
+        "metadata": {"product_type": "Digital Asset Transfer", "tags": ["cryptocurrency", "Bitcoin", "blockchain", "USDC", "Coinbase"]},
+    },
+    {
+        "title": "Bank-to-Bank Transfer via Linked External Account",
+        "text": (
+            "Linking an external bank account enables transfers between your accounts at different "
+            "financial institutions. Process: (1) In online banking, add an external account by "
+            "providing the routing and account numbers. (2) The bank verifies ownership through "
+            "micro-deposits (two small test deposits, typically $0.01–$0.99, verify the amounts) "
+            "or instant verification (real-time via Plaid or similar). Micro-deposit verification "
+            "takes 1–2 business days; instant verification is immediate. (3) Once verified, "
+            "initiate transfers up to daily/monthly limits. Transfer types: push (from your primary "
+            "to external) or pull (from external to primary). ACH transfers: standard 1–3 days, free; "
+            "some banks offer instant transfers for a fee. Best use: moving savings between high-yield "
+            "accounts, funding investment accounts, managing multiple banking relationships. "
+            "Maintain records of linked accounts and review periodically for any unrecognized links."
+        ),
+        "metadata": {"product_type": "Account Transfer", "tags": ["linked account", "external transfer", "Plaid", "micro-deposit", "ACH transfer"]},
+    },
+    {
+        "title": "Real Estate Closing Wire Transfer",
+        "text": (
+            "Real estate closings require the buyer to deliver 'good funds' — typically a wire transfer "
+            "or cashier's check — for the down payment and closing costs. Wire is most common for "
+            "amounts over $10,000. Process: the title company sends wire instructions to the buyer "
+            "(name, bank name, routing number, account number, reference). The buyer's bank processes "
+            "the wire, which arrives at the title company's escrow account before closing. "
+            "Wire fraud risk: real estate wire fraud is a multi-billion dollar annual fraud problem. "
+            "Fraudsters intercept closing communications and substitute fraudulent wire instructions. "
+            "Protection protocol: (1) Call the title company on a KNOWN, VERIFIED phone number (from "
+            "the initial contract, not an email) to confirm wire instructions before sending. "
+            "(2) Never change wire instructions based solely on an email. (3) Confirm receipt of "
+            "funds with the title company after sending. (4) Verify the closing wire amount matches "
+            "your Closing Disclosure exactly."
+        ),
+        "metadata": {"product_type": "Wire Transfer", "tags": ["closing wire", "real estate", "wire fraud", "title company", "escrow"]},
+    },
+    {
+        "title": "ACH Payroll Direct Deposit",
+        "text": (
+            "Payroll direct deposit is the most common ACH application — employers transmit payroll "
+            "via ACH credit to employees' bank accounts on each payday. Benefits: funds available "
+            "on payday without depositing a check; often available 1–2 days early at digital banks "
+            "(Chime, Ally, SoFi, Varo); triggers fee waivers at many banks; eliminates check loss "
+            "risk. Setup: complete your employer's direct deposit authorization form with your "
+            "bank routing number and account number. Processing: ACH payroll files are typically "
+            "submitted 2 business days before payday. Direct deposit splits: most employers can "
+            "split deposits — e.g., $500 automatically to savings, remainder to checking. "
+            "Government benefit direct deposit: Social Security, SSI, and VA benefits are also "
+            "paid via ACH. Since 2013, all federal government benefit payments have been required "
+            "to be made electronically."
+        ),
+        "metadata": {"product_type": "ACH", "tags": ["direct deposit", "payroll", "ACH credit", "early deposit", "split deposit"]},
+    },
+    {
+        "title": "ACH Debit — Subscription and Recurring Payments",
+        "text": (
+            "ACH debit authorizations allow businesses to pull payments from a customer's bank account "
+            "on a recurring basis. Common examples: utility autopay, gym memberships, loan payments, "
+            "SaaS subscriptions, insurance premiums, streaming services. Authorization: the customer "
+            "provides bank account details and signs an authorization (paper or electronic). "
+            "Consumer protection: unauthorized ACH debits can be disputed and reversed within "
+            "60 days (Reg E). Even authorized debits can be disputed for incorrect amounts or "
+            "after cancellation. To cancel an ACH authorization: notify the bank AND the originating "
+            "company in writing; the bank can stop future ACH pulls if you've already notified the "
+            "company. Monitoring: review bank statements monthly for any unrecognized ACH debits — "
+            "subscriptions are easy to forget. FTC estimates the average household has 3+ forgotten "
+            "subscriptions totaling $100–$300/year."
+        ),
+        "metadata": {"product_type": "ACH", "tags": ["ACH debit", "subscription", "recurring payment", "authorization", "cancellation"]},
+    },
+    {
+        "title": "Check Writing and Payment",
+        "text": (
+            "Personal checks are written payment instruments directing a bank to pay a specified amount "
+            "from the check writer's account. Despite declining use (check volume fell 50%+ since 2000), "
+            "checks remain essential for certain payments: rent, contractor services, donations, gifts, "
+            "and any payment where the recipient can't accept electronic payment. Check components: "
+            "MICR line at the bottom contains routing number (9 digits), account number, and check "
+            "number. Proper check writing: date, payee name, numeric amount, written amount (controls "
+            "in case of dispute), signature, memo line (optional, good for reference). Stop payment: "
+            "if a check is lost or stolen before cashing, call your bank immediately — stop payment "
+            "fee is $25–$35. Stop payments are effective for 6 months (renewable). Post-dated checks: "
+            "requesting a bank to honor a check only after a future date is not guaranteed — banks "
+            "may process a post-dated check immediately."
+        ),
+        "metadata": {"product_type": "Check Payment", "tags": ["check", "stop payment", "personal check", "MICR", "post-dated"]},
+    },
+    {
+        "title": "Business ACH and EFT Payments",
+        "text": (
+            "Business-to-business (B2B) ACH and electronic funds transfers are the backbone of "
+            "commercial payments, processing trillions of dollars annually. Business ACH enables: "
+            "vendor payments (accounts payable), customer collections (accounts receivable), payroll, "
+            "tax payments, and inter-company transfers. ACH transaction types for businesses: PPD "
+            "(Prearranged Payment and Deposit — consumer accounts), CCD (Corporate Credit or Debit — "
+            "business accounts), CTX (Corporate Trade Exchange — includes remittance data). "
+            "Same-Day ACH is widely available for business payments up to $1M per transaction. "
+            "Security: businesses must implement ACH debit filters and blocks to prevent unauthorized "
+            "debits — most business banks offer 'ACH positive pay' (only pre-approved payee/amount "
+            "combinations are processed). A business ACH security program is essential — commercial "
+            "account fraud doesn't carry the same Reg E consumer protections."
+        ),
+        "metadata": {"product_type": "Business Payment", "tags": ["business ACH", "B2B payments", "ACH positive pay", "CCD", "commercial payments"]},
+    },
+    {
+        "title": "Gift Cards and Store Value Cards",
+        "text": (
+            "Gift cards are prepaid stored-value cards, available as open-loop (Visa, Mastercard, "
+            "Amex — usable anywhere) or closed-loop (specific retailer or restaurant). Consumer "
+            "protections under the Credit CARD Act: after 12 months of inactivity, no inactivity fee; "
+            "expiration of funds must be at least 5 years from purchase or last load date; fee "
+            "disclosures required. Open-loop card fees: $3–$6 purchase fee; no monthly fees if "
+            "used promptly. Lost card: open-loop cards with registered account numbers may be "
+            "replaceable; closed-loop cards often not. Gift card scams: (1) Gift cards emptied by "
+            "in-store tampered packaging — check seal integrity. (2) Scammers demanding gift card "
+            "payment — IRS, utilities, courts, government agencies NEVER request gift card payment. "
+            "(3) Unwanted gift card resale — only sell through reputable exchanges (CardCash, Raise). "
+            "Gift cards are not FDIC insured and have no fraud protection comparable to debit/credit cards."
+        ),
+        "metadata": {"product_type": "Stored Value", "tags": ["gift card", "prepaid card", "stored value", "scam", "CARD Act"]},
+    },
+    {
+        "title": "Bank Transfer Limits and Cutoff Times",
+        "text": (
+            "All bank transfer methods have limits and cutoff times that affect when money moves. "
+            "Wire transfers: initiated by 4:00–5:00 PM ET for same-day settlement; amounts up to "
+            "several million per day (verify with your bank). ACH standard: no transaction limit "
+            "at the Nacha level; individual banks set limits ($25,000–$250,000/day for online "
+            "transfers is common). Same-Day ACH: $1,000,000 per transaction. Zelle: $500–$25,000/day "
+            "depending on bank and account type. Mobile deposit: $2,500–$50,000/day depending on "
+            "account age and history. International wires: daily limits and OFAC compliance screening "
+            "may delay transactions. For time-sensitive large transfers (real estate closings, "
+            "business acquisitions): call the bank in advance to confirm available limits, ensure "
+            "wire instructions are verified, and initiate early in the banking day to avoid cutoff "
+            "issues. High-value wire service at branch may be required for very large amounts."
+        ),
+        "metadata": {"product_type": "Transfer Operations", "tags": ["transfer limits", "cutoff times", "ACH limit", "wire limit", "Zelle limit"]},
+    },
+    {
+        "title": "SWIFT gpi — Enhanced International Wire Tracking",
+        "text": (
+            "SWIFT gpi (Global Payments Innovation) is a modernization of the international wire "
+            "transfer system providing faster settlement, end-to-end tracking, and greater fee "
+            "transparency. Key improvements over traditional SWIFT: same-day settlement for many "
+            "currency corridors (versus 1–5 days previously); real-time payment tracking (like "
+            "package tracking — you can see exactly where your wire is); transparent fee deduction "
+            "(each intermediary's fee deduction is visible). Most major U.S. banks have adopted "
+            "SWIFT gpi. For senders of large international wires: ask your bank for a SWIFT gpi "
+            "tracking number (UETR — Unique End-to-End Transaction Reference) so you can monitor "
+            "progress. For recipients: funds credited more reliably within 24 hours for major "
+            "currency pairs. SWIFT gpi does not eliminate the cost premium versus fintechs like "
+            "Wise — it primarily benefits large commercial transactions where bank relationships "
+            "and SWIFT network reliability are required."
+        ),
+        "metadata": {"product_type": "International Transfer", "tags": ["SWIFT gpi", "international wire", "UETR", "wire tracking", "same-day settlement"]},
+    },
+]
+
+FAQS = [
+    {
+        "title": "How long does a wire transfer take?",
+        "text": (
+            "Domestic wire transfers initiated before the bank's cutoff time (typically 4:00–5:00 PM "
+            "ET) typically settle the same business day. Funds are usually available in the recipient's "
+            "account within a few hours of initiation, sometimes within minutes. Wires initiated after "
+            "the cutoff or on weekends/holidays are processed the next business day. International "
+            "wire transfers take 1–5 business days depending on the destination country, currency, "
+            "and whether any intermediary banks are involved. Banks participating in SWIFT gpi may "
+            "settle international wires same-day for major currency pairs. Reasons for delay: "
+            "OFAC compliance screening (matching against sanctions lists), correspondent bank "
+            "processing, incorrect beneficiary information (requiring return and resubmission), "
+            "or currency conversion delays. Track your wire: ask your bank for the wire reference "
+            "number (FedRef for domestic, UETR for SWIFT) to inquire about status."
+        ),
+        "metadata": {"category": "Wire Transfers", "tags": ["wire transfer", "processing time", "same-day", "international wire", "cutoff time"]},
+    },
+    {
+        "title": "Can I cancel or reverse a wire transfer?",
+        "text": (
+            "Domestic wire transfers: once a wire clears and credits the recipient's account, it "
+            "cannot be unilaterally reversed. However, if you realize an error immediately after "
+            "initiating, call your bank right away — the wire may still be in the queue and can "
+            "be recalled before it clears. If the wire has already credited, your bank can send a "
+            "'wire recall request' to the receiving bank, asking them to return the funds. The "
+            "receiving bank is NOT obligated to return the funds — they will attempt to recover "
+            "from the recipient. Success rate depends on whether the recipient cooperates. "
+            "International wire recall: similar process through SWIFT gpi messaging; more complex "
+            "and less certain. Key prevention: always double-check the routing number and account "
+            "number before confirming — even one digit wrong sends to the wrong account. "
+            "For real estate or large transfers, call to confirm instructions through a known number."
+        ),
+        "metadata": {"category": "Wire Transfers", "tags": ["wire recall", "cancel wire", "wire error", "reverse wire", "wire fraud recovery"]},
+    },
+    {
+        "title": "What is the difference between ACH and wire transfer?",
+        "text": (
+            "ACH and wire transfers are both electronic bank transfers but differ in speed, cost, "
+            "reversibility, and use cases. ACH: processes in batches through the ACH network; standard "
+            "1–3 business days (same-day option available); typically free for consumers; reversible "
+            "within 5 business days for unauthorized transactions; daily transaction limits apply "
+            "(often $25,000–$250,000 for online banking). Best for: direct deposit, bill payments, "
+            "routine transfers, recurring payments. Wire transfer: real-time gross settlement "
+            "through Fedwire or CHIPS; typically same-day; fees $20–$50; effectively irrevocable "
+            "once processed; higher transaction limits. Best for: large, time-sensitive, irrevocable "
+            "payments (real estate, large business payments). The reversibility difference is "
+            "critical for fraud risk: scammers prefer wire transfers precisely because they're "
+            "irrevocable. When in doubt, use ACH — it provides a safety net."
+        ),
+        "metadata": {"category": "Transfer Comparison", "tags": ["ACH vs wire", "ACH", "wire transfer", "reversibility", "transfer comparison"]},
+    },
+    {
+        "title": "Is Zelle safe to use?",
+        "text": (
+            "Zelle is safe for sending money to people you know and trust. It is not safe for "
+            "transactions with strangers or for marketplace purchases. The critical limitation: "
+            "Zelle transfers are instant and irrevocable. Once sent, the money cannot be recalled "
+            "unless the recipient voluntarily returns it. Common Zelle scams: (1) Impersonation "
+            "scams — fraudsters pretend to be from your bank's fraud department, say your account "
+            "is compromised, and ask you to Zelle money to a 'safe account.' Banks never do this. "
+            "(2) Marketplace scams — seller asks for Zelle payment for goods never delivered. "
+            "(3) Romance/grandparent scams. Consumer protection: Zelle does not offer buyer "
+            "protection. Banks are under no obligation to reimburse unauthorized Zelle transactions "
+            "that were authorized by the account holder (even under coercion). Safe uses: splitting "
+            "dinner with friends, paying your barber, paying known contractors. Unsafe: "
+            "paying strangers, paying for online purchases from unknown sellers."
+        ),
+        "metadata": {"category": "P2P Payments", "tags": ["Zelle safety", "Zelle scam", "P2P fraud", "bank impersonation", "marketplace scam"]},
+    },
+    {
+        "title": "What information do I need to wire money to someone?",
+        "text": (
+            "For a domestic wire transfer you need: (1) Recipient's full legal name. (2) Recipient's "
+            "bank name. (3) Recipient's bank ABA routing number (9 digits — for wires, some banks "
+            "have a different wire routing number than their ACH routing number, so confirm this). "
+            "(4) Recipient's account number. (5) Recipient's address (for most banks). "
+            "(6) Purpose of wire (some banks require this). For an international wire you additionally "
+            "need: SWIFT/BIC code (identifies the bank globally), IBAN (required for Europe, "
+            "increasingly required globally), recipient country, and the currency of the receiving "
+            "account. Important: call the recipient and verbally confirm the wire instructions — "
+            "do not rely solely on emailed instructions, especially for large transfers. "
+            "Real estate wire fraud commonly involves substituting fraudulent instructions for "
+            "legitimate ones via email interception."
+        ),
+        "metadata": {"category": "Wire Transfers", "tags": ["wire instructions", "routing number", "account number", "SWIFT", "IBAN"]},
+    },
+    {
+        "title": "What is a SWIFT code and when do I need it?",
+        "text": (
+            "A SWIFT code (also called a BIC — Bank Identifier Code) is an 8–11 character code that "
+            "uniquely identifies a financial institution in the SWIFT network, used for international "
+            "wire transfers. Format: first 4 characters = bank code, next 2 = country code, "
+            "next 2 = location code, last 3 (optional) = branch code. Example: CHASUS33 is "
+            "JPMorgan Chase, US, New York. You need a SWIFT code when: sending an international "
+            "wire to a foreign bank, or receiving an international wire (you'll need to provide "
+            "your bank's SWIFT code to the sender). Find a bank's SWIFT code: the bank's website, "
+            "your account statement (sometimes listed), or the SWIFT directory. Note: SWIFT codes "
+            "are for identifying banks, not individual accounts — you'll still need the account "
+            "number or IBAN. U.S. banks don't use IBAN for domestic accounts but do use it when "
+            "sending to IBAN-based countries."
+        ),
+        "metadata": {"category": "International Transfers", "tags": ["SWIFT code", "BIC", "international wire", "IBAN", "bank identifier"]},
+    },
+    {
+        "title": "What is an IBAN and which countries use it?",
+        "text": (
+            "IBAN (International Bank Account Number) is a standardized format for identifying bank "
+            "accounts used for international transfers. It can contain up to 34 alphanumeric characters "
+            "and includes: country code (2 letters), check digits (2 numbers), and a country-specific "
+            "bank/account identifier. Usage: mandatory in all European Union countries and many others "
+            "globally (57+ countries). Required for: sending wire transfers to European banks, and "
+            "increasingly to banks in the Middle East, North Africa, and Caribbean. U.S. banks do NOT "
+            "use IBANs for domestic accounts — this is a point of confusion when non-U.S. parties "
+            "ask for a U.S. IBAN. If you're in the U.S. and need to receive an international wire, "
+            "provide your routing number + account number (and your bank's SWIFT code). If you're "
+            "sending to Europe, you MUST obtain the recipient's IBAN — transfers without IBAN "
+            "to European banks will be returned."
+        ),
+        "metadata": {"category": "International Transfers", "tags": ["IBAN", "international transfer", "Europe", "account format", "wire transfer"]},
+    },
+    {
+        "title": "How does Zelle work if the recipient isn't enrolled?",
+        "text": (
+            "When you send a Zelle payment to a phone number or email address not yet enrolled in "
+            "Zelle, the recipient receives a notification (text or email) and has 14 days to "
+            "enroll in Zelle through their bank or the Zelle app to claim the funds. If they don't "
+            "enroll within 14 days, the payment is automatically returned to your account. "
+            "No money is lost in this process. Note: once enrolled, the recipient receives the "
+            "funds instantly and they cannot be recalled. If you mistakenly send Zelle to the wrong "
+            "phone number or email that IS enrolled, you cannot get the money back without the "
+            "recipient's cooperation. Always double-check the recipient's Zelle identifier before "
+            "sending. For first-time sends: Zelle will show you the recipient's name as it appears "
+            "in their profile — confirm this matches the person you intend to pay before confirming."
+        ),
+        "metadata": {"category": "P2P Payments", "tags": ["Zelle enrollment", "Zelle recipient", "payment not enrolled", "14-day window", "Zelle process"]},
+    },
+    {
+        "title": "What are the fees for international wire transfers?",
+        "text": (
+            "International wire transfers have multiple cost components: (1) Outgoing wire fee: "
+            "$25–$50 at most U.S. banks. (2) Intermediary bank fees: if the wire routes through "
+            "correspondent banks (common for smaller currencies), each may deduct $10–$30. "
+            "(3) Currency conversion spread: if converting from USD, the bank's exchange rate "
+            "includes a spread of 2–4% above the mid-market rate. (4) Recipient bank's incoming "
+            "wire fee: $10–$20. Total cost for a $1,000 international wire: $60–$130, or 6–13% "
+            "of the amount. Fintech alternatives are dramatically cheaper: Wise charges ~0.5–1.5% "
+            "plus a small flat fee and uses the mid-market exchange rate. For a $1,000 transfer "
+            "to Europe via Wise: approximately $7–$12 total cost. The math: for any international "
+            "transfer under $50,000, always compare Wise or OFX against your bank — the savings "
+            "are typically 5–10x. Banks' advantages: reliability, large transfer amounts, "
+            "established banking relationships."
+        ),
+        "metadata": {"category": "International Transfers", "tags": ["international wire fees", "exchange rate", "Wise", "correspondent bank", "transfer cost"]},
+    },
+    {
+        "title": "What is a stop payment on a check?",
+        "text": (
+            "A stop payment is an instruction to your bank not to honor a specific check if presented "
+            "for payment. Use cases: a check was lost or stolen before being cashed; you changed "
+            "your mind about a payment; a dispute arose with a vendor or contractor. Process: "
+            "contact your bank (phone, online banking, or branch) before the check is cashed. "
+            "Provide: check number, date written, amount, and payee name. Fee: $25–$35 per stop "
+            "payment. Effectiveness: stop payments go into effect within hours; however, if the "
+            "check is already in the processing pipeline, it may process before the stop takes "
+            "effect. Duration: stop payments are typically effective for 6 months and can be renewed. "
+            "Limitations: a stop payment cannot be placed on a cashier's check or certified check "
+            "(funds have already left your account). For ACH debits, you can request a 'stop ACH' "
+            "which functions similarly. Keep the stop payment confirmation number."
+        ),
+        "metadata": {"category": "Check Payments", "tags": ["stop payment", "check", "lost check", "fee", "check fraud prevention"]},
+    },
+    {
+        "title": "How do I set up automatic payments for a mortgage?",
+        "text": (
+            "Setting up automatic mortgage payments ensures on-time payment, protects your credit "
+            "score, and often earns a rate discount. Methods: (1) Servicer-side autopay: log in to "
+            "your mortgage servicer's portal (the company that collects your payments), provide "
+            "your bank's routing and account numbers, authorize recurring ACH debit on your due date. "
+            "Most servicers offer 0.25% rate reduction for autopay. (2) Bank-side bill pay: set up "
+            "a recurring payment from your bank's bill pay system — more control (you initiate the "
+            "payment), but no rate discount. Important considerations: set payment date 3–5 days "
+            "before the due date (not the 15-day grace period) to allow for processing. Ensure your "
+            "escrow payment amount is updated when your servicer does their annual escrow analysis — "
+            "the payment amount may change. When refinancing, cancel the old servicer's autopay "
+            "and set up new autopay with the new servicer promptly."
+        ),
+        "metadata": {"category": "Loan Payments", "tags": ["mortgage autopay", "automatic payment", "mortgage servicer", "rate discount", "ACH debit"]},
+    },
+    {
+        "title": "What is a wire transfer recall and how does it work?",
+        "text": (
+            "A wire transfer recall is a formal request to reverse a completed wire transfer. "
+            "Initiated by: the sending bank on behalf of the customer (due to fraud, error, or "
+            "duplicate payment). Process: sending bank contacts receiving bank through SWIFT or "
+            "Fedwire messaging to request the return of funds. The receiving bank investigates "
+            "and contacts the recipient. The recipient's bank has no obligation to reverse the "
+            "payment — they can only return funds if the recipient consents or a court order "
+            "compels return. Success rate: highest within 24 hours; drops significantly after funds "
+            "are disbursed to the recipient. For fraud: file a report with IC3 (fbi.gov/ic3) — "
+            "the FBI has a wire recall initiative that works with the receiving bank through law "
+            "enforcement channels, providing additional leverage. Time is critical: the faster "
+            "a recall is initiated, the better the chance of recovery."
+        ),
+        "metadata": {"category": "Wire Transfers", "tags": ["wire recall", "reverse wire", "wire fraud recovery", "IC3", "receiving bank"]},
+    },
+    {
+        "title": "How do ACH returns and rejections work?",
+        "text": (
+            "An ACH return occurs when the receiving bank sends back an ACH transaction that cannot "
+            "be processed. Common return codes: R01 (insufficient funds), R02 (account closed), "
+            "R03 (no account/unable to locate), R04 (invalid account number), R05/R10 (unauthorized "
+            "transaction). Return timeframe: consumer ACH returns must be initiated within 2 business "
+            "days (unauthorized returns within 60 days). For businesses: R01 returns trigger a "
+            "returned check fee from the initiating business ($25–$40). Returned ACH credits "
+            "(e.g., direct deposit returned): funds are returned to the originator within 2 days. "
+            "What to do when an ACH return happens: verify account information with the recipient; "
+            "correct any errors; re-initiate the transaction with corrected information. "
+            "For unauthorized ACH debit returns: contact your bank immediately — you have 60 days "
+            "to dispute unauthorized transactions under Regulation E."
+        ),
+        "metadata": {"category": "ACH Payments", "tags": ["ACH return", "insufficient funds", "return code", "R01", "Regulation E"]},
+    },
+    {
+        "title": "Is it safe to use Venmo for large transfers?",
+        "text": (
+            "Venmo is not designed or recommended for large transfers. Maximum limits: personal "
+            "payment sending: $999.99/week (unverified); $60,000/week (identity-verified). "
+            "Key concerns for large amounts: (1) Venmo balances are not FDIC insured — funds held "
+            "in Venmo (not yet transferred to your bank) are not deposit-insured. (2) No buyer "
+            "protection on personal payments — if you send $5,000 for goods to a stranger and "
+            "they disappear, Venmo will not help you. (3) Instant bank transfer fee: 1.75% to "
+            "move funds from Venmo to bank instantly (standard transfer is free but takes 1–3 days). "
+            "For large transfers to trusted individuals: Zelle (bank-integrated) or wire transfer "
+            "are more appropriate. For large purchases from strangers: use a credit card or "
+            "escrow service. For large real estate or business transactions: wire transfer through "
+            "your bank. Venmo is optimized for small, casual payments between friends."
+        ),
+        "metadata": {"category": "P2P Payments", "tags": ["Venmo", "large transfer", "FDIC", "limits", "buyer protection"]},
+    },
+    {
+        "title": "What happens if I wire money to the wrong account?",
+        "text": (
+            "Sending a wire to the wrong account number is a serious situation with no guaranteed "
+            "resolution. Immediate actions: (1) Call your bank immediately — explain the error and "
+            "provide the transaction details. Initiate a wire recall request. (2) If the wire has "
+            "not yet been processed, it may be cancelled. (3) If processed, the bank will contact "
+            "the receiving institution to request return of funds. The receiving bank is not legally "
+            "obligated to return the funds without court order — this is critical. (4) If the "
+            "receiving account is at your own bank, the bank can often freeze and return the funds "
+            "more easily. Recovery options if recall fails: work with your bank's fraud team; "
+            "file a police report; consult an attorney about a civil suit against the unintended "
+            "recipient. Prevention: banks now display the registered account holder's name for "
+            "domestic wires — verify this matches your intended recipient before confirming. "
+            "Never rely solely on account numbers provided via email."
+        ),
+        "metadata": {"category": "Wire Transfers", "tags": ["wrong account", "wire error", "wire recall", "bank error", "recovery"]},
+    },
+    {
+        "title": "What is bill pay vs. autopay — which should I use?",
+        "text": (
+            "Bill pay and autopay are both methods for paying recurring bills, but they differ in who "
+            "controls the payment. Bill pay (bank-initiated): you log in to your bank and schedule "
+            "a payment. The bank pushes funds to the biller. You control the amount, timing, and "
+            "can cancel anytime from the bank app. Best for: variable bills (credit cards, where "
+            "the balance changes monthly); bills where you want to review before paying; billers "
+            "you don't fully trust with direct account access. Autopay (biller-initiated): you "
+            "authorize the biller to pull payments from your account via ACH. Convenient; ensures "
+            "you never miss a payment; may earn rate discounts (mortgages, student loans, utilities). "
+            "Risk: if the biller overbills or pulls an incorrect amount, disputing through your bank "
+            "requires an ACH debit dispute. Recommendation: use autopay for fixed-amount bills you "
+            "trust (mortgage, utilities); use bank-side bill pay for variable bills and billers "
+            "you want oversight of."
+        ),
+        "metadata": {"category": "Bill Payment", "tags": ["bill pay", "autopay", "ACH debit", "ACH push", "payment control"]},
+    },
+    {
+        "title": "What currency exchange rate will I get for international transfers?",
+        "text": (
+            "The exchange rate you receive for international transfers depends significantly on "
+            "the transfer method. Bank rate: most banks apply a 2–4% spread above the mid-market "
+            "rate (interbank rate). On a $5,000 transfer, a 3% spread = $150 in hidden exchange "
+            "rate cost, in addition to the wire fee. Fintech rates: Wise uses the mid-market rate "
+            "with a transparent percentage fee; OFX uses near-mid-market rates. The mid-market rate: "
+            "check xe.com or Google to see the true interbank rate before transferring. Comparison "
+            "example for $1,000 USD to EUR: Bank wire: ~€900 (3% spread + fees); Wise: ~€933 "
+            "(0.5% fee + mid-market rate). For regular international transfers (supporting family "
+            "abroad, paying foreign contractors): use Wise or a specialist FX service. "
+            "For large corporate transactions where relationship and reliability matter more than "
+            "small rate differences: banks are appropriate."
+        ),
+        "metadata": {"category": "International Transfers", "tags": ["exchange rate", "FX spread", "mid-market rate", "Wise", "currency conversion"]},
+    },
+    {
+        "title": "How do I receive an international wire transfer?",
+        "text": (
+            "To receive an international wire to your U.S. bank account, provide the sender with: "
+            "(1) Your full legal name as it appears on the account. (2) Your bank's SWIFT/BIC code "
+            "(find on your bank's website or account information page). (3) Your routing number "
+            "(ABA routing number — some banks have a specific wire routing number different from "
+            "the ACH routing number). (4) Your full account number. (5) Your bank's name and "
+            "full address. (6) Your personal name and address. Note: U.S. accounts do not have "
+            "IBANs — international senders sometimes ask for one but U.S. account numbers serve "
+            "the equivalent purpose. Check incoming wire fees at your bank ($10–$20 is typical). "
+            "Free incoming wires: Schwab Bank, Charles Schwab Bank, and some premium accounts "
+            "waive incoming wire fees. Timeline: expect 1–5 business days; ask the sender for "
+            "the SWIFT UETR tracking number to monitor progress."
+        ),
+        "metadata": {"category": "International Transfers", "tags": ["receive wire", "SWIFT code", "incoming wire", "international transfer", "wire instructions"]},
+    },
+    {
+        "title": "What is remittance and how do I send money abroad cheaply?",
+        "text": (
+            "Remittance refers to transferring money from one country to another, typically from "
+            "immigrants to family in their home country. The global remittance market exceeds "
+            "$800 billion annually. Cost-effective options: Wise (TransferWise): transparent fees, "
+            "mid-market rate, best for bank-to-bank transfers in 80+ currencies. Remitly: "
+            "competitive rates and fees, especially for common corridors (US-Mexico, US-Philippines, "
+            "US-India); express vs. economy options. WorldRemit: competitive for Africa and "
+            "Southeast Asia. Xoom (PayPal): convenient, widely accepted, but higher fees. "
+            "Western Union/MoneyGram: most extensive cash pickup network — essential where bank "
+            "accounts are unavailable; fees are higher for bank deposits. Factors affecting cost: "
+            "destination currency/country, delivery method (bank vs. cash vs. mobile wallet), "
+            "payment method (bank vs. debit vs. credit card — card payments incur higher fees), "
+            "amount sent. Always compare fees AND exchange rate to calculate total cost."
+        ),
+        "metadata": {"category": "International Transfers", "tags": ["remittance", "Wise", "Remitly", "Western Union", "international money transfer"]},
+    },
+    {
+        "title": "What is a fraudulent wire transfer and how do I report it?",
+        "text": (
+            "Wire fraud occurs when someone deceives you into sending a wire transfer to a fraudulent "
+            "account. Common scenarios: real estate wire fraud (fraudulent closing instructions), "
+            "CEO fraud/business email compromise (employee tricked into wiring funds to a fake "
+            "vendor), romance scam, tech support scam. Immediate steps: (1) Call your bank's fraud "
+            "line immediately — time is critical for wire recall. (2) File a complaint with the "
+            "FBI's Internet Crime Complaint Center (IC3.gov) — they have wire recovery mechanisms. "
+            "(3) File a report with the FTC at ReportFraud.ftc.gov. (4) File a local police report "
+            "(required for some bank insurance claims). (5) Contact your bank's wire recall team — "
+            "provide all details of the fraudulent instructions. Contact receiving bank through "
+            "your bank. Recovery statistics: wires recovered within 72 hours have the highest "
+            "success rate (estimated 30–40%); after funds are withdrawn or moved again, recovery "
+            "becomes nearly impossible."
+        ),
+        "metadata": {"category": "Wire Fraud", "tags": ["wire fraud", "business email compromise", "BEC", "IC3", "wire recovery"]},
+    },
+    {
+        "title": "How does PayPal buyer protection work?",
+        "text": (
+            "PayPal buyer protection covers eligible purchases made with PayPal when: the seller "
+            "doesn't deliver the item, or the item is significantly different from the description. "
+            "Coverage: most goods and services purchases; some exclusions (real estate, vehicles, "
+            "custom items, digital items in some categories). How to file a claim: open a dispute "
+            "in the PayPal Resolution Center within 180 days of payment. PayPal mediates; if "
+            "unresolved, escalate to a formal claim within 20 days. Outcome: PayPal issues a "
+            "refund if the claim is upheld. Key requirement: must pay with PayPal's 'Goods and "
+            "Services' option — friend/family payments have no buyer protection. Critical: "
+            "sellers requesting G&S payment but offering to cover the fee by inflating the price "
+            "may be attempting to shift to an unprotected transaction. PayPal buyer protection "
+            "is a genuine, enforceable consumer protection — it makes PayPal appropriate for "
+            "marketplace purchases from unknown sellers where other methods offer no recourse."
+        ),
+        "metadata": {"category": "Digital Payments", "tags": ["PayPal buyer protection", "dispute", "Resolution Center", "goods and services", "purchase protection"]},
+    },
+    {
+        "title": "What is OFAC compliance and why does it delay some transfers?",
+        "text": (
+            "OFAC (Office of Foreign Assets Control) is a U.S. Treasury agency that administers "
+            "economic and trade sanctions against targeted foreign countries, entities, and individuals. "
+            "All U.S. financial institutions are required to screen all transactions against OFAC's "
+            "Specially Designated Nationals (SDN) list and other sanctions lists. If a name, country, "
+            "or account matches a sanctions list entry, the bank must block or reject the transaction. "
+            "OFAC matches cause transfer delays: even innocent customers with names similar to "
+            "sanctioned individuals may experience review delays. Current major sanction targets: "
+            "Russia, Iran, North Korea, Cuba, Syria, Venezuela. Practical impact: international "
+            "wires to sanctioned countries are illegal regardless of purpose; funds to/from those "
+            "countries will be blocked. If a transfer is delayed for OFAC review, your bank will "
+            "contact you for additional information. Never attempt to circumvent OFAC sanctions — "
+            "penalties include imprisonment and substantial fines."
+        ),
+        "metadata": {"category": "Transfer Compliance", "tags": ["OFAC", "sanctions", "SDN list", "compliance", "international transfer delay"]},
+    },
+    {
+        "title": "What is BSA/AML and why does the bank ask about large transfers?",
+        "text": (
+            "The Bank Secrecy Act (BSA) and Anti-Money Laundering (AML) regulations require U.S. "
+            "financial institutions to report and monitor suspicious financial activity. Key "
+            "reporting requirements: Currency Transaction Reports (CTRs): required for cash "
+            "transactions over $10,000 in a single day. Suspicious Activity Reports (SARs): "
+            "filed when banks suspect transactions may be related to illegal activity, regardless "
+            "of amount. Structuring: deliberately breaking up transactions to avoid $10,000 "
+            "threshold (e.g., depositing $9,500 multiple days in a row) is itself a federal crime. "
+            "Why banks ask about wire transfer purposes: required due diligence for large or "
+            "unusual transfers. You must answer truthfully — providing false information is illegal. "
+            "Common legitimate explanations: real estate purchase, business payment, gift to family "
+            "member, investment. Banks are prohibited from telling customers when they've filed "
+            "a SAR. Compliance questions are routine, not accusatory — answer honestly and provide "
+            "documentation when requested."
+        ),
+        "metadata": {"category": "Transfer Compliance", "tags": ["BSA", "AML", "CTR", "SAR", "structuring", "compliance"]},
+    },
+    {
+        "title": "Can I send money internationally using Zelle or Venmo?",
+        "text": (
+            "No — Zelle is only available for transfers between U.S. bank accounts held by U.S. "
+            "account holders. International transfers are not supported on the Zelle network. "
+            "Venmo is similarly U.S.-only and cannot be used for international transfers. "
+            "For international transfers, your options are: (1) Bank international wire transfer: "
+            "reliable but expensive ($25–$50 fee + exchange rate spread). (2) Wise (TransferWise): "
+            "best overall for bank-to-bank international transfers — low fees, mid-market rate. "
+            "(3) Remitly: strong for key corridors (US-Mexico, US-India, US-Philippines). "
+            "(4) Western Union/MoneyGram: best for cash pickup or mobile wallet delivery "
+            "in countries with limited banking infrastructure. (5) PayPal (Xoom): convenient "
+            "but higher fees than Wise. (6) Cryptocurrency (for sophisticated users): stablecoin "
+            "transfers via Circle/USDC can be fast and cheap but require technical knowledge "
+            "and recipient readiness."
+        ),
+        "metadata": {"category": "International Transfers", "tags": ["Zelle international", "Venmo international", "P2P limits", "international transfer options"]},
+    },
+    {
+        "title": "How does contactless payment work?",
+        "text": (
+            "Contactless payments use NFC (Near Field Communication) technology to transmit payment "
+            "data between a card or mobile device and a payment terminal. Process: hold your NFC-enabled "
+            "card or mobile device (phone, watch) within 1–2 inches of the payment terminal; "
+            "the transaction is processed in under a second. Security: contactless payments do not "
+            "transmit your actual card number — they use tokenization, generating a unique, one-time "
+            "transaction code for each payment. This makes contactless more secure than magnetic stripe "
+            "swipes. Tap-to-pay limits: some merchants set contactless limits ($100–$200) requiring "
+            "chip insertion for larger amounts (common in UK/Europe but less restrictive in the U.S.). "
+            "Mobile wallets (Apple Pay, Google Pay) use the same NFC technology with the additional "
+            "security of biometric authentication. Contactless payments work at most modern U.S. "
+            "retail, restaurant, and transit payment terminals."
+        ),
+        "metadata": {"category": "Digital Payments", "tags": ["contactless payment", "NFC", "tap to pay", "tokenization", "Apple Pay", "mobile wallet"]},
+    },
+    {
+        "title": "What is Nacha and how does it govern ACH payments?",
+        "text": (
+            "Nacha (National Automated Clearing House Association) is the not-for-profit organization "
+            "that governs the ACH network in the United States. Nacha sets the rules and standards "
+            "that all ACH participants must follow, including: transaction formats and timing requirements, "
+            "return and reversal rules, authorization requirements, same-day ACH capabilities, "
+            "fraud prevention standards (WEB Debit Account Validation Rule — banks must validate "
+            "account validity before first WEB debit). Nacha processes approximately $80+ trillion "
+            "in ACH transactions annually (over 30 billion transactions). Nacha rule changes affect "
+            "businesses that originate ACH transactions: in 2022, Nacha implemented rules requiring "
+            "originators to conduct risk monitoring and have account validation procedures. "
+            "For consumers: Nacha rules govern your rights under ACH transactions including return "
+            "rights (unauthorized debits can be returned within 60 days). Nacha is separate from "
+            "the Federal Reserve — it is a private industry organization, unlike Fedwire."
+        ),
+        "metadata": {"category": "ACH Payments", "tags": ["Nacha", "ACH rules", "ACH network", "account validation", "authorization"]},
+    },
+    {
+        "title": "What is a chargeback and when can I use one?",
+        "text": (
+            "A chargeback is a reversal of a payment initiated by your card issuer (bank or credit "
+            "card company) on your behalf after you dispute a transaction. Chargebacks are available "
+            "for credit and debit card transactions but not wire transfers, Zelle, or ACH personal "
+            "transfers. Valid reasons for chargebacks: (1) Unauthorized transaction (fraud). "
+            "(2) Merchandise not received. (3) Item significantly not as described. (4) Duplicate "
+            "charge. (5) Incorrect amount. The process: contact your card issuer and dispute the "
+            "transaction; the issuer investigates and may provisionally credit your account while "
+            "contacting the merchant; the merchant can provide evidence to counter the dispute. "
+            "Credit card chargeback rights (FCBA): file within 60 days of the statement containing "
+            "the error. Debit card (Reg E): 60 days for unauthorized transactions. Misuse: filing "
+            "fraudulent chargebacks (receiving goods/services and disputing anyway) is 'friendly "
+            "fraud' and is illegal."
+        ),
+        "metadata": {"category": "Payment Disputes", "tags": ["chargeback", "dispute", "FCBA", "Regulation E", "fraud protection"]},
+    },
+]
+
+MARKET_COMMENTARY = [
+    {
+        "title": "The Real-Time Payments Revolution: FedNow vs. RTP",
+        "text": (
+            "The U.S. payment system is undergoing its most significant transformation in decades "
+            "with the simultaneous expansion of two real-time payment networks. The Clearing House "
+            "RTP (launched 2017): 300+ financial institutions covering ~60% of U.S. demand deposit "
+            "accounts; used primarily for business-to-business and business-to-consumer payments; "
+            "$1M transaction limit. FedNow (launched July 2023): rapidly growing adoption among "
+            "banks of all sizes; 1,000+ participating institutions by early 2025; $500,000 transaction "
+            "limit; particularly important for community banks and credit unions. Combined impact: "
+            "consumers will increasingly expect instant payment for payroll, insurance claims, "
+            "tax refunds, and P2P payments. Businesses benefit from improved cash flow visibility "
+            "and just-in-time supplier payments. The U.S. is finally catching up to countries "
+            "like India (UPI), UK (Faster Payments), and Brazil (PIX) which have had robust "
+            "instant payment systems for years."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "Real-Time Payments", "tags": ["FedNow", "RTP", "real-time payments", "instant payments", "payment modernization"]},
+    },
+    {
+        "title": "Zelle Fraud Concerns and Regulatory Response",
+        "text": (
+            "Zelle has processed over $1 trillion in transactions since launch, but consumer fraud "
+            "losses have attracted congressional and regulatory scrutiny. Senate Banking Committee "
+            "investigations in 2022–2023 found that major banks reimbursed only a small percentage "
+            "of consumer-reported Zelle fraud losses. The core tension: Zelle fraud cases often "
+            "involve consumers who were tricked into authorizing the payment (impersonation scams) "
+            "rather than unauthorized transactions — banks argue these don't qualify for Regulation "
+            "E reimbursement. Regulatory pressure: the CFPB has signaled that 'authorized push "
+            "payment' fraud (where consumers are socially engineered into initiating payments) "
+            "should receive stronger protections. In 2023, Early Warning Services (Zelle's owner) "
+            "announced expanded fraud reimbursement policies for impersonation scams. The trend: "
+            "banks face increasing pressure to protect consumers from social engineering fraud, "
+            "not just purely unauthorized transactions."
+        ),
+        "metadata": {"period": "2023-2025", "topic": "P2P Payment Safety", "tags": ["Zelle fraud", "authorized push payment", "social engineering", "CFPB", "consumer protection"]},
+    },
+    {
+        "title": "Buy Now Pay Later (BNPL) — The New Face of Consumer Credit",
+        "text": (
+            "BNPL services have become a mainstream payment method, used by over 100 million Americans. "
+            "The dominant model — pay-in-4 (four equal payments over 6 weeks, interest-free) — has "
+            "proven enormously popular for e-commerce purchases. Market leaders: Affirm, Klarna, "
+            "Afterpay (Block), PayPal Pay Later. Integration at checkout has become near-ubiquitous "
+            "at major retailers. Longer-term BNPL products (6–36 months) carry APRs of 10–36%. "
+            "Risks: BNPL commitments are often not reported to credit bureaus (creating invisible "
+            "debt loads); BNPL users are more likely to overdraft their bank accounts; multiple "
+            "simultaneous BNPL obligations can become unmanageable. Regulatory response: CFPB "
+            "issued guidance in 2024 treating BNPL as credit cards for key consumer protections "
+            "(dispute rights, refund rights). Banks are responding with their own BNPL products. "
+            "BNPL total U.S. transaction volume exceeded $100 billion in 2024."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "BNPL", "tags": ["BNPL", "buy now pay later", "Affirm", "Klarna", "consumer credit"]},
+    },
+    {
+        "title": "Cross-Border Payment Modernization: The Role of Stablecoins and CBDCs",
+        "text": (
+            "International payments remain a significant pain point — slow, expensive, and opaque "
+            "despite SWIFT gpi improvements. Emerging alternatives are gaining traction. USDC stablecoin "
+            "(Circle): 1:1 USD-pegged digital dollar running on blockchain; enables near-instant, "
+            "low-cost cross-border transfers for businesses and individuals with crypto wallets. "
+            "Transaction cost: cents versus $25–$50 for bank wires. CBDCs (Central Bank Digital "
+            "Currencies): over 130 countries are exploring CBDCs. The Bahamas (Sand Dollar), Nigeria "
+            "(eNaira), and EU (Digital Euro — in design phase) have launched or are developing. "
+            "Federal Reserve: released a CBDC research paper but has not committed to a U.S. "
+            "digital dollar; Congress has been skeptical. mBridge project: cross-border CBDC "
+            "pilot between central banks of China, UAE, Thailand, and Hong Kong. Near-term "
+            "impact: stablecoins are disrupting B2B cross-border payments; CBDCs are years away "
+            "from significant consumer impact."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "International Payments", "tags": ["stablecoin", "CBDC", "digital dollar", "USDC", "cross-border payment"]},
+    },
+    {
+        "title": "The War on Payment Fraud: Banks Invest in Real-Time Detection",
+        "text": (
+            "Payment fraud losses in the U.S. exceed $10 billion annually and are growing. Banks "
+            "are deploying advanced defenses: (1) Real-time AI fraud scoring: every card transaction "
+            "is scored within milliseconds using ML models analyzing hundreds of signals (unusual "
+            "location, atypical merchant, amount anomaly, device fingerprint). (2) Behavioral "
+            "biometrics: analyzing typing patterns, mouse movements, and device orientation to "
+            "confirm identity during online banking sessions. (3) Confirmation of Payee (CoP): "
+            "some banks now display the account holder's name before wire/transfer confirmation "
+            "— mismatches flag potential errors or fraud. (4) Social engineering detection: "
+            "transaction coaching and delay features when patterns suggest a customer is being "
+            "scammed in real-time (unusual transfer amounts, previous engagement with suspicious "
+            "numbers). (5) Network-level fraud sharing: banks sharing fraud indicators in real-time "
+            "through industry consortia. The most effective prevention: consumer education. "
+            "Technology can detect many fraud patterns, but social engineering bypasses technical "
+            "controls by targeting human psychology."
+        ),
+        "metadata": {"period": "2025", "topic": "Payment Fraud Prevention", "tags": ["payment fraud", "AI fraud detection", "behavioral biometrics", "CoP", "social engineering"]},
+    },
+    {
+        "title": "Embedded Finance: Payments Everywhere",
+        "text": (
+            "Embedded finance integrates financial services (including payments) directly into "
+            "non-financial platforms. Examples: in-app payments in ridesharing apps (Uber Pay), "
+            "restaurant ordering platforms (Toast, Square), healthcare billing portals, real estate "
+            "platforms (escrow payment at contract signing), and e-commerce checkouts. The "
+            "disintermediation trend: consumers increasingly make payments within apps without "
+            "ever visiting a bank's interface. Banking-as-a-Service (BaaS) providers (Stripe, "
+            "Plaid, Marqeta) enable platforms to embed payment functionality. Impact on traditional "
+            "banks: fee revenue from traditional payment services is under pressure as embedded "
+            "payments capture more transaction volume. Consumer benefit: frictionless payment "
+            "experiences reduce checkout abandonment and enable new use cases. Risk: consumers "
+            "may not realize the embedded payment provider's consumer protections may differ "
+            "from their primary bank's protections."
+        ),
+        "metadata": {"period": "2025", "topic": "Fintech Payments", "tags": ["embedded finance", "BaaS", "Stripe", "fintech", "payment platforms"]},
+    },
+    {
+        "title": "ACH Modernization: Same-Day ACH Growth and Impact",
+        "text": (
+            "Same-Day ACH has driven significant modernization of the U.S. banking infrastructure "
+            "since Nacha expanded it in 2016. Volume has grown rapidly: from modest beginnings "
+            "to over 1 billion transactions annually by 2024. The transaction limit increase to "
+            "$1 million per transaction (from $100,000) in 2022 opened Same-Day ACH for many "
+            "business payment use cases previously requiring wire transfers. Impact: payroll "
+            "processors can run late payroll corrections same-day; insurance companies pay claims "
+            "faster; businesses make faster supplier payments without wire fees. Remaining gaps: "
+            "Same-Day ACH still only processes during business hours on business days (unlike "
+            "FedNow's 24/7 availability); settlement is end-of-business-day rather than real-time. "
+            "The trend: as FedNow and RTP expand, Same-Day ACH may migrate toward true instant "
+            "settlement. Currently, Same-Day ACH is significantly more accessible (lower per-transaction "
+            "cost) than FedNow for many routine payment use cases."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "ACH Payments", "tags": ["Same-Day ACH", "Nacha", "payment modernization", "ACH volume", "FedNow"]},
+    },
+    {
+        "title": "Open Banking and API-Driven Payment Initiation",
+        "text": (
+            "Open banking APIs are enabling a new category of payment services: Payment Initiation "
+            "Services (PIS). Rather than storing card credentials with merchants, PIS providers "
+            "connect directly to a consumer's bank account (with consent) and initiate ACH or "
+            "real-time payment directly. Benefits: no card credentials exposed, typically lower "
+            "processing fees for merchants (ACH costs pennies versus card interchange of 1.5–3%), "
+            "and potentially faster settlement. Examples: Plaid Payment Initiation, Stripe Financial "
+            "Connections, TrueLayer in UK/Europe. In the U.S., the CFPB's Personal Financial Data "
+            "Rights rule (Section 1033) is accelerating open banking adoption by requiring banks "
+            "to provide API access to consumer-authorized third parties. Consumer privacy note: "
+            "payment initiation requires sharing your bank account access — review the requesting "
+            "service's security and privacy practices carefully before authorizing."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "Open Banking", "tags": ["open banking", "payment initiation", "Plaid", "CFPB 1033", "API payments"]},
+    },
+    {
+        "title": "Global Payment Trends: Decline of Cash",
+        "text": (
+            "Cash usage continues its long decline globally, though the pace varies significantly "
+            "by country. In Sweden, cash accounts for less than 10% of retail transactions. "
+            "The UK, Netherlands, and Australia are approaching cashless economies. The U.S. is "
+            "slower in transition — cash still accounts for approximately 18–20% of consumer "
+            "transactions (down from 30% in 2012). COVID-19 accelerated contactless payment adoption: "
+            "contactless's share of card transactions doubled from 2019 to 2021. Demographic split: "
+            "under-40 consumers rarely use cash; over-60 consumers use it significantly more. "
+            "Policy concern: financial inclusion — an estimated 5 million U.S. households are "
+            "unbanked and rely on cash. Cashless business policies face regulatory pushback "
+            "in several states (New York, Philadelphia have passed 'cashless ban' laws). "
+            "Central banks are studying CBDCs partly as a digital cash equivalent to maintain "
+            "public access to central bank money as physical cash use declines."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "Payment Trends", "tags": ["cashless", "cash decline", "contactless payments", "financial inclusion", "CBDC"]},
+    },
+    {
+        "title": "Cryptocurrency and Banking: Where the Lines Are Blurring",
+        "text": (
+            "The relationship between traditional banking and cryptocurrency is evolving from "
+            "antagonism to cautious integration. Bitcoin ETF approval (January 2024) brought "
+            "crypto into mainstream investment accounts. Stablecoin legislation is advancing in "
+            "the U.S. — the GENIUS Act aims to create a federal framework for payment stablecoins, "
+            "potentially enabling bank issuance of dollar-pegged stablecoins. Crypto-friendly banks: "
+            "Silvergate and Signature Bank (both failed in 2023) served the crypto industry; "
+            "the void has been filled by smaller institutions. Major banks' role: custody services "
+            "for institutional clients; JPMorgan's Onyx blockchain for interbank settlement; "
+            "Citi, Goldman, and BofA all have crypto-adjacent infrastructure projects. "
+            "Consumer impact: crypto debit cards (Coinbase Card, Crypto.com Visa) allow spending "
+            "crypto converted to fiat in real-time. The boundaries between crypto and traditional "
+            "banking are gradually blurring as regulatory clarity improves."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "Crypto in Banking", "tags": ["cryptocurrency", "stablecoin", "Bitcoin ETF", "banking crypto", "GENIUS Act"]},
+    },
+    {
+        "title": "Business Email Compromise (BEC): The Largest Cyber-Enabled Financial Crime",
+        "text": (
+            "Business Email Compromise (BEC) caused over $2.9 billion in U.S. losses in 2023 alone, "
+            "making it the most costly cyber-enabled crime reported to the FBI. BEC attacks "
+            "target wire transfer authorization processes: fraudsters compromise or spoof a business "
+            "email account (vendor, CEO, attorney) and trick an employee into authorizing a wire "
+            "to a fraudulent account. Common scenarios: fake invoice substitution (vendor email "
+            "compromised, fraudulent banking details substituted), CEO fraud (executive-impersonating "
+            "email directs finance to wire urgently), real estate wire fraud (title company "
+            "communications compromised). Prevention for businesses: establish verbal confirmation "
+            "procedures for any new or changed wire instructions; implement multi-person authorization "
+            "for transfers above threshold; use secure portals rather than email for wire instructions; "
+            "enable DMARC, DKIM email authentication. Recovery: IC3's Financial Fraud Kill Chain "
+            "(FFKC) recovers a portion of wires if reported within 72 hours."
+        ),
+        "metadata": {"period": "2024-2025", "topic": "Payment Fraud", "tags": ["BEC", "business email compromise", "wire fraud", "CEO fraud", "cybercrime"]},
+    },
+]
+
+CLIENT_SCENARIOS = [
+    {
+        "title": "Case Study: First International Wire — Sending $5,000 to Family Abroad",
+        "text": (
+            "Profile: Maria, 33, wants to send $5,000 to her parents in the Philippines monthly. "
+            "She's been using Western Union (losing $80–$120/month in fees and exchange rate spread). "
+            "\n\nOptimized transfer strategy: (1) Compare Remitly vs. Wise for Philippines corridor. "
+            "Remitly economy: ~$4 fee, competitive rate, 3–5 days. Remitly express: ~$4.99, "
+            "hours. Wise: ~$25 fee but mid-market rate for bank-to-bank transfer. (2) For $5,000 "
+            "monthly, Remitly express delivers approximately $1,200 more pesos per transfer "
+            "compared to Western Union's over-the-counter rate. Annual savings: $960–$1,440. "
+            "(3) Recipient account: for Philippines, GCash (mobile wallet) and bank deposit both "
+            "available; GCash is often fastest. (4) Send limits and verification: monthly transfers "
+            "of $5,000 require identity verification (government ID, address verification). "
+            "Annual AML monitoring: large recurring transfers may prompt additional documentation. "
+            "Setup time: 15 minutes to create and verify a Remitly account."
+        ),
+        "metadata": {"scenario_type": "International Transfer", "tags": ["remittance", "Philippines", "Remitly", "Western Union comparison", "international wire"]},
+    },
+    {
+        "title": "Case Study: Falling Victim to a Zelle Scam and What Happened Next",
+        "text": (
+            "Profile: Thomas, 54, received a call from someone claiming to be his bank's fraud "
+            "department. The caller said Thomas's account was compromised and instructed him to "
+            "Zelle $2,800 to a 'secure temporary account' to protect the funds while the issue "
+            "was resolved. Thomas complied. The money disappeared.\n\n"
+            "Recovery attempt: (1) Thomas reported immediately to his real bank — the bank could "
+            "not recall the Zelle transfer (already accepted by the recipient). (2) Thomas filed "
+            "a dispute claiming he was coerced. The bank's initial response: denied claim as "
+            "'authorized' payment. (3) Thomas escalated: filed CFPB complaint citing bank "
+            "impersonation + social engineering. (4) Under post-2023 Zelle reimbursement policy "
+            "updates (driven by regulatory pressure), Thomas's bank reimbursed him as the scam "
+            "involved bank impersonation. Key lessons: Banks will NEVER call asking you to Zelle "
+            "money to another account. Hang up and call the number on the back of your card. "
+            "Report scams — regulatory pressure has resulted in expanded reimbursement for "
+            "bank impersonation Zelle scams."
+        ),
+        "metadata": {"scenario_type": "Scam Recovery", "tags": ["Zelle scam", "bank impersonation", "social engineering", "fraud recovery", "CFPB complaint"]},
+    },
+    {
+        "title": "Case Study: Real Estate Closing Wire — Avoiding Wire Fraud",
+        "text": (
+            "Profile: The Johnson family is closing on a $520,000 home purchase. They need to wire "
+            "$104,000 (20% down + closing costs) to the title company. They received wire "
+            "instructions via email.\n\n"
+            "Security protocol they followed: (1) Did NOT send the wire based on emailed "
+            "instructions alone. (2) Called the title company on the phone number from the "
+            "ORIGINAL purchase contract (not the email signature) and verbally confirmed every "
+            "digit of the routing and account numbers. (3) Confirmed the title company's bank name "
+            "and the beneficiary name matched exactly. (4) Initiated the wire at the bank branch "
+            "with a banker's assistance (not online self-service) for extra verification. "
+            "(5) Called the title company 2 hours later to confirm receipt. The wire arrived "
+            "successfully. What they avoided: real estate wire fraud had diverted the wire "
+            "instructions via a compromised email account at the real estate agent's office — "
+            "two other buyers that week wired to a fraudulent account. Verbal verification "
+            "is the only reliable defense against this fraud."
+        ),
+        "metadata": {"scenario_type": "Real Estate Wire", "tags": ["closing wire", "real estate fraud", "wire fraud prevention", "title company", "verbal verification"]},
+    },
+    {
+        "title": "Case Study: Setting Up Recurring International Vendor Payments",
+        "text": (
+            "Profile: David, 41, owns a small e-commerce business and has regular payments to "
+            "two suppliers: one in China ($8,000/month) and one in Germany ($3,200/month). "
+            "He's been using his bank's international wire service for both.\n\n"
+            "Payment optimization: (1) China supplier ($8,000): Bank wire costs $45 fee + ~3% "
+            "FX spread (~$240) = $285/transfer = $3,420/year. Wise Business: ~$60 fee + 0.5% "
+            "spread (~$40) = $100/transfer = $1,200/year. Savings: $2,220/year. (2) Germany "
+            "supplier ($3,200 EUR): Wise Business: ~$15 fee + 0.4% spread (~$13) = $28/transfer "
+            "= $336/year vs. bank $45 + 3% ($96) = $141/transfer = $1,692/year. Savings: "
+            "$1,356/year. (3) Setup: create Wise Business account, add beneficiary bank details "
+            "(SWIFT/IBAN for Germany), verify business identity. (4) Total annual savings: "
+            "$3,576. (5) Also consider: OFX for amounts over $10,000 offers competitive rates "
+            "with dedicated FX traders who can help time transfers to favorable exchange rates."
+        ),
+        "metadata": {"scenario_type": "Business Payments", "tags": ["international vendor payment", "Wise Business", "FX optimization", "small business", "supplier payment"]},
+    },
+    {
+        "title": "Case Study: Accidental Duplicate Wire — Recovery Process",
+        "text": (
+            "Profile: Sarah, 38, CFO of a small business, accidentally initiated a $42,000 ACH "
+            "payment to a vendor twice — once in the bill pay system and once directly through "
+            "the vendor portal, both processed within 30 minutes.\n\n"
+            "Recovery steps: (1) Contacted both her bank and the vendor immediately upon realizing "
+            "the duplicate. (2) The vendor (a reputable software company) confirmed receipt of "
+            "both payments within the hour and immediately initiated a return ACH credit for the "
+            "duplicate amount. Returned in 2 business days. (3) If the vendor had been less "
+            "cooperative: her bank could have sent an ACH reversal request — within 5 business "
+            "days for 'administrative errors.' (4) Sarah implemented a dual-approval control: "
+            "all payments over $10,000 now require a second staff member approval in the payment "
+            "system. Lesson: ACH's reversibility window (unlike wire transfers) provided a safety "
+            "net. The dual-approval process implemented afterward prevents recurrence and is "
+            "now a standard internal control."
+        ),
+        "metadata": {"scenario_type": "Payment Error", "tags": ["duplicate payment", "ACH reversal", "dual approval", "payment control", "error recovery"]},
+    },
+    {
+        "title": "Case Study: Gig Worker Managing Multiple Payment Platforms",
+        "text": (
+            "Profile: Keisha, 29, works across multiple gig platforms: DoorDash (Stripe Direct "
+            "deposit), Airbnb host payouts (ACH to bank), Etsy (Etsy Payments, weekly deposit), "
+            "and freelance design work (paid via PayPal or Zelle). Managing income from five "
+            "different payment platforms.\n\n"
+            "Organization strategy: (1) Dedicated business checking account for all gig income — "
+            "keeps gig income separate from personal spending for tax purposes. (2) Each platform "
+            "directs payment to the same business checking account routing/account number. "
+            "(3) PayPal: enable automatic transfer to bank account on a weekly schedule. "
+            "(4) Set up a separate high-yield savings account for tax reserves (25% of all "
+            "gig income). (5) Use accounting software (Wave — free, or QuickBooks Self-Employed) "
+            "connected to the business account for automated income categorization. (6) Verify "
+            "payment platform fees: PayPal charges 3.49% + $0.49 for goods and services — "
+            "negotiate flat project fees inclusive of fees or ask clients to pay via Zelle "
+            "to avoid fees. Quarterly estimated tax payments simplify tax season."
+        ),
+        "metadata": {"scenario_type": "Gig Economy", "tags": ["gig worker", "multiple payment platforms", "PayPal", "DoorDash", "tax management"]},
+    },
+    {
+        "title": "Case Study: Sending a Large Gift to a Family Member — Best Method",
+        "text": (
+            "Profile: Robert and Linda, 65, want to send their daughter $50,000 as a down payment "
+            "gift. Their daughter lives in a different state with a different bank. They want "
+            "to be sure the money arrives safely and quickly before a scheduled closing date.\n\n"
+            "Transfer analysis: (1) Personal check: inadvisable for this size — holds of up to "
+            "9 days could delay the closing. (2) Cashier's check: safe, but requires mailing "
+            "or in-person delivery. Subject to holds if the daughter deposits via mobile. "
+            "(3) Wire transfer: best option. Same-day, irrevocable, no hold. Cost: $25–$35. "
+            "Robert and Linda should call the daughter's bank to get her exact wire instructions "
+            "(routing, account number), then initiate the wire at their branch. (4) Gift letter: "
+            "most mortgage lenders require a signed gift letter documenting that the $50,000 is "
+            "a gift, not a loan. Robert and Linda should prepare this in advance. IRS gifting: "
+            "$50,000 exceeds the $18,000 annual gift tax exclusion (2024); the excess $32,000 "
+            "applies against the lifetime exemption ($13.61M). No tax owed but Form 709 may "
+            "be required."
+        ),
+        "metadata": {"scenario_type": "Gift Transfer", "tags": ["gift transfer", "down payment gift", "wire transfer", "gift letter", "gift tax"]},
+    },
+    {
+        "title": "Case Study: Business Owner Implementing ACH Fraud Controls",
+        "text": (
+            "Profile: Frank, 52, owner of a manufacturing company with $3M in annual revenue. "
+            "He recently learned that two suppliers had their bank accounts changed via BEC "
+            "and he nearly wired $85,000 to a fraudulent account (his controller caught the "
+            "email discrepancy in time).\n\n"
+            "Controls implemented: (1) Callback verification policy: any new or changed vendor "
+            "banking information requires a callback to the vendor at a phone number on file "
+            "(not the one in the email requesting the change). (2) Dual authorization: all "
+            "ACH and wire payments over $5,000 require approval from two authorized signatories. "
+            "(3) Bank ACH positive pay: enrolled in the bank's ACH positive pay — the bank "
+            "notifies before processing any ACH debit not matching a pre-approved list. "
+            "(4) Wire whitelist: only pre-approved beneficiary accounts can receive wire transfers "
+            "without additional verification. (5) Email security: enabled DMARC, DKIM, SPF "
+            "protocols; implemented email banner for messages from outside the company domain. "
+            "(6) Employee training: annual BEC awareness training, especially for accounting staff. "
+            "Annual estimated fraud prevention value: $85,000+ (the near-miss case alone)."
+        ),
+        "metadata": {"scenario_type": "Business Fraud Prevention", "tags": ["BEC prevention", "ACH positive pay", "dual authorization", "wire controls", "vendor fraud"]},
+    },
+    {
+        "title": "Case Study: Immigrant Family Using Remittances — Optimizing Costs",
+        "text": (
+            "Profile: The Santos family (parents, 3 adult children, all with jobs in the U.S.) "
+            "collectively send about $3,000/month to extended family in El Salvador. They've "
+            "each been using different services, paying varying fees.\n\n"
+            "Audit and optimization: Survey of current methods: one sibling uses Western Union "
+            "over-the-counter ($8–$15 fee + 3–4% FX spread); one uses MoneyGram ($5 fee + "
+            "3–4% spread); one uses Remitly app. Remitly economy to El Salvador (USD-to-USD "
+            "transactions since El Salvador uses USD): $3.99 flat fee, no FX spread. Annual "
+            "family savings from all switching to Remitly: $1,200–$1,800 vs. legacy services. "
+            "Additional optimization: split amounts to stay under $500/transaction for lowest "
+            "Remitly fee tier; set up repeat transfers for predictable amounts; use debit card "
+            "funding (credit card charges additional 3% fee). Family coordination: create a "
+            "shared calendar for transfer timing to smooth recipient cash flow. Total monthly "
+            "transfer cost reduction: from ~$80 to ~$15."
+        ),
+        "metadata": {"scenario_type": "Remittance Optimization", "tags": ["remittance", "El Salvador", "Remitly", "family transfer", "transfer cost optimization"]},
+    },
+    {
+        "title": "Case Study: Navigating SWIFT gpi for a Large Business Transfer",
+        "text": (
+            "Profile: Jennifer, 44, CFO of a mid-size import/export company. She sent a $500,000 "
+            "SWIFT wire to a supplier in Germany 3 days ago. The supplier reports it hasn't arrived. "
+            "\n\nTracking and resolution: (1) Contact the bank's wire operations team — request "
+            "the SWIFT UETR (Unique End-to-End Transaction Reference) number. (2) With the UETR, "
+            "the bank can trace the wire through SWIFT gpi Tracker, seeing each bank in the "
+            "processing chain and current status. (3) The tracker shows the wire is 'pending' "
+            "at an intermediary bank in New York (correspondent bank for the German bank). "
+            "(4) The hold was triggered by a name similarity to an OFAC watchlist entity — "
+            "the bank needed additional documentation. (5) Jennifer provided a copy of the "
+            "commercial invoice and supplier documentation; OFAC hold cleared within 24 hours. "
+            "(6) Total delay: 4 business days. Prevention: for large international transfers to "
+            "new beneficiaries, proactively provide commercial documentation to your bank at "
+            "time of wire initiation to prevent OFAC holds."
+        ),
+        "metadata": {"scenario_type": "International Wire", "tags": ["SWIFT gpi", "UETR", "wire tracking", "OFAC hold", "correspondent bank"]},
+    },
+    {
+        "title": "Case Study: Student Managing Money Between Parent and School Accounts",
+        "text": (
+            "Profile: Emma, 20, college sophomore. Parents send her $1,500/month for expenses. "
+            "She has a checking account at a large national bank; her parents use a regional bank. "
+            "Current method: parents mail a check monthly (2–3 day mail + 1–2 day hold = 5 days). "
+            "\n\nOptimized transfer system: (1) Zelle: both banks participate in Zelle — "
+            "parents can send $1,500 instantly from their banking app directly to Emma's account. "
+            "Free, instant, no hold. (2) Setup: Emma creates a Zelle profile with her phone "
+            "number or email; parents add Emma's Zelle contact; first transfer confirms identity. "
+            "(3) Future transfers: parents initiate from their bank app on the 1st of each month. "
+            "Money arrives in Emma's account within seconds. (4) Emergency transfers: parents can "
+            "send additional funds instantly via Zelle if Emma has an unexpected expense. "
+            "(5) Emma should confirm her phone number is correctly linked to the right account "
+            "— Zelle is tied to one bank account per phone number. No paper checks, no mail delays, "
+            "no holds. Annual time savings: ~2 hours of check-writing, mailing, and deposit trips."
+        ),
+        "metadata": {"scenario_type": "Student Transfers", "tags": ["Zelle", "parent to student transfer", "monthly allowance", "college banking", "instant transfer"]},
+    },
+]
+
+
+def build_chunks():
+    chunks = []
+    for item in PRODUCTS:
+        chunks.append({"content_type": "PRODUCT", "title": item["title"], "text": item["text"], "metadata": item["metadata"]})
+    for item in FAQS:
+        chunks.append({"content_type": "FAQ", "title": item["title"], "text": item["text"], "metadata": item["metadata"]})
+    for item in MARKET_COMMENTARY:
+        chunks.append({"content_type": "MARKET_COMMENTARY", "title": item["title"], "text": item["text"], "metadata": item["metadata"]})
+    for item in CLIENT_SCENARIOS:
+        chunks.append({"content_type": "CLIENT_SCENARIO", "title": item["title"], "text": item["text"], "metadata": item["metadata"]})
+    return chunks
+
+
+if __name__ == "__main__":
+    import os as _os
+    _os.makedirs(_os.path.dirname(OUTPUT_PATH), exist_ok=True)
+    chunks = build_chunks()
+    counts = {}
+    for c in chunks:
+        counts[c["content_type"]] = counts.get(c["content_type"], 0) + 1
+    print("Chunk counts by content type:")
+    for k, v in sorted(counts.items()):
+        print(f"  {k}: {v}")
+    print(f"  TOTAL: {len(chunks)}")
+    with open(OUTPUT_PATH, "w") as f:
+        json.dump(chunks, f, indent=2)
+    print(f"\nWrote {len(chunks)} chunks to {OUTPUT_PATH}")
